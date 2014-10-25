@@ -14,7 +14,7 @@
 	}
 	
 	$dbc = mysqli_connect("localhost", "root", "", $database)
-		or die("cannot connect database：" . mysqli_error());
+		or die("cannot connect database: " . mysqli_error());
 	mysqli_query($dbc, "set names utf8");
 ?>
 </head>
@@ -44,7 +44,7 @@
 				echo "</table>";
 				mysqli_free_result($result);
 				mysqli_close($dbc);
-				?>
+			?>
 		</div>
 	</div>
 </body>
