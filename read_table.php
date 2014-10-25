@@ -34,11 +34,17 @@
 				while($field_infor=mysqli_fetch_field($result)){
 					echo "<th>".$field_infor->name."</th>";
 				}
+				echo "<th>action</th>";
 				while ($row=mysqli_fetch_row($result)){
 					echo "<tr>";
 					foreach ($row as $key=>$val){
 						echo "<td>$val</td>";
 					}
+					echo '<td width=150>';
+					echo '<a class="btn btn-success" >Edit</a>';
+					echo ' ';
+					echo '<a class="btn btn-danger">Delete</a>';
+					echo '</td>';
 					echo "</tr>";
 				}
 				echo "</table>";
