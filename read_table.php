@@ -41,7 +41,9 @@
 						echo "<td>$val</td>";
 					}
 					echo '<td width=150>';
-					echo '<a class="btn btn-success" >Edit</a>';
+					echo '<a class="btn btn-success" href="edit_item.php?
+							database=wedget_user_' . $database. 
+							'&table='. $table .'&id='.$row[0].'">Edit</a>';
 					echo ' ';
 					echo '<a class="btn btn-danger">Delete</a>';
 					echo '</td>';
