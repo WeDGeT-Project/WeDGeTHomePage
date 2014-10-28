@@ -27,7 +27,7 @@
 		<div class="row">
 			<?php			
 				$query = "SELECT * FROM ". $table;
-				$result = mysqli_query($dbc, $query);
+				$result = mysqli_query($dbc, $query)  or die(mysqli_error($dbc));
 				
 				echo '<table class="table table-striped table-bordered" >';
 
@@ -40,12 +40,8 @@
 					foreach ($row as $key=>$val){
 						echo "<td>$val</td>";
 					}
-					echo '<td width=150>';
-					echo '<a class="btn btn-success" href="edit_item.php?
-							database=wedget_user_' . $database. 
-							'&table='. $table .'&id='.$row[0].'">Edit</a>';
-					echo ' ';
-					echo '<a class="btn btn-danger">Delete</a>';
+					echo '<td width=100>';
+					echo '<a class="btn btn-danger" href="delete_row.php?database='. $database .'&table='. $table .'&id='.$row[0].'">Delete</a>';
 					echo '</td>';
 					echo "</tr>";
 				}

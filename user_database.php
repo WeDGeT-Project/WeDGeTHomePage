@@ -61,9 +61,7 @@
 							echo '<tr>';
 							echo '<td>' . $row[0] . '</td>';
 							echo '<td width=250>';
-							echo '<a class="btn" href="read_table.php?database=wedget_user_' . $nickname. '&table='. $row[0] .'">Read</a>';
-							echo ' ';
-							echo '<a class="btn btn-success" >Update</a>';
+							echo '<a class="btn btn-success" href="read_table.php?database=wedget_user_' . $nickname. '&table='. $row[0] .'">Read & Edit</a>';
 							echo ' ';
 							echo '<a class="btn btn-danger">Delete</a>';
 							echo '</td>';
