@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* 站点说明： 10010chinaunicom2.0
+ * 开发时间： 2011-5-23
+ * 开发者： sandfilter
+ * 维护者： sandfilter      
+ *
+ * 样式版本： v1.0
+ * 版本时间： 2012-8-13
+ * 注意事项： 默认共用样式表,旧版本所有非独立样式、非主题样式存于此表
+ */
+
+#wapContent{ width:1003px; margin:auto; font-family:Arial,"宋体"; font-size:12px;_margin-top:-20px;}
+#cotainer{ width:1003px; overflow:hidden;}
+.self_service_aside{ width:210px; overflow:hidden;}
+.main_selfService{ width:789px; overflow:hidden; }
+
+#loading {
+	border:1px solid #ccc;
+	width:200px;
+	height:94px;
+	border-radius:8px;
+	line-height:50px;
+	text-align:center;
+	position:fixed;
+	_position:absolute;
+	top:48%;
+	_top:300px;
+	left:50%;
+	opacity:0.7;
+	display:none;
+	background:#eee url(http://m1.img.10010.com/images/loading.gif) no-repeat center center;
+	/*text-shadow:none;*/
+	z-index:1000;
+}
+

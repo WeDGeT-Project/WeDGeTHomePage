@@ -1,0 +1,16 @@
+document.write('<DIV id=footer>				')
+document.write('				')
+document.write('<DIV class=left></DIV>				')
+document.write('				')
+document.write('<DIV class=center>				')
+document.write('				')
+document.write('<DIV class=copyright>哈尔滨工业大学教务处,Copyright &copy;2009 - 2010 ')
+document.write('<A href="Http://jwc.hit.edu.cn"><FONT face=Verdana, sans-serif Helvetica, Arial,><B>Jwc.<FONT color=#cc0000>Hit.Edu.Cn</FONT></B></FONT></A>')
+document.write('				')
+document.write('</DIV>')
+document.write('				')
+document.write('<DIV class=intro></DIV></DIV>')
+document.write('				')
+document.write('<DIV class=right></DIV></DIV>')
+<!-- Thanks for DBBBS   -->
+
