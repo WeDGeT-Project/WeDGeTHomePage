@@ -11,30 +11,35 @@
 		$nickname = $_POST['nickname'];
 		$password = $_POST['password'];
 		$database = "wedget_user_" . $nickname;
-	}
-	$dbc = mysqli_connect("localhost","root","","wedget_info")
-		or die("cannot connect database：" . mysqli_error());
-	$flag = false;
+		$dbc = mysqli_connect("localhost","root","","wedget_info")
+			or die("cannot connect database：" . mysqli_error());
+		$flag = false;
 
-	$check_query_nickname = mysqli_query($dbc,"select uid from user where nickname='$nickname' limit 1");
-	if(!mysqli_fetch_array($check_query_nickname)){
-		echo '<h3>昵称不存在</h3>
-	    	<a class="btn" href="login.php">返回登录界面</a>';
-		exit();
-	}
-	else{
-		$password_MD5 = MD5($_POST['password']);
-		$check_query_password = mysqli_query($dbc,"select uid from user where nickname='$nickname' and password='$password_MD5' limit 1");
-		if(mysqli_fetch_array($check_query_password)){
-			$flag = true;
-		}
-		else {
-			echo '<h3>密码错误<h3>
-		    	<a class="btn" href="login.php">返回登录界面</a>';
+		$check_query_nickname = mysqli_query($dbc,"select uid from user where nickname='$nickname' limit 1");
+		if(!mysqli_fetch_array($check_query_nickname)){
+			echo '<h3>昵称不存在</h3>
+				<a class="btn" href="login.php">返回登录界面</a>';
 			exit();
 		}
+		else{
+			$password_MD5 = MD5($_POST['password']);
+			$check_query_password = mysqli_query($dbc,"select uid from user where nickname='$nickname' and password='$password_MD5' limit 1");
+			if(mysqli_fetch_array($check_query_password)){
+				$flag = true;
+			}
+			else {
+				echo '<h3>密码错误<h3>
+					<a class="btn" href="login.php">返回登录界面</a>';
+				exit();
+			}
+		}
+		mysqli_close($dbc);
+	}else{
+		if (! empty ( $_GET)) {
+			$database = $_REQUEST ['database'];
+		}
 	}
-	mysqli_close($dbc);
+	
 	?>
 </head>
 <body>
@@ -61,7 +66,7 @@
 					</thead>
 					<tbody>
 						<?php
-							$user_dbc = mysqli_connect("localhost", "root", "", "wedget_user_" . $nickname);
+							$user_dbc = mysqli_connect("localhost", "root", "", $database);
 							$sql = 'show tables';
 							$result = mysqli_query($user_dbc, $sql);
 							

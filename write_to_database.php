@@ -13,10 +13,16 @@
 	$database = null;
 	$myhtml = null;
 	$tableid = null;
-	if (! empty ( $_GET)) {
-		$database = $_REQUEST ['database'];
-		$myhtml = $_REQUEST ['myhtml'];
-		$tableid = $_REQUEST ['tableid'];
+	$tablename = "wedgettable";
+	if (! empty ( $_POST)) {
+		$database = $_POST ['database'];
+		$myhtml = $_POST ['myhtml'];
+		$tableid = $_POST ['tableid'];
+		$tablename = $_POST ['tablename'];
+		//echo $database.'<br>';
+		//echo $myhtml.'<br>';
+		//echo $tableid.'<br>';
+		//echo $tablename.'<br>';
 	}
 	//echo $database.'<br>';
 	//echo $myhtml.'<br>';
@@ -31,7 +37,7 @@
 	$element = $html->find('table');
 	//$element[$tableid]->setAttribute('class', 'table table-striped table-bordered');
 	//echo $element[$tableid];
-	$sql = "create table trry". $tableid ."(id int auto_increment,";
+	$sql = "create table ". $tablename ."(id int auto_increment,";
 	$tr = $element[$tableid]->find('tr');
 	$columns = 0;
 	$ishaveth = false;
@@ -113,6 +119,7 @@
 	}
 	$sql = $sql . "primary key (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 	$sql = strip_tags($sql);
+	//echo $sql.'<br>';
 	mysqli_query($dbc, $sql)
 		or die(mysqli_error($dbc));
 	echo "<h2>在数据库中成功建表！</h2>";
@@ -121,7 +128,7 @@
 	foreach($tr as $row){
 		$td = $row->find('td');
 		if($cells%$columns == 0){
-			$sqld = "insert into trry". $tableid ." values(''";
+			$sqld = "insert into ". $tablename ." values(''";
 		}
 		foreach($td as $tdrow){
 			//echo $tdrow.'<br>';
@@ -137,54 +144,12 @@
 					mysqli_query($dbc, $sqld)
 						or die(mysqli_error($dbc));
 				}
-			}else{
-				echo "find &nbsp;";
 			}
 		}
 	}
-	echo "<h2>表格填充数据完毕，可返回上一页。</h2>";
-	/*$flag = true;
-	foreach($tr as $row){
-		//echo $row.'<br>';
-		
-		$th = $row->find('th');
-		foreach($th as $throw){
-			//echo "Hello";
-			$throw = strip_tags($throw);
-			if(strip_tags($throw) == " ")
-				$sql = $sql . "xixi" . " varchar(45),";
-			else
-			{
-				$throw = trim($throw);
-				$sql = $sql . "`" .$throw . "` varchar(45),";
-			}	
-		}
-		if($flag)
-		{
-			$sql = $sql . "primary key (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
-			$sql = strip_tags($sql);
-			//echo $sql.'<br>';
-			mysqli_query($dbc, $sql)
-				or die(mysqli_error($dbc));
-			echo "<h1>write to your database successfully!</h1>";
-			//$flag == false;
-		}
-		if($flag == false)
-		{
-			$td = $row->find('td');
-			$sqld = "insert into trry". $tableid ." values(''";
-			foreach($td as $tdrow){
-				//echo $tdrow.'<br>';
-				$sqld = $sqld . ",'" . strip_tags($tdrow) . "'";
-			}
-			$sqld = $sqld . ");";
-			$sqld = strip_tags($sqld);
-			//echo $sqld.'<br>';
-			mysqli_query($dbc, $sqld)
-					or die(mysqli_error($dbc));
-		}
-		$flag = false;
-	}*/
+	echo "<h2>表格填充数据完毕，可返回上一页（点击浏览器后退）。</h2>";
+	echo '<a class="btn btn-success" href="user_database.php?database='. $database .'">查看您的数据库</a>';
 ?>
+	
 </body>
 </html>
