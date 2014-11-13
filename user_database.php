@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>个人Web网页数据抽取：您的数据库</title>
+	<title>个人Web网页数据抽取：您的表格</title>
 	<meta charset="utf-8">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<script src="js/bootstrap.min.js"></script>
@@ -10,8 +10,8 @@
 	if (! empty ( $_POST )) {
 		$nickname = $_POST['nickname'];
 		$password = $_POST['password'];
-		$database = "wedget_user_" . $nickname;
-		$dbc = mysqli_connect("localhost","root","","wedget_info")
+		$database = "wedget_info";
+		$dbc = mysqli_connect("localhost", "root", "", "wedget_info")
 			or die("cannot connect database：" . mysqli_error());
 		$flag = false;
 
@@ -37,6 +37,7 @@
 	}else{
 		if (! empty ( $_GET)) {
 			$database = $_REQUEST ['database'];
+			$nickname = $_REQUEST ['nickname'];
 		}
 	}
 	
@@ -51,7 +52,7 @@
 				<p class="text-info">以下是您数据库中的表单，您可以对他们进行一些操作。如果您没有发现任何表单，说明您未抽取表单并存入数据库。</p>
 				<p>您的数据库名称：<?php echo $database; ?></p>
 				<?php 
-					echo '<a class="btn btn-success" href="extract_table.php?database=' . $database. '">抽取数据</a>';
+					echo '<a class="btn btn-success" href="extract_table.php?database=' . $database. '&nickname='.$nickname.'">抽取数据</a>';
 				?>
 				<br>
 				<br>
@@ -67,7 +68,7 @@
 					<tbody>
 						<?php
 							$user_dbc = mysqli_connect("localhost", "root", "", $database);
-							$sql = 'show tables';
+							$sql = "show tables like '".$nickname."_%';";
 							$result = mysqli_query($user_dbc, $sql);
 							
 							while($row = mysqli_fetch_array($result))

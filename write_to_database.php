@@ -9,24 +9,25 @@
 <body>
 <?php
 	header("Content-Type: text/html; charset=utf-8");
+	//error_reporting(0);
 	include('simple_html_dom.php');
 	$database = null;
 	$myhtml = null;
 	$tableid = null;
 	$tablename = "wedgettable";
 	if (! empty ( $_POST)) {
+		
 		$database = $_POST ['database'];
 		$myhtml = $_POST ['myhtml'];
 		$tableid = $_POST ['tableid'];
 		$tablename = $_POST ['tablename'];
-		//echo $database.'<br>';
-		//echo $myhtml.'<br>';
-		//echo $tableid.'<br>';
-		//echo $tablename.'<br>';
+		$nickname = $_POST ['nickname'];
+		/*echo $database.'<br>';
+		echo $myhtml.'<br>';
+		echo $tableid.'<br>';
+		echo $tablename.'<br>';
+		echo $nickname.'<br>';*/
 	}
-	//echo $database.'<br>';
-	//echo $myhtml.'<br>';
-	//echo $tableid.'<br>';
 	
 	$dbc = mysqli_connect("localhost", "root", "", $database)
 				or die("connect fail!");
@@ -35,120 +36,93 @@
 	$html->load_file($myhtml);
 
 	$element = $html->find('table');
-	//$element[$tableid]->setAttribute('class', 'table table-striped table-bordered');
-	//echo $element[$tableid];
-	$sql = "create table ". $tablename ."(id int auto_increment,";
-	$tr = $element[$tableid]->find('tr');
+	$all_tr = $element[$tableid]->find('tr');   //获取选中表格中的所有tr
+	
+	//确定表头并建立表格
 	$columns = 0;
-	$ishaveth = false;
-	foreach($tr as $row){
-		$th = $row->find('th');
-		foreach($th as $throw){
-			//echo "Hello";
-			$ishaveth = true;
-			$throw = strip_tags($throw);
-			if(strip_tags($throw) == " ")
-			{
-				$sql = $sql . "xixi" . " varchar(45),";
-				$columns = $columns + 1;
-			}
-			else
-			{
-				$throw = trim($throw);
-				$sql = $sql . "`" .$throw . "` varchar(45),";
-				$columns = $columns + 1;
-			}	
-		}
-	}
-	if($ishaveth == false)
+	$hava_th = false;
+	$tablename = $nickname.'_'. $tablename;
+	$sql_create_table = "create table ". $tablename ."(id int auto_increment,";
+	foreach($all_tr as $every_tr)
 	{
-		echo '<h3>该表格不含有表头，我们想办法努力获取……</h3>';
-		$pretr = $element[$tableid-1]->find('tr');
-		$columns = 0;
-		$ishaveth = false;
-		foreach($pretr as $row){
-			$th = $row->find('th');
-			foreach($th as $throw){
-				//echo "Hello";
-				$ishaveth = true;
-				$throw = strip_tags($throw);
-				if(strip_tags($throw) == " ")
+		if($every_tr->find('th'))
+		{
+			$hava_th = true;
+			$all_th = $every_tr->find('th');
+			$count_th = 0;
+			foreach($all_th as $every_th)
+			{
+				$count_th++;
+				$every_th = strip_tags($every_th);  //去除标签干扰
+				if(strip_tags($every_th) == " ")
 				{
-					$sql = $sql . "xixi" . " varchar(45),";
-					$columns = $columns + 1;
+					$sql_create_table = $sql_create_table . "tablehead" . " varchar(45),";
 				}
 				else
 				{
-					$throw = trim($throw);
-					$sql = $sql . "`" .$throw . "` varchar(45),";
-					$columns = $columns + 1;
-				}	
+					$every_th = trim($every_th);    //去除两边空格
+					$sql_create_table = $sql_create_table . "`" .$every_th . "` varchar(45),";
+				}
+			}
+			$columns += $count_th;
+			//echo '该行表头数量（正常获取）:'.$columns.'<br>';
+		}
+		else
+		{
+			if($hava_th == false)
+			{
+				$all_td = $every_tr->find('td');
+				$count_td = 0;
+				foreach($all_td as $every_td)
+				{
+					$count_td++;
+					$every_th = strip_tags($every_td);  //去除标签干扰
+					$sql_create_table = $sql_create_table . "thead" . $count_td . " varchar(45),";
+				}
+				$columns = $count_td;
+				//echo '该行表头数量（从表体获取）:'.$columns.'<br>';
+				break;
 			}
 		}
 	}
-	if($ishaveth == true)
+	//echo '该行表头数量:'.$columns.'<br>';
+	$sql_create_table = $sql_create_table . "primary key (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+	$sql_create_table = strip_tags($sql_create_table);
+	//echo $sql_create_table.'<br>';
+	mysqli_query($dbc, $sql_create_table)
+			or die(mysqli_error($dbc));
+			
+	//向表格中添加元素
+	foreach($all_tr as $every_tr)
 	{
-		echo '<h3>成功获取表头。</h3>';
-	}else{
-		echo '<h3>第一次获取表头失败。</h3>';
-		echo '<h3>额……我再努努力吧……</h3>';
-		$columns = 0;
-		$ishaveth = false;
-		foreach($tr as $row){
-			$th = $row->find('td');
-			$ishaveth = true;
-			//echo "row".'<br>';
-			//$throw = strip_tags($throw);
-			foreach($th as $throw){
-				$throw = strip_tags($throw);
-				//echo $throw.'<br>';
-				if(strip_tags($throw) == " ")
-				{
-					$sql = $sql . "xixi" . " varchar(45),";
-					$columns = $columns + 1;
-				}
-				else
-				{
-					$throw = trim($throw);
-					$sql = $sql . "`" .$throw . "` varchar(45),";
-					$columns = $columns + 1;
-				}
-			}
-			break;	
+		$all_td = $every_tr->find('td');
+		$count_td = 0;
+		$sql_insert_row = "insert into ". $tablename ." values(''";
+		foreach($all_td as $every_td)
+		{
+			$count_td++;
 		}
-	}
-	$sql = $sql . "primary key (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
-	$sql = strip_tags($sql);
-	//echo $sql.'<br>';
-	mysqli_query($dbc, $sql)
-		or die(mysqli_error($dbc));
-	echo "<h2>在数据库中成功建表！</h2>";
-	echo "<h3>正在将数据写入表格……</h3>";
-	$cells = 0;
-	foreach($tr as $row){
-		$td = $row->find('td');
-		if($cells%$columns == 0){
-			$sqld = "insert into ". $tablename ." values(''";
-		}
-		foreach($td as $tdrow){
-			//echo $tdrow.'<br>';
-			$throw = strip_tags($tdrow);
-			if($throw != "&nbsp;"){
-				//$throw = trim($throw);
-				$sqld = $sqld . ",'" . strip_tags($tdrow) . "'";
-				$cells = $cells + 1;
-				if($cells%$columns == 0){
-					$sqld = $sqld . ");";
-					$sqld = strip_tags($sqld);
-					//echo $sqld.'<br>';
-					mysqli_query($dbc, $sqld)
-						or die(mysqli_error($dbc));
-				}
+		if($count_td == $columns)
+		{
+			//echo 'same: '.$count_td.'<br>';
+			foreach($all_td as $every_td)
+			{
+				$sql_insert_row = $sql_insert_row . ",'" . strip_tags($every_td) . "'";
 			}
+			//echo 'insert a row<br>';
+			$sql_insert_row = $sql_insert_row . ");";
+			$sql_insert_row = strip_tags($sql_insert_row);
+			//echo $sql_insert_row.'<br>';
+			mysqli_query($dbc, $sql_insert_row)
+				or die(mysqli_error($dbc));
+		}
+		else
+		{
+			//echo 'delete a row<br>';
 		}
 	}
 	echo "<h2>表格填充数据完毕，可返回上一页（点击浏览器后退）。</h2>";
-	echo '<a class="btn btn-success" href="user_database.php?database='. $database .'">查看您的数据库</a>';
+	echo '<a class="btn btn-success" href="user_database.php?database='. $database .'&nickname='.$nickname.'">查看您的数据库</a>';
 ?>
 	
 </body>

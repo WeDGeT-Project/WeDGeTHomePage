@@ -128,16 +128,10 @@ if (! empty ( $_POST )) {
 						if(!mysqli_fetch_array($check_query)){
 							$password_MD5 = MD5($password);
 							$regdate = time();
-							$sql = "INSERT INTO user(nickname,password,email_account,regdate)VALUES('$nickname','$password_MD5','$email_account',
-							$regdate)";
-							$cnnt = mysqli_connect("localhost", "root", "");
-							$sql_create_db = "CREATE DATABASE wedget_user_" . $nickname . " CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';";
+							$sql = "INSERT INTO user(nickname,password,email_account,regdate)VALUES('$nickname','$password_MD5','$email_account',$regdate)";
 							
 							if(mysqli_query($dbc, $sql)){
 								echo '<h3>注册成功</h3>';
-								if(mysqli_query($cnnt, $sql_create_db)){
-									echo '<h3>您的个人数据库已经成功建立！</h3>';
-								}
 								echo  '<a class="btn btn-success" href="login.php">进入登录界面</a>';
 							} 
 							else {
