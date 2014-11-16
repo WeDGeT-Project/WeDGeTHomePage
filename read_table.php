@@ -11,6 +11,7 @@
 	if (! empty ( $_GET ['database'] )) {
 		$database = $_REQUEST ['database'];
 		$table = $_REQUEST ['table'];
+		$nickname = $_REQUEST ['nickname'];
 	}
 	
 	$dbc = mysqli_connect("localhost", "root", "", $database)
@@ -23,6 +24,10 @@
 	<div class="container">
 		<div class="row">
 			<h3><?php echo $table;?></h3>
+			<?php
+				echo '<a class="btn btn-success" href="user_database.php?database=' . $database. '&table='. $table .'&nickname='. $nickname .'">返回查看所有表单</a>';
+				echo '<br><br>';
+			?>
 		</div>
 		<div class="row">
 			<?php			
@@ -32,7 +37,11 @@
 				echo '<table class="table table-striped table-bordered" >';
 
 				while($field_infor=mysqli_fetch_field($result)){
-					echo "<th>".$field_infor->name."</th>";
+					if($field_infor->name!="id")
+						echo '<th>'.$field_infor->name.'<br><a class="btn btn-danger" >删除</a></th>';
+					else
+						echo '<th>'.$field_infor->name.'</th>';
+					//echo '<tr><td></td>';
 				}
 				echo "<th>action</th>";
 				while ($row=mysqli_fetch_row($result)){
@@ -41,7 +50,7 @@
 						echo "<td>$val</td>";
 					}
 					echo '<td width=100>';
-					echo '<a class="btn btn-danger" href="delete_row.php?database='. $database .'&table='. $table .'&id='.$row[0].'">Delete</a>';
+					echo '<a class="btn btn-danger" href="delete_row.php?database='. $database .'&table='. $table .'&id='.$row[0].'&nickname='.$nickname.'">删除</a>';
 					echo '</td>';
 					echo "</tr>";
 				}

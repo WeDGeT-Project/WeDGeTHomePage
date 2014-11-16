@@ -48,9 +48,8 @@
 
 		<div class="span10 offset1">
 			<div class="row">
-				<h1>个人Web网页数据抽取：您的数据库</h1>
-				<p class="text-info">以下是您数据库中的表单，您可以对他们进行一些操作。如果您没有发现任何表单，说明您未抽取表单并存入数据库。</p>
-				<p>您的数据库名称：<?php echo $database; ?></p>
+				<h1>个人Web网页数据抽取：您的表格</h1>
+				<p class="text-info">以下是您曾抽取过的表单，您可以对它们进行一些操作。如果您没有发现任何表单，说明您未抽取表单并存入数据库。</p>
 				<?php 
 					echo '<a class="btn btn-success" href="extract_table.php?database=' . $database. '&nickname='.$nickname.'">抽取数据</a>';
 				?>
@@ -76,9 +75,9 @@
 								echo '<tr>';
 								echo '<td>' . $row[0] . '</td>';
 								echo '<td width=350>';
-								echo '<a class="btn btn-success" href="read_table.php?database=' . $database. '&table='. $row[0] .'">读取表单&对表单内容进行操作</a>';
+								echo '<a class="btn btn-success" href="read_table.php?database=' . $database. '&table='. $row[0] .'&nickname='. $nickname .'">读取表单&对表单内容进行操作</a>';
 								echo ' ';
-								echo '<a class="btn btn-danger">删除该项表单</a>';
+								echo '<a class="btn btn-danger" href="delete_table.php?database=' . $database. '&table='. $row[0] .'&nickname='. $nickname .'">删除该项表单</a>';
 								echo '</td>';
 								echo '</tr>';
 							}

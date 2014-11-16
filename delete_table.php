@@ -2,28 +2,25 @@
 	$database = null;
 	$table = null;
 	$id = null;
-	$nickname = null;
 	$flag = false;
 	
-	if (! empty ( $_GET ['id'] )) {
+	if (! empty ( $_GET)) {
 		$database = $_REQUEST ['database'];
 		$table = $_REQUEST ['table'];
-		$id = $_REQUEST ['id'];
 		$nickname = $_REQUEST ['nickname'];
 	}
 	
 	if (! empty ( $_POST )) {
 		$database = $_POST ['database'];
 		$table = $_POST ['table'];
-		$id = $_POST ['id'];
 		$nickname = $_POST ['nickname'];
 		
 		$dbc = mysqli_connect("localhost", "root", "", $database)
 			or die('error happend whien connect database');
 
-		$sql =  "DELETE FROM ". $table. " WHERE id = ".$id;
+		$sql =  "drop table ".$table.";";
 		mysqli_query($dbc, $sql)
-			or die('error happened when delete!');
+			or die("heh");
 		
 		mysqli_close($dbc);
 		$flag = true;
@@ -43,18 +40,17 @@
 
 		<div class="span10 offset1">
 			<div class="row">
-				<h3>删除该行数据</h3>
+				<h3><?php echo "删除表单：".$table; ?></h3>
 			</div>
 
-			<form class="form-horizontal" action="delete_row.php" method="post">
+			<form class="form-horizontal" action="delete_table.php" method="post">
 				<input type="hidden" name="database" value="<?php echo $database;?>" />
 				<input type="hidden" name="table" value="<?php echo $table;?>" />
-				<input type="hidden" name="id" value="<?php echo $id;?>" />
 				<input type="hidden" name="nickname" value="<?php echo $nickname;?>" />
 					<?php
 						if(!$flag)
 						{
-							echo '<p class="alert alert-error">您真的要删除改行数据吗？</p>';
+							echo '<p class="alert alert-error">您真的要删除这个表单吗？删除之后无法恢复</p>';
 						}
 					?>
 				<div class="form-actions">
@@ -62,12 +58,12 @@
 						if(!$flag)
 						{
 							echo '<button type="submit" class="btn btn-danger">是</button>';
-							echo '<a class="btn" href="read_table.php?database=' . $database. '&table='. $table .'&nickname='.$nickname.'">否</a>';
+							echo '<a class="btn" href="user_database.php?database=' . $database. '&table='. $table .'&nickname='. $nickname .'">否</a>';
 						}
 						else
 						{
-							echo '<h3>成功删除该行</h3>';
-							echo '<a class="btn btn-success" href="read_table.php?database=' . $database. '&table='. $table .'&nickname='.$nickname.'">返回</a>';
+							echo '<h3>成功删除表单</h3>';
+							echo '<a class="btn btn-success" href="user_database.php?database=' . $database. '&table='. $table .'&nickname='. $nickname .'">返回</a>';
 						}
 					?>			
 				</div>
