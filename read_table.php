@@ -38,7 +38,10 @@
 
 				while($field_infor=mysqli_fetch_field($result)){
 					if($field_infor->name!="id")
-						echo '<th>'.$field_infor->name.'<br><a class="btn btn-danger" >删除</a></th>';
+					{
+						$head = $field_infor->name;
+						echo '<th>'. $head .'<br><a class="btn btn-danger" href="delete_column.php?database='. $database .'&table='. $table .'&head='.$head.'&nickname='.$nickname.'">删除</a></th>';
+					}
 					else
 						echo '<th>'.$field_infor->name.'</th>';
 					//echo '<tr><td></td>';

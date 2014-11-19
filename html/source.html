@@ -1,1688 +1,372 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://www.w3school.com.cn/jsref/jsref_obj_number.asp -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="w3school.com.cn">
+<link rel="stylesheet" type="text/css" href="./JavaScriptNumber_files/c5.css">
 
+<title>JavaScript Number 对象</title>
 
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-
- 
-
-<html>
-<style type="text/css">
-<!--
-.STYLE1 {color: #FF0000}
--->
-</style>
-<head>
-<title>学生个人成绩查询</title>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<link href="../../public/body.css" rel="stylesheet" type="text/css">
 </head>
-<SCRIPT TYPE="text/javascript" src="../../public/public.js"></SCRIPT>
 
-<body  text="#000000" topmargin="0">
-	<br>
-    <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
-      <tr>
-        <td><div align="left"><strong><font size="3">1120310623－刘昔霖　第一专业成绩表</font></strong></div></td>
-        <td><div align="right"><a href="XSGRCJCX.ASP"><font size="2">查询其他学生</font></a></div></td>
-      </tr>
-    </table>
-    <table id="masterdiv" width="96%" border="1" align="center" cellpadding="0" cellspacing="0">
-      <tr bgcolor="C1E7FF">
-        <td height="25"><div align="center"><font size="2"><strong>序号</strong></font></div></td>
-        <td><div align="center"><font size="2"><strong>课程号</strong></font></div></td>
-        <td width="30%"><div align="center"><font size="2"><strong>课程名</strong></font></div></td>
-        <td><div align="center"><font size="2"><strong>课程类别</strong></font></div></td>
-        <td><div align="center"><font size="2"><strong>考核方式</strong></font></div></td>
-        <td width="15%"><div align="center"><font size="2"><strong>授课教师</strong></font></div></td>
-        <td><div align="center"><font size="2"><strong>学期</strong></font></div></td>
-        <td><div align="center"><font size="2"><strong>学分</strong></font></div></td>
-        <td><div align="center"><font size="2"><strong>学时</strong></font></div></td>
-        <td><div align="center"><font size="2"><strong>成绩</strong></font></div></td>
-        <td><div align="center"><font size="2"><strong>考试类别</strong></font></div></td>
-        <td><div align="center"><font size="2"><strong>备注</strong></font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">04C1170011</font></div></td>
-        <td><div align="center"><font size="2">体育</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">盛俊林</font></div></td>
-        <td><div align="center"><font size="2">2012秋季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">30</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            88
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">08C1000030</font></div></td>
-        <td><div align="center"><font size="2">军训及军事理论</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">罗善华</font></div></td>
-        <td><div align="center"><font size="2">2012秋季</font></div></td>
-        <td><div align="center"><font size="2">3</font></div></td>
-        <td><div align="center"><font size="2">3周</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            80
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">3</font></div></td>
-        <td><div align="center"><font size="2">08C1150311</font></div></td>
-        <td><div align="center"><font size="2">大学英语</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">孙盛萍</font></div></td>
-        <td><div align="center"><font size="2">2012秋季</font></div></td>
-        <td><div align="center"><font size="2">2.5</font></div></td>
-        <td><div align="center"><font size="2">60</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            74
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">4</font></div></td>
-        <td><div align="center"><font size="2">08C1240110</font></div></td>
-        <td><div align="center"><font size="2">思想道德修养与法律基础</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">刘晓芳</font></div></td>
-        <td><div align="center"><font size="2">2012秋季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">34</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            78
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">5</font></div></td>
-        <td><div align="center"><font size="2">08N1120211</font></div></td>
-        <td><div align="center"><font size="2">工科数学分析</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">黄艳</font></div></td>
-        <td><div align="center"><font size="2">2012秋季</font></div></td>
-        <td><div align="center"><font size="2">5.5</font></div></td>
-        <td><div align="center"><font size="2">90</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            82
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">6</font></div></td>
-        <td><div align="center"><font size="2">08N1120220</font></div></td>
-        <td><div align="center"><font size="2">代数与几何</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">徐阳</font></div></td>
-        <td><div align="center"><font size="2">2012秋季</font></div></td>
-        <td><div align="center"><font size="2">3.5</font></div></td>
-        <td><div align="center"><font size="2">60</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            77
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">7</font></div></td>
-        <td><div align="center"><font size="2">08T1034030</font></div></td>
-        <td><div align="center"><font size="2">高级语言程序设计</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">赵巍</font></div></td>
-        <td><div align="center"><font size="2">2012秋季</font></div></td>
-        <td><div align="center"><font size="2">4.5</font></div></td>
-        <td><div align="center"><font size="2">72</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            75
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">8</font></div></td>
-        <td><div align="center"><font size="2">08T1034060</font></div></td>
-        <td><div align="center"><font size="2">计算机导论</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">战德臣</font></div></td>
-        <td><div align="center"><font size="2">2012秋季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">30</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            82
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		 bgcolor='#FDE7BD' 
-	  >
-        <td height="20"><div align="center"><font size="2">9</font></div></td>
-        <td><div align="center"><font size="2">C0005020</font></div></td>
-        <td><div align="center"><font size="2">科技文献检索与利用</font></div></td>
-        <td><div align="center"><font size="2">全校任选</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">郭兴明</font></div></td>
-        <td><div align="center"><font size="2">2012秋季</font></div></td>
-        <td><div align="center"><font size="2">0.5</font></div></td>
-        <td><div align="center"><font size="2">10</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            88
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)" bgcolor="#CCCCCC" >
-        <td height="24" colspan="12"><div align="left"><font size="2"><strong>2012秋季学籍变动：</strong>
-		无<br>
-		<strong>2012秋季完成学分：</strong>&nbsp;必修：24.0
-			（计划要求必修学分：
-			24
-			）
-		
-		　限选：0.0　全校任选：0.5
-		　创新学分：0.0　素质讲座：0.0　通识教育：0.0　其它：0.0
-		</font></div></td>
-      </tr>
-		
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">10</font></div></td>
-        <td><div align="center"><font size="2">04C1170012</font></div></td>
-        <td><div align="center"><font size="2">体育</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">盛俊林</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">30</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            84
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">11</font></div></td>
-        <td><div align="center"><font size="2">04N1110021</font></div></td>
-        <td><div align="center"><font size="2">大学物理II</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">吴琦</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">4.5</font></div></td>
-        <td><div align="center"><font size="2">75</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            53
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">12</font></div></td>
-        <td><div align="center"><font size="2">04N1110021</font></div></td>
-        <td><div align="center"><font size="2">大学物理II</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">王晓鸥</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">4.5</font></div></td>
-        <td><div align="center"><font size="2">75</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            37
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            补考
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">13</font></div></td>
-        <td><div align="center"><font size="2">08C1150312</font></div></td>
-        <td><div align="center"><font size="2">大学英语</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">孙盛萍</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">2.5</font></div></td>
-        <td><div align="center"><font size="2">60</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            66
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">14</font></div></td>
-        <td><div align="center"><font size="2">08C1240120</font></div></td>
-        <td><div align="center"><font size="2">中国近现代史纲要</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">黄进华</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">32</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            82
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">15</font></div></td>
-        <td><div align="center"><font size="2">08N1030010</font></div></td>
-        <td><div align="center"><font size="2">集合论与图论</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">刘峰</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">3</font></div></td>
-        <td><div align="center"><font size="2">48</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            46
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">16</font></div></td>
-        <td><div align="center"><font size="2">08N1030010</font></div></td>
-        <td><div align="center"><font size="2">集合论与图论</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">刘峰</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">3</font></div></td>
-        <td><div align="center"><font size="2">48</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            45
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            补考
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">17</font></div></td>
-        <td><div align="center"><font size="2">08N1120212</font></div></td>
-        <td><div align="center"><font size="2">工科数学分析</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">洪成杓</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">5.5</font></div></td>
-        <td><div align="center"><font size="2">90</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            68
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">18</font></div></td>
-        <td><div align="center"><font size="2">08T1030060</font></div></td>
-        <td><div align="center"><font size="2">汇编语言程序设计</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">郑贵滨</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">2.5</font></div></td>
-        <td><div align="center"><font size="2">40</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            47
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">19</font></div></td>
-        <td><div align="center"><font size="2">08T1030060</font></div></td>
-        <td><div align="center"><font size="2">汇编语言程序设计</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">郑贵滨</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">2.5</font></div></td>
-        <td><div align="center"><font size="2">40</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            60
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            补考
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">20</font></div></td>
-        <td><div align="center"><font size="2">08T1060710</font></div></td>
-        <td><div align="center"><font size="2">电路III</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">刘洪臣</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">3</font></div></td>
-        <td><div align="center"><font size="2">50</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            45
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">21</font></div></td>
-        <td><div align="center"><font size="2">08T1060710</font></div></td>
-        <td><div align="center"><font size="2">电路III</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">刘洪臣</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">3</font></div></td>
-        <td><div align="center"><font size="2">50</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            60
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            补考
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">22</font></div></td>
-        <td><div align="center"><font size="2">08T1060760</font></div></td>
-        <td><div align="center"><font size="2">电路实验</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">李琰</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">18</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            70
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		 bgcolor='#FDE7BD' 
-	  >
-        <td height="20"><div align="center"><font size="2">23</font></div></td>
-        <td><div align="center"><font size="2">C0001020</font></div></td>
-        <td><div align="center"><font size="2">数学建模</font></div></td>
-        <td><div align="center"><font size="2">全校任选</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">张达治</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">30</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            75
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		 bgcolor='#FDE7BD' 
-	  >
-        <td height="20"><div align="center"><font size="2">24</font></div></td>
-        <td><div align="center"><font size="2">C0005080</font></div></td>
-        <td><div align="center"><font size="2">程序设计实践（一）</font></div></td>
-        <td><div align="center"><font size="2">全校任选</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">孙大烈</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">1.5</font></div></td>
-        <td><div align="center"><font size="2">30</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            83
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#CCDDEE' 
-	  >
-        <td height="20"><div align="center"><font size="2">25</font></div></td>
-        <td><div align="center"><font size="2">G2160020</font></div></td>
-        <td><div align="center"><font size="2">国文经典导读</font></div></td>
-        <td><div align="center"><font size="2">通识教育</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">付丽</font></div></td>
-        <td><div align="center"><font size="2">2013春季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">20</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            76
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)" bgcolor="#CCCCCC" >
-        <td height="24" colspan="12"><div align="left"><font size="2"><strong>2013春季学籍变动：</strong>
-		无<br>
-		<strong>2013春季完成学分：</strong>&nbsp;必修：17.5
-			<span class="STYLE1">（计划要求必修学分：
-			25
-			）</span>
-		
-		　限选：0.0　全校任选：3.5
-		　创新学分：0.0　素质讲座：0.0　通识教育：1.0　其它：0.0
-		</font></div></td>
-      </tr>
-		
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">26</font></div></td>
-        <td><div align="center"><font size="2">04N1110022</font></div></td>
-        <td><div align="center"><font size="2">大学物理II</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">赵树民</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">4.5</font></div></td>
-        <td><div align="center"><font size="2">75</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            42
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">27</font></div></td>
-        <td><div align="center"><font size="2">04N1110022</font></div></td>
-        <td><div align="center"><font size="2">大学物理II</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">王晓鸥</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">4.5</font></div></td>
-        <td><div align="center"><font size="2">75</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            18
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            补考
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">28</font></div></td>
-        <td><div align="center"><font size="2">13GC16000300</font></div></td>
-        <td><div align="center"><font size="2">毛泽东思想和中国特色社会主义理论体系概论</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">黄莺</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">4</font></div></td>
-        <td><div align="center"><font size="2">60</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            82
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">29</font></div></td>
-        <td><div align="center"><font size="2">13GC17000103</font></div></td>
-        <td><div align="center"><font size="2">体育</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">柳洪涛</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">0.5</font></div></td>
-        <td><div align="center"><font size="2">15</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            73
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">30</font></div></td>
-        <td><div align="center"><font size="2">13GN11000211</font></div></td>
-        <td><div align="center"><font size="2">大学物理实验I</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">钱守仁</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">1.5</font></div></td>
-        <td><div align="center"><font size="2">33</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            76
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">31</font></div></td>
-        <td><div align="center"><font size="2">13GN12000300</font></div></td>
-        <td><div align="center"><font size="2">概率论与数理统计</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">史晓冉</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">2.5</font></div></td>
-        <td><div align="center"><font size="2">44</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            63
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">32</font></div></td>
-        <td><div align="center"><font size="2">13SC03100100</font></div></td>
-        <td><div align="center"><font size="2">数据结构与算法(英文)</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">张岩1</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">3.5</font></div></td>
-        <td><div align="center"><font size="2">60</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            44
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">33</font></div></td>
-        <td><div align="center"><font size="2">13SC03100100</font></div></td>
-        <td><div align="center"><font size="2">数据结构与算法</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">刘扬2</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">3.5</font></div></td>
-        <td><div align="center"><font size="2">60</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            48
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            补考
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">34</font></div></td>
-        <td><div align="center"><font size="2">13SD03100600</font></div></td>
-        <td><div align="center"><font size="2">数字逻辑设计</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">张彦航</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">3.5</font></div></td>
-        <td><div align="center"><font size="2">56</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            76
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#99FFCC' 
-	  >
-        <td height="20"><div align="center"><font size="2">35</font></div></td>
-        <td><div align="center"><font size="2">IR03001800</font></div></td>
-        <td><div align="center"><font size="2">文本理解与场景生成设计</font></div></td>
-        <td><div align="center"><font size="2">创新研修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">郑德权</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2"></font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            80
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		 bgcolor='#FDE7BD' 
-	  >
-        <td height="20"><div align="center"><font size="2">36</font></div></td>
-        <td><div align="center"><font size="2">C0003780</font></div></td>
-        <td><div align="center"><font size="2">大学生恋爱心理与性心理</font></div></td>
-        <td><div align="center"><font size="2">全校任选</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">何晶</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">20</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            95
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		 bgcolor='#FDE7BD' 
-	  >
-        <td height="20"><div align="center"><font size="2">37</font></div></td>
-        <td><div align="center"><font size="2">C0004720</font></div></td>
-        <td><div align="center"><font size="2">知识产权</font></div></td>
-        <td><div align="center"><font size="2">全校任选</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">程玉林</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">24</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            87
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">38</font></div></td>
-        <td><div align="center"><font size="2">10C4150530</font></div></td>
-        <td><div align="center"><font size="2">英语视听说</font></div></td>
-        <td><div align="center"><font size="2">英语拓展</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">Garrick</font></div></td>
-        <td><div align="center"><font size="2">2013秋季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">32</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            64
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)" bgcolor="#CCCCCC" >
-        <td height="24" colspan="12"><div align="left"><font size="2"><strong>2013秋季学籍变动：</strong>
-		无<br>
-		<strong>2013秋季完成学分：</strong>&nbsp;必修：14.0
-			<span class="STYLE1">（计划要求必修学分：
-			21.5
-			）</span>
-		
-		　限选：0.0　全校任选：2.0
-		　创新学分：1.0　素质讲座：0.0　通识教育：0.0　其它：0.0
-		</font></div></td>
-      </tr>
-		
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">39</font></div></td>
-        <td><div align="center"><font size="2">13GC16000400</font></div></td>
-        <td><div align="center"><font size="2">马克思主义基本原理</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">杜帮云</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">3</font></div></td>
-        <td><div align="center"><font size="2">48</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            77
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">40</font></div></td>
-        <td><div align="center"><font size="2">13GC17000104</font></div></td>
-        <td><div align="center"><font size="2">体育</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">柳洪涛</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">0.5</font></div></td>
-        <td><div align="center"><font size="2">15</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            66
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">41</font></div></td>
-        <td><div align="center"><font size="2">13GN03100100</font></div></td>
-        <td><div align="center"><font size="2">近世代数</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">李涛1</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">32</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            87
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">42</font></div></td>
-        <td><div align="center"><font size="2">13GN11000121</font></div></td>
-        <td><div align="center"><font size="2">大学物理II</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">王晓鸥</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">5</font></div></td>
-        <td><div align="center"><font size="2">80</font></div></td>
-        <td
-		bgcolor='#FF0000'
-		><div align="center"><font size="2">
-            17
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            重修
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            缓考
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">43</font></div></td>
-        <td><div align="center"><font size="2">13GN11000212</font></div></td>
-        <td><div align="center"><font size="2">大学物理实验I</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">方光宇</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">27</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            80
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">44</font></div></td>
-        <td><div align="center"><font size="2">13GN12000600</font></div></td>
-        <td><div align="center"><font size="2">计算方法</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">陈延梅</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">36</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            94
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">45</font></div></td>
-        <td><div align="center"><font size="2">13SC03100200</font></div></td>
-        <td><div align="center"><font size="2">计算机组成原理</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">舒燕君</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">4</font></div></td>
-        <td><div align="center"><font size="2">64</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            85
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">46</font></div></td>
-        <td><div align="center"><font size="2">13SC03100300</font></div></td>
-        <td><div align="center"><font size="2">算法设计与分析</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">王宏志</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">2.5</font></div></td>
-        <td><div align="center"><font size="2">40</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            60
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">47</font></div></td>
-        <td><div align="center"><font size="2">13SD03100400</font></div></td>
-        <td><div align="center"><font size="2">集合论与图论</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">刘峰</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">3</font></div></td>
-        <td><div align="center"><font size="2">48</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            66
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            重修
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">48</font></div></td>
-        <td><div align="center"><font size="2">13SD03100700</font></div></td>
-        <td><div align="center"><font size="2">数理逻辑</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">任世军</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">32</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            80
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">49</font></div></td>
-        <td><div align="center"><font size="2">13SP03100100</font></div></td>
-        <td><div align="center"><font size="2">软件设计与开发实践Ⅰ</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">骆吉洲</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">48</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            75
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">50</font></div></td>
-        <td><div align="center"><font size="2">13SP08001400</font></div></td>
-        <td><div align="center"><font size="2">工程训练(电子工艺实习)</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">韩秀琴</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">2周</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            85
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		 bgcolor='#FDE7BD' 
-	  >
-        <td height="20"><div align="center"><font size="2">51</font></div></td>
-        <td><div align="center"><font size="2">GO00800500</font></div></td>
-        <td><div align="center"><font size="2">篆刻艺术欣赏</font></div></td>
-        <td><div align="center"><font size="2">全校任选</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">王晓溪</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">20</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            85
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		 bgcolor='#FDE7BD' 
-	  >
-        <td height="20"><div align="center"><font size="2">52</font></div></td>
-        <td><div align="center"><font size="2">GO01606900</font></div></td>
-        <td><div align="center"><font size="2">《红楼梦》专题</font></div></td>
-        <td><div align="center"><font size="2">全校任选</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">付丽</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">20</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            80
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">53</font></div></td>
-        <td><div align="center"><font size="2">10C4150620</font></div></td>
-        <td><div align="center"><font size="2">实用英文写作</font></div></td>
-        <td><div align="center"><font size="2">英语拓展</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">杨莉萍</font></div></td>
-        <td><div align="center"><font size="2">2014春季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">32</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            76
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)" bgcolor="#CCCCCC" >
-        <td height="24" colspan="12"><div align="left"><font size="2"><strong>2014春季学籍变动：</strong>
-		无<br>
-		<strong>2014春季完成学分：</strong>&nbsp;必修：26.0
-			（计划要求必修学分：
-			22.5
-			）
-		
-		　限选：0.0　全校任选：2.0
-		　创新学分：0.0　素质讲座：0.0　通识教育：0.0　其它：0.0
-		</font></div></td>
-      </tr>
-		
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFFF' 
-	  >
-        <td height="20"><div align="center"><font size="2">54</font></div></td>
-        <td><div align="center"><font size="2">13SP03100300</font></div></td>
-        <td><div align="center"><font size="2">计算机设计与实践</font></div></td>
-        <td><div align="center"><font size="2">必修</font></div></td>
-        <td><div align="center"><font size="2">
-		√
-		</font></div></td>
-        <td><div align="center"><font size="2">黄剑华</font></div></td>
-        <td><div align="center"><font size="2">2014夏季</font></div></td>
-        <td><div align="center"><font size="2">3.5</font></div></td>
-        <td><div align="center"><font size="2">56</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            72
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		 bgcolor='#FDE7BD' 
-	  >
-        <td height="20"><div align="center"><font size="2">55</font></div></td>
-        <td><div align="center"><font size="2">GO92400400</font></div></td>
-        <td><div align="center"><font size="2">死刑的全球视野与中国视角</font></div></td>
-        <td><div align="center"><font size="2">全校任选</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">刘仁文</font></div></td>
-        <td><div align="center"><font size="2">2014夏季</font></div></td>
-        <td><div align="center"><font size="2">1</font></div></td>
-        <td><div align="center"><font size="2">16</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            83
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)"  
-		bgcolor='#FFFFCC' 
-	  >
-        <td height="20"><div align="center"><font size="2">56</font></div></td>
-        <td><div align="center"><font size="2">13SE03100100</font></div></td>
-        <td><div align="center"><font size="2">C++程序设计</font></div></td>
-        <td><div align="center"><font size="2">限选</font></div></td>
-        <td><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td><div align="center"><font size="2">郑贵滨</font></div></td>
-        <td><div align="center"><font size="2">2014夏季</font></div></td>
-        <td><div align="center"><font size="2">2</font></div></td>
-        <td><div align="center"><font size="2">32</font></div></td>
-        <td
-		
-		><div align="center"><font size="2">
-            73
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-        <td><div align="center"><font size="2">
-            　
-        </font></div></td>
-      </tr>
-      
+<body class="browserscripting" id="jsref">
 
-      <tr onMouseOver="SeeSetBg(this)" onMouseOut="SeeReBg(this)" bgcolor="#CCCCCC">
-        <td height="20" colspan="12"><div align="left"><font size="2"><strong>2014夏季学籍变动：</strong>
-		无<br>
-		<strong>2014夏季完成学分：</strong>&nbsp;必修：3.5
-			（计划要求必修学分：
-			3.5
-			）
-		
-		　限选：2.0　全校任选：1.0
-		　创新学分：0.0　素质讲座：0.0　通识教育：0.0　其它：0.0
-		</font></div></td>
-      </tr>
-    </table>
-	<br>
-    <table width="96%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#AEC9FB">
-      <tr>
-        <td rowspan="5" bgcolor="ECECEC"><div align="center"><strong><font size="2">统计信息</font></strong></div></td>
-        <td height="25" bgcolor="ECECEC"><div align="center"><strong><font size="2">课程类别（计划要求学分）</font></strong></div></td>
-        <td><div align="center"><strong><font size="2">必修（112.5）</font></strong></div></td>
-        <td bgcolor="#FFFFCC"><div align="center"><strong><font size="2">限选</font></strong></div></td>
-        <td bgcolor="#FDE7BD"><div align="center"><strong><font size="2">全校任选</font></strong></div></td>
-        <td bgcolor="#99FFCC"><div align="center"><strong><font size="2">创新学分</font></strong></div></td>
-        <td bgcolor="#FFddff"><div align="center"><strong><font size="2">素质讲座</font></strong></div></td>
-        <td bgcolor="#CCDDEE"><div align="center"><strong><font size="2">通识教育</font></strong></div></td>
-        <td bgcolor="#CCCCCC"><div align="center"><strong><font size="2">其它</font></strong></div></td>
-      </tr>
-      <tr>
-        <td height="25" bgcolor="ECECEC"><div align="center"><strong><font size="2">选课学分</font></strong></div></td>
-        <td><div align="center"><font size="2">97.5</font></div></td>
-        <td bgcolor="#FFFFCC"><div align="center"><font size="2">2.0</font></div></td>
-        <td bgcolor="#FDE7BD"><div align="center"><font size="2">9.0</font></div></td>
-        <td bgcolor="#99FFCC"><div align="center"><font size="2">1.0</font></div></td>
-        <td bgcolor="#FFddff"><div align="center"><font size="2">0.0</font></div></td>
-        <td bgcolor="#CCDDEE"><div align="center"><font size="2">1.0</font></div></td>
-        <td bgcolor="#CCCCCC"><div align="center"><font size="2">0.0</font></div></td>
-      </tr>
-      <tr>
-        <td height="25" bgcolor="ECECEC"><div align="center"><strong><font size="2">完成学分</font></strong></div></td>
-        <td><div align="center"><font size="2">85.0</font></div></td>
-        <td bgcolor="#FFFFCC"><div align="center"><font size="2">2.0</font></div></td>
-        <td bgcolor="#FDE7BD"><div align="center"><font size="2">9.0</font></div></td>
-        <td bgcolor="#99FFCC"><div align="center"><font size="2">1.0</font></div></td>
-        <td bgcolor="#FFddff"><div align="center"><font size="2">0.0</font></div></td>
-        <td bgcolor="#CCDDEE"><div align="center"><font size="2">1.0</font></div></td>
-        <td bgcolor="#CCCCCC"><div align="center"><font size="2">0.0</font></div></td>
-      </tr>
-      <tr>
-        <td height="25" bgcolor="ECECEC"><div align="center"><strong><font size="2">完成比例</font></strong></div></td>
-        <td><div align="center"><font size="2">
-		87.18%
-		</font></div></td>
-        <td bgcolor="#FFFFCC"><div align="center"><font size="2">
-		100.00%
-		</font></div></td>
-        <td bgcolor="#FDE7BD"><div align="center"><font size="2">
-		100.0%
-		</font></div></td>
-        <td bgcolor="#99FFCC"><div align="center"><font size="2">
-		100.00%
-		</font></div></td>
-        <td bgcolor="#FFddff"><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-        <td bgcolor="#CCDDEE"><div align="center"><font size="2">
-		100.00%
-		</font></div></td>
-        <td bgcolor="#CCCCCC"><div align="center"><font size="2">
-		&nbsp;
-		</font></div></td>
-      </tr>
-      <tr>
-        <td height="25" bgcolor="ECECEC"><div align="center"><strong><font size="2">平均学分绩</font></strong></div></td>
-        <td colspan="7"><div align="center"><font size="2">&nbsp;考试课学分绩：4840.5　　考试课学分：70.5　　考查课不及格学分：3　　学期数：5　　平均学分绩：68.06</font></div></td>
-      </tr>
-    </table>
+<div id="wrapper">
 
-</body>
-</html>
+<div id="header">
+<a href="http://www.w3school.com.cn/index.html" title="w3school 在线教程" style="float:left;">w3school 在线教程</a>
+<div id="ad_head">
+<script async="" type="text/javascript" src="http://www.gstatic.com/pub-config/ca-pub-3381531532877742.js"></script><script type="text/javascript"><!--
+google_ad_client = "pub-3381531532877742";
+/* 728x90, 创建于 08-12-1 */
+google_ad_slot = "7423315034";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./JavaScriptNumber_files/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="http://www.w3school.com.cn/h.asp" title="HTML 系列教程">HTML 系列教程</a></li>
+<li id="b"><a href="http://www.w3school.com.cn/b.asp" title="浏览器脚本教程">浏览器脚本</a></li>
+<li id="s"><a href="http://www.w3school.com.cn/s.asp" title="服务器脚本教程">服务器脚本</a></li>
+<li id="d"><a href="http://www.w3school.com.cn/d.asp" title="ASP.NET 教程">ASP.NET 教程</a></li>
+<li id="x"><a href="http://www.w3school.com.cn/x.asp" title="XML 系列教程">XML 系列教程</a></li>
+<li id="ws"><a href="http://www.w3school.com.cn/ws.asp" title="Web Services 系列教程">Web Services 系列教程</a></li>
+<li id="w"><a href="http://www.w3school.com.cn/w.asp" title="建站手册">建站手册</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+
+<div id="course"><h2>JS &amp; DOM 参考手册</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/jsref/index.asp" title="JavaScript 和 HTML DOM 参考手册">参考手册目录</a></li>
+</ul>
+<h2>JavaScript 对象</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_array.asp" title="JavaScript Array 对象参考手册">JS Array</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_boolean.asp" title="JavaScript Boolean 对象参考手册">JS Boolean</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_date.asp" title="JavaScript Date 对象参考手册">JS Date</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_math.asp" title="JavaScript Math 对象的参考手册">JS Math</a></li>
+<li class="currentLink"><a href="./JavaScriptNumber_files/JavaScriptNumber.html" title="JavaScript Number 对象参考手册">JS Number</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_string.asp" title="JavaScript String 对象参考手册">JS String</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp" title="JavaScript RegExp 对象参考手册">JS RegExp</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_global.asp" title="JavaScript 全局对象参考手册">JS Functions</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_events.asp" title="JavaScript 事件参考手册">JS Events</a></li>
+</ul>
+<h2>Browser 对象</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_window.asp" title="HTML DOM Window 对象">Window</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_navigator.asp" title="HTML DOM Navigator 对象">Navigator</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_screen.asp" title="HTML DOM Screen 对象">Screen</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_history.asp" title="HTML DOM History 对象">History</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_location.asp" title="HTML DOM Location 对象">Location</a></li>
+</ul>
+<h2>HTML DOM 对象</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_document.asp" title="HTML DOM Document 对象">DOM Document</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_all.asp" title="HTML DOM Element 对象">DOM Element</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_attributes.asp" title="HTML DOM Attribute 对象">DOM Attribute</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_event.asp" title="HTML DOM Event 对象">DOM Event</a></li>
+</ul>
+<h2>HTML 对象</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_anchor.asp" title="HTML DOM Anchor 对象">&lt;a&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_area.asp" title="HTML DOM Area 对象">&lt;area&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_audio.asp" title="HTML DOM Audio 对象">&lt;audio&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_base.asp" title="HTML DOM Base 对象">&lt;base&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_body.asp" title="HTML DOM Body 对象">&lt;body&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_blockquote.asp" title="HTML DOM Blockquote 对象">&lt;blockquote&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_pushbutton.asp" title="HTML DOM Button 对象">&lt;button&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_canvas.asp" title="HTML DOM Canvas 对象">&lt;canvas&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_col.asp" title="HTML DOM Column 对象">&lt;col&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_colgroup.asp" title="HTML DOM ColumnGroup 对象">&lt;colgroup&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_datalist.asp" title="HTML DOM Datalist 对象">&lt;datalist&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_del.asp" title="HTML DOM Del 对象">&lt;del&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_details.asp" title="HTML DOM Details 对象">&lt;details&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_dialog.asp" title="HTML DOM Dialog 对象">&lt;dialog&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_embed.asp" title="HTML DOM Embed 对象">&lt;embed&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_fieldset.asp" title="HTML DOM Fieldset 对象">&lt;fieldset&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_form.asp" title="HTML DOM Form 对象">&lt;form&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_frame.asp" title="HTML DOM Frame 对象">&lt;frame&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_frameset.asp" title="HTML DOM Frameset 对象">&lt;frameset&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_iframe.asp" title="HTML DOM IFrame 对象">&lt;iframe&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_image.asp" title="HTML DOM Image 对象">&lt;img&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_ins.asp" title="HTML DOM Ins 对象">&lt;ins&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_button.asp" title="HTML DOM Button 对象">&lt;input&gt; button</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_checkbox.asp" title="HTML DOM Checkbox 对象">&lt;input&gt; checkbox</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_color.asp" title="HTML DOM Color 对象">&lt;input&gt; color</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_date.asp" title="HTML DOM Input Date 对象">&lt;input&gt; date</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_datetime.asp" title="HTML DOM Datetime 对象">&lt;input&gt; datetime</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_datetime-local.asp" title="HTML DOM Datetime Local 对象">&lt;input&gt; datetime-local</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_email.asp" title="HTML DOM Email 对象">&lt;input&gt; email</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_fileupload.asp" title="HTML DOM FileUpload 对象">&lt;input&gt; file</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_hidden.asp" title="HTML DOM Hidden 对象">&lt;input&gt; hidden</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_input_image.asp" title="HTML DOM Input Image 对象">&lt;input&gt; image</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_month.asp" title="HTML DOM Month 对象">&lt;input&gt; month</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_number.asp" title="HTML DOM Number 对象">&lt;input&gt; number</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_password.asp" title="HTML DOM Password 对象">&lt;input&gt; password</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_range.asp" title="HTML DOM Input Range 对象">&lt;input&gt; range</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_radio.asp" title="HTML DOM Radio 对象">&lt;input&gt; radio</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_reset.asp" title="HTML DOM Reset 对象">&lt;input&gt; reset</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_search.asp" title="HTML DOM Input Search 对象">&lt;input&gt; search</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_submit.asp" title="HTML DOM Submit 对象">&lt;input&gt; submit</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_text.asp" title="HTML DOM Text 对象">&lt;input&gt; text</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_input_time.asp" title="HTML DOM Input Time 对象">&lt;input&gt; time</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_url.asp" title="HTML DOM Input URL 对象">&lt;input&gt; url</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_week.asp" title="HTML DOM Week 对象">&lt;input&gt; week</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_keygen.asp" title="HTML DOM Keygen 对象">&lt;keygen&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_label.asp" title="HTML DOM Label 对象">&lt;label&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_legend.asp" title="HTML DOM Legend 对象">&lt;legend&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_li.asp" title="HTML DOM Li 对象">&lt;li&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_link.asp" title="HTML DOM Link 对象">&lt;link&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_map.asp" title="HTML DOM Map 对象">&lt;map&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_menu.asp" title="HTML DOM Menu 对象">&lt;menu&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_menuitem.asp" title="HTML DOM MenuItem 对象">&lt;menuitem&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_meta.asp" title="HTML DOM Meta 对象">&lt;meta&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_meter.asp" title="HTML DOM Meter 对象">&lt;meter&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_object.asp" title="HTML DOM Object 对象">&lt;object&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_ol.asp" title="HTML DOM Ol 对象">&lt;ol&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_optgroup.asp" title="HTML DOM OptionGroup 对象">&lt;optgroup&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_option.asp" title="HTML DOM Option 对象">&lt;option&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_param.asp" title="HTML DOM Parameter 对象">&lt;param&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_progress.asp" title="HTML DOM Progress 对象">&lt;progress&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_quote.asp" title="HTML DOM Quote 对象">&lt;q&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_script.asp" title="HTML DOM Script 对象">&lt;script&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_select.asp" title="HTML DOM Select 对象">&lt;select&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_source.asp" title="HTML DOM Source 对象">&lt;source&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_style.asp" title="HTML DOM Style 对象">&lt;style&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_table.asp" title="HTML DOM Table 对象">&lt;table&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_tabledata.asp" title="HTML DOM TableCell 对象">&lt;td&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_tablehead.asp" title="HTML DOM TableHeader 对象">&lt;th&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_tablerow.asp" title="HTML DOM TableRow 对象">&lt;tr&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_textarea.asp" title="HTML DOM Textarea 对象">&lt;textarea&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_time.asp" title="HTML DOM Time 对象">&lt;time&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_title.asp" title="HTML DOM Title 对象">&lt;title&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_track.asp" title="HTML DOM Track 对象">&lt;track&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_video.asp" title="HTML DOM Video 对象">&lt;video&gt;</a></li>
+</ul>
+</div><div id="selected">
+<h2>建站手册</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/site/index.asp" title="网站构建">网站构建</a></li>
+<li><a href="http://www.w3school.com.cn/w3c/index.asp" title="万维网联盟 (W3C)">万维网联盟 (W3C)</a></li>
+<li><a href="http://www.w3school.com.cn/browsers/index.asp" title="浏览器信息">浏览器信息</a></li>
+<li><a href="http://www.w3school.com.cn/quality/index.asp" title="网站品质">网站品质</a></li>
+<li><a href="http://www.w3school.com.cn/semweb/index.asp" title="语义网">语义网</a></li>
+<li><a href="http://www.w3school.com.cn/careers/index.asp" title="职业规划">职业规划</a></li>
+<li><a href="http://www.w3school.com.cn/hosting/index.asp" title="网站主机">网站主机</a></li>
+</ul>
+
+<h2><a href="http://www.w3school.com.cn/about/index.asp" title="关于 W3School" id="link_about">关于 W3School</a></h2>
+<h2><a href="http://www.w3school.com.cn/about/about_helping.asp" title="帮助 W3School" id="link_help">帮助 W3School</a></h2>
+
+</div>
+
+</div>
+
+<div id="maincontent">
+
+<h1>JavaScript Number 对象</h1>
+
+
+<div>
+<h2>Number 对象</h2>
+
+<p>Number 对象是原始数值的包装对象。</p>
+
+<h3>创建 Number 对象的语法：</h3>
+
+<pre>var myNum=new Number(<i>value</i>);
+var myNum=Number(<i>value</i>);
+</pre>
+
+<h3>参数</h3>
+
+<p>参数 <i>value</i> 是要创建的 Number 对象的数值，或是要转换成数字的值。</p>
+
+<h3>返回值</h3>
+
+<p>当 Number() 和运算符 new 一起作为构造函数使用时，它返回一个新创建的 Number 对象。如果不用 new 运算符，把 Number() 作为一个函数来调用，它将把自己的参数转换成一个原始的数值，并且返回这个值（如果转换失败，则返回 NaN）。</p>
+</div>
+
+
+<div>
+<h2>Number 对象属性</h2>
+
+<table class="dataintable">
+  <tbody><tr>
+    <th style="width:25%">属性</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_constructor_number.asp">constructor</a></td>
+    <td>返回对创建此对象的 Number 函数的引用。</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_max_value.asp">MAX_VALUE</a></td>
+    <td>可表示的最大的数。</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_min_value.asp">MIN_VALUE</a></td>
+    <td>可表示的最小的数。</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_nan_number.asp">NaN</a></td>
+    <td>非数字值。</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_negative_infinity.asp">NEGATIVE_INFINITY</a></td>
+    <td>负无穷大，溢出时返回该值。</td>
+    </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_positive_infinity.asp">POSITIVE_INFINITY</a></td>
+    <td>正无穷大，溢出时返回该值。</td>
+  </tr>
+  <tr>
+    <td>prototype</td>
+    <td>使您有能力向对象添加属性和方法。</td>
+  </tr>
+</tbody></table>
+</div>
+
+
+<div>
+<h2>Number 对象方法</h2>
+
+<table class="dataintable">
+  <tbody><tr>
+    <th style="width:25%">方法</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_tostring_number.asp">toString</a></td>
+    <td>把数字转换为字符串，使用指定的基数。</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_tolocalestring_number.asp">toLocaleString</a></td>
+    <td>把数字转换为字符串，使用本地数字格式顺序。</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_tofixed.asp">toFixed</a></td>
+    <td>把数字转换为字符串，结果的小数点后有指定位数的数字。</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_toexponential.asp">toExponential</a></td>
+    <td>把对象的值转换为指数计数法。</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_toprecision.asp">toPrecision</a></td>
+    <td>把数字格式化为指定的长度。</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_valueof_number.asp">valueOf</a></td>
+    <td>返回一个 Number 对象的基本数字值。</td>
+  </tr>
+</tbody></table>
+</div>
+
+
+<div>
+<h2>Number 对象描述</h2>
+
+<p>在 JavaScript 中，数字是一种基本的数据类型。JavaScript 还支持 Number 对象，该对象是原始数值的包装对象。在必要时，JavaScript 会自动地在原始数据和对象之间转换。在 JavaScript 1.1 中，可以用构造函数 Number() 明确地创建一个 Number 对象，尽管这样做并没有什么必要。</p>
+
+<p>构造函数 Number() 可以不与运算符 new 一起使用，而直接作为转化函数来使用。以这种方式调用 Number() 时，它会把自己的参数转化成一个数字，然后返回转换后的原始数值（或 NaN）。</p>
+
+<p>构造函数通常还用作 5 个有用的数字常量的占位符，这 5 个有用的数字常量分别是可表示的最大数、可表示的最小数、正无穷大、负无穷大和特殊的 NaN 值。
+注意，这些值是构造函数 Number() 自身的属性，而不是单独的某个 Number 对象的属性。</p>
+
+<p>比如这样使用属性 MAX_VALUE 是正确的：</p>
+
+<pre>var big = Number.MAX_VALUE</pre>
+
+<p>但是这样是错误的：</p>
+
+<pre>var n= new Number(2);
+var big = n.MAX_VALUE
+</pre>
+
+<p>作为比较，我们看一下 toString() 和 Number 对象的其他方法，它们是每个 Number 对象的方法，而不是 Number() 构造函数的方法。前面提到过，在必要时，JavaScript 会自动地把原始数值转化成 Number 对象，调用 Number 方法的既可以是 Number 对象，也可以是原始数字值。</p>
+
+<pre>var n = 123;
+var binary_value = n.toString(2);
+</pre>
+</div>
+
+
+<div id="toc">
+<h2>课外书</h2>
+
+<p>如需更多信息，请阅读 JavaScript 高级教程中的相关内容：</p>
+
+<dl>
+<dt><a href="http://www.w3school.com.cn/js/pro_js_referencetypes.asp" title="ECMAScript 引用类型">ECMAScript 引用类型</a></dt>
+<dd>引用类型通常叫做类（class）或对象。本节讲解 ECMAScript 的预定义引用类型。</dd>
+</dl>
+</div>
+
+
+
+
+</div>
+<!-- maincontent end -->
+
+<div id="sidebar">
+
+<div id="searchui">
+<form method="get" id="searchform" action="http://www.google.com.hk/search">
+<p><label for="searched_content">Search:</label></p>
+<p><input type="hidden" name="sitesearch" value="w3school.com.cn"></p>
+<p>
+<input type="text" name="as_q" class="box" id="searched_content" title="在此输入搜索内容。">
+<input type="submit" value="Go" class="button" title="搜索！">
+</p>
+</form>
+</div>
+
+<div id="tools">
+<h5 id="tools_reference"><a href="http://www.w3school.com.cn/jsref/index.asp">JavaScript 参考手册</a></h5>
+<h5 id="tools_example"><a href="http://www.w3school.com.cn/example/jseg_examples.asp">JavaScript 实例</a></h5>
+<h5 id="tools_quiz"><a href="http://www.w3school.com.cn/js/js_quiz.asp">JavaScript 测验</a></h5>
+</div>
+
+<div id="ad">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3381531532877742";
+/* sidebar-160x600 */
+google_ad_slot = "3772569310";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="./JavaScriptNumber_files/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+
+</div>
+
+<div id="footer">
+<p>
+W3School 提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。W3School 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+</p>
+
+<p>
+当使用本站时，代表您已接受了本站的<a href="http://www.w3school.com.cn/about/about_use.asp" title="关于使用">使用条款</a>和<a href="http://www.w3school.com.cn/about/about_privacy.asp" title="关于隐私">隐私条款</a>。版权所有，保留一切权利。
+赞助商：<a href="http://www.yktz.net/" title="上海赢科投资有限公司">上海赢科投资有限公司</a>。
+<a href="http://www.miitbeian.gov.cn/">蒙ICP备06004630号</a>
+</p>
+</div>
+
+</div>
+<!-- wrapper end -->
+
+
+
+</body></html>
