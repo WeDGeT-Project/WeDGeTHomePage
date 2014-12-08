@@ -23,11 +23,6 @@
 		
 		$valid = false;
 		if (! empty ( $_FILES )) {
-			/*echo "Upload: " . $_FILES["htmlfile"]["name"] . "<br />";
-			echo "Type: " . $_FILES["htmlfile"]["type"] . "<br />";
-			echo "Size: " . ($_FILES["htmlfile"]["size"] / 1024) . " Kb<br />";
-			
-			echo "Stored in: " . $_FILES["htmlfile"]["tmp_name"];*/ 
 			move_uploaded_file($_FILES['htmlfile']['tmp_name'] , "html/source.html");
 			$html = new simple_html_dom(); //实例化一个simple_html_dom对象
 			$myhtml = "html/source.html";

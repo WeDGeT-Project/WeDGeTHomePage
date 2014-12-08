@@ -7,6 +7,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<?php 
 	$database = null;
+	$isSearch = false;
 	if (! empty ( $_POST )) {
 		$nickname = $_POST['nickname'];
 		$password = $_POST['password'];
@@ -36,8 +37,12 @@
 		mysqli_close($dbc);
 	}else{
 		if (! empty ( $_GET)) {
-			$database = $_REQUEST ['database'];
-			$nickname = $_REQUEST ['nickname'];
+			$database = $_GET ['database'];
+			$nickname = $_GET ['nickname'];
+			if (! empty ( $_GET['tableSearch'])){
+				$tableSearch = $_GET['tableSearch'];
+				$isSearch = true;
+			}
 		}
 	}
 	
@@ -57,6 +62,20 @@
 				<br>
 			</div>
 			<div class="row">
+				<form method="get">
+					<label class="control-label">表单名:</label>
+					<div >
+						<input name="tableSearch" type="text" placeholder="表单名">
+						<input name="database" type="hidden" value="<?php echo $database;?>">
+						<input name="nickname" type="hidden" value="<?php echo $nickname;?>">
+					</div>
+					<div>
+						<button type="submit" class="btn btn-success">搜索</button>
+					</div>
+					
+				</form>
+			</div>
+			<div class="row">
 				<table class="table table-striped table-bordered">
 					<thead>
 						<tr>
@@ -67,7 +86,16 @@
 					<tbody>
 						<?php
 							$user_dbc = mysqli_connect("localhost", "root", "", $database);
-							$sql = "show tables like '".$nickname."_%';";
+							if($isSearch)
+							{
+								$sql = "show tables like '".$tableSearch."'";
+							}
+							else
+							{
+								$sql = "show tables like '".$nickname."_%'";
+							}
+							
+							
 							$result = mysqli_query($user_dbc, $sql);
 							
 							while($row = mysqli_fetch_array($result))

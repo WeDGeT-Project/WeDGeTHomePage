@@ -90,7 +90,8 @@
 	$sql_create_table = strip_tags($sql_create_table);
 	//echo $sql_create_table.'<br>';
 	mysqli_query($dbc, $sql_create_table)
-			or die(mysqli_error($dbc));
+			or die('<h2>已存在同名表单（返回您的首页查看是否同名）或是我们无法处理该表单（点击浏览器后退）</h2>
+			<a class="btn btn-success" href="user_database.php?database='. $database .'&nickname='.$nickname.'">查看您的数据库</a>');
 			
 	//向表格中添加元素
 	foreach($all_tr as $every_tr)
@@ -114,7 +115,8 @@
 			$sql_insert_row = strip_tags($sql_insert_row);
 			//echo $sql_insert_row.'<br>';
 			mysqli_query($dbc, $sql_insert_row)
-				or die(mysqli_error($dbc));
+				or die('<h2>很抱歉，填充表单时出现错误（但表单已经建立，您可以在您的数据库中删除它）</h2>
+				<a class="btn btn-success" href="user_database.php?database='. $database .'&nickname='.$nickname.'">查看您的数据库</a>');
 		}
 		else
 		{
