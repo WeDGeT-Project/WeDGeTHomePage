@@ -1,40 +1,359 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0070)https://ebsnew.boc.cn/boc15/welcome.html?v=20141016081637044&locale=zh -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!--[if IE 10]><html class="ie ie10"><![endif]--><!--[if IE 9]><html class="ie ie9"><![endif]--><!--[if IE 8]><html class="ie ie8"><![endif]--><!--[if IE 7]><html class="ie ie7"><![endif]--><!--[if IE 7]><html class="ie ie6"><![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>中国银行网上银行</title><link rel="stylesheet" type="text/css" href="./yinhang_files/bocue.css" media="all"><!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css?v=20141030071937661" /><![endif]--><!--[if lte IE 8]><script type="text/javascript" src="scripts/lib/excanvas.js"></script><![endif]--><!--[if IE 6]><script type="text/javascript" src="scripts/DD_belatedPNG_0.0.8a-min.js"></script><![endif]--><link rel="stylesheet" type="text/css" href="./yinhang_files/w1200.css" media="all"><link rel="stylesheet" type="text/css" href="./yinhang_files/w1600.css" media="all"><link rel="stylesheet" type="text/css" href="./yinhang_files/datepicker.css" media="all"><link rel="stylesheet" type="text/css" href="./yinhang_files/print.css" media="print"><script type="text/javascript">function openNewWindow(url){
-    	window.open(url, null,"toolbar=no, menubar=no,scrollbars=yes,resizable=yes, location=no, status=no,fullscreen=yes");
-    }</script><script type="text/javascript" src="./yinhang_files/lan_c.js"></script><script type="text/javascript" src="./yinhang_files/lan_c.js"></script><script type="text/javascript" src="./yinhang_files/lan_c.js"></script><script type="text/javascript" src="./yinhang_files/lan_c.js"></script><script type="text/javascript" src="./yinhang_files/cAccountOverview.js"></script><script id="t_tmpl" type="text/html">
-<div>
-<table class="tb">
-    <thead>
-        <tr>
-           <th class="first w70" lan="l0852" v="交易日期" ></th>
-            <th class="w70" lan="l1577" v="业务摘要"></th>
-            <th class="w80" lan="l1579" v="对方账户名称"></th>
-            <th class="w90" lan="l1580" v="对方账户账号"></th>
-            <th class="w60" lan="l0093" v="币种"></th>
-            <th class="w30" lan="l46341" v="钞/汇"></th>
-            <th class="w90 tar" lan="l1581" v="收入金额"></th>
-            <th class="w90 tar" lan="l0456" v="支出金额"></th>
-            <th class="w90 tar" lan="l4087" v="余额"></th>
-            <th class="w100" lan="l0110" v="附言"></th>
-        </tr>
-    </thead>
-    <tbody>
-    	{{each list}}
-        <tr {{if $index%2==0}}class="odd"{{else}}class="even"{{/if}} {{if chargeBack}}style="color:red;"{{/if}}>
-            <td class="first" lan="date" currCode="">${$value.paymentDate}</td>
-            <td>${$value.businessDigest}</td>
-            <td>${$value.payeeAccountName}</td>
-            <td>${$value.payeeAccountNumber}</td>
-            <td lan="kind_of_currencies_${$value.currency}"></td>
-            <td lan="{{if cashRemit}}moneyremit_${$value.cashRemit}{{else}}moneyremit_00{{/if}}"></td>
-            <td class="tar" lan="num" currCode="${$value.currency}">${$value.amountPlus}</td>
-            <td class="tar" lan="num" currCode="${$value.currency}">${$value.amountMinus}</td>
-            <td class="tar" lan="num" currCode="${$value.currency}">${$value.balance}</td>
-            <td>${$value.furInfo}</td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://www.w3school.com.cn/jsref/jsref_obj_array.asp -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="w3school.com.cn">
+<link rel="stylesheet" type="text/css" href="./Array ����_files/c5.css">
+
+<title>JavaScript Array ����</title>
+
+</head>
+
+<body class="browserscripting" id="jsref">
+
+<div id="wrapper">
+
+<div id="header">
+<a href="http://www.w3school.com.cn/index.html" title="w3school ���߽̳�" style="float:left;">w3school ���߽̳�</a>
+<div id="ad_head">
+<script async="" type="text/javascript" src="./Array ����_files/ca-pub-3381531532877742.js"></script><script type="text/javascript"><!--
+google_ad_client = "pub-3381531532877742";
+/* 728x90, ������ 08-12-1 */
+google_ad_slot = "7423315034";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./Array ����_files/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
 </div>
-</script><script type="text/javascript" src="./yinhang_files/cTransactionDetails.js"></script></head><body class="w1200 wh768"><div id="wrapper" class="bu-wrapper"><div id="header" class="bu-header clearfix"><h1 class="logo"><span>中国银行网上银行</span></h1><div id="subtitle" class="web-type fl hide-for-init" v="理财版或查询版" lan="l10029">理财版</div><span class="fr mt20 hide-for-init"><input type="text" id="search" class="input search fl text-darkengray" phlan="l14855" validategroup="{}" placeholder="功能搜索"><a href="javascript:void(0);" class="search-icon"></a></span> <div class="lan-box hide-for-init"><span class="register"><span v="您好，" lan="l7525">您好，</span><span class="ml5 mr5" id="welcome-customerGender_EN"></span><span id="welcome-customerName">姜天文</span><span id="welcome-customerGender_CN"></span></span> <a href="https://95566.boc.cn/ZIM/index.htm" id="a_60_1169" urllan="url.onlineServiceUrl" class="service-r" lan="l22359" v="在线客服">在线客服</a> <a href="javascript:void(0);" id="a_55_1164" class="lan-en" lan="l0055" v="English">English</a> <a href="javascript:void(0);" id="a_56_1165" class="lan-zh hide" lan="l0056" v="中文" visible="false" style="display: none;">中文</a> <a href="javascript:void(0);" id="a_57_1166" class="trans" lan="l6275" v="个性风格">个性风格</a> <a href="javascript:void(0);" id="a_58_1167" class="help" lan="l0058" v="帮助">帮助</a> <a href="javascript:void(0);" id="a_59_1168" class="out" lan="l0059" v="安全退出">安全退出</a></div></div><div id="nav" class="bu-nav clearfix"><div id="nav-home" class="nav-item first fl"><a href="javascript:void(0)" lan="l0027" key="WelcomePage">首页</a></div><ul id="nav-top" class="navoh"><li class="nav-item current"><a href="javascript:void(0);" lan="l8530" key="MyAccount">银行账户</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0029" key="TransfersAndRemittances">转账汇款</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0030" key="DepositManage">存款管理</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0031" key="LoanServices">贷款管理</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0032" key="interBankCashManagement">跨行现金管理</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0033" key="selfServices">公用服务缴费</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0034" key="PersonLivelihood">民生服务</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0035" key="CreditCards">信用卡</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0036" key="ePayment">电子支付</a></li><li class="nav-item last"><a href="javascript:void(0);" lan="l0048" key="PersonalPreference">个人设定</a></li></ul><ul id="nav-bottom" class="navoh"><li class="nav-item"><a href="javascript:void(0);" lan="l0038" key="BOCWealthManagement">中银理财</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0039" key="ForeignExchange">外汇</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0040" key="MutualFund">基金</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0041" key="PreciousMetal">贵金属</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0042" key="BondFutures">证券期货</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0043" key="TBonds">债券</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0044" key="Insurance">保险</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0045" key="Option">期权</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0037" key="Fess">结售汇</a></li><li class="nav-item"><a href="javascript:void(0);" lan="l0046" key="GlobalService">全球服务</a></li><li class="nav-item last"><a href="javascript:void(0);" lan="l48609" key="BranchFeaturesFullScreen">地区特色</a></li></ul></div><span id="showMenu" class="aside-btn aside-close hide" visible="false" style="display: none;"><span class="ico"></span> <label lan="l2048" v="展开菜单" class="txt">展开菜单</label></span> <span id="hideMenu" class="aside-btn"><span class="ico"></span> <label lan="l2049" v="隐藏菜单" class="txt">隐藏菜单</label></span> <div id="main" class="bu-main clearfix"><div id="subMenu" class="aside" style=""><h3 lan="l8530">银行账户</h3><dl><dt><a href="javascript:void(0);" class="nosub"><em></em><span lan="l0175" controller="AccountOverview">账户概览</span></a></dt></dl><dl><dt><a href="javascript:void(0);" class="nosub current"><em></em><span lan="l0176" controller="TransactionDetails">交易明细</span></a></dt></dl><dl><dt><a href="javascript:void(0);" class="nosub"><em></em><span lan="l0177" controller="AccountDetails">账户详情</span></a></dt></dl><dl><dt><a href="javascript:void(0);" class="nosub"><em></em><span lan="l0178" controller="AccountAutoRelate">账户自助关联</span></a></dt></dl><dl><dt><a href="javascript:void(0);"><em></em><span lan="l0179">电子现金账户</span></a></dt><dd style="display: none;"><a href="javascript:void(0);" lan="l0175" controller="ElectronCashAccountDetails">账户概览</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l0177" controller="ElectronAccountDetail">账户详情</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l1945" controller="ElectronBusinessDetail">账户交易明细</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l1861" controller="ElectronAccountRechargeable">账户充值</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l1947" controller="ElectronRechargeableAccountSign">充值账户签约</a></dd></dl><dl><dt><a href="javascript:void(0);"><em></em><span lan="l7137">银行本票/汇票申请</span></a></dt><dd style="display: none;"><a href="javascript:void(0);" lan="l0180" controller="DraftApply">申请</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l0049" controller="DraftQuery">查询</a></dd></dl><dl><dt><a href="javascript:void(0);" class="nosub"><em></em><span lan="l0181" controller="ApplicationAccount">申请定期/活期账户</span></a></dt></dl><dl><dt><a href="javascript:void(0);"><em></em><span lan="l6452">虚拟银行卡服务</span></a></dt><dd style="display: none;"><a href="javascript:void(0);" lan="l6453" controller="DebitCardVirtualApply">申请虚拟银行卡</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l6454" controller="DebitCardVirtualSet">虚拟银行卡功能设置</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l6455" controller="DebitCardVirtualQuery">虚拟银行卡信息查询</a></dd></dl><dl><dt><a href="javascript:void(0);"><em></em><span lan="l22393">主办账户</span></a></dt><dd style="display: none;"><a href="javascript:void(0);" lan="l47342" controller="SignInfoQuery">账户签约</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l47341" controller="AccountCollection">行内资金归集</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l47446" controller="AcctionInterBankCollection">跨行资金归集</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l40173" controller="SmartTimeDeposit">智能定存</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l6193" controller="SignPackage">套餐签约</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l48586" controller="FacilitatePayment">便利支付</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l21376" controller="ComprehensiveAssetsQuery">综合资产查询</a></dd></dl><dl><dt><a href="javascript:void(0);"><em></em><span lan="l29796">账户短信服务</span></a></dt><dd style="display: none;"><a href="javascript:void(0);" lan="l4985" controller="serviceProvisioning">开通服务</a></dd><dd style="display: none;"><a href="javascript:void(0);" lan="l30350" controller="smservicecManage">短信服务管理</a></dd></dl><dl><dt><a href="javascript:void(0);" class="nosub"><em></em><span lan="l47126" controller="DrawDepositProve">申请开立存款证明</span></a></dt></dl><div class="bdr"></div></div><div id="content" class="article"><div id="TransactionDetails_29">    <div class="" id="transactionPage">     <div class="bact-detail-r uptips" style="">      <p class="pos">       <label lan="l1572" v="您可通过此功能查询时间跨度最长为3个月的交易记录。">您可通过此功能查询时间跨度最长为3个月的交易记录。</label>      </p>      <h4 class="tb-caption" v="交易明细" lan="l0176">交易明细</h4>      <ul class="layout-lr layout-lr30 border-box">       <li class="clearfix">        <span class="item-title">         <span class="mr5">*</span>         <label lan="l1570" v="请选择账户">请选择账户</label>         <em>:</em>        </span>        <div class="item-con">         <div class="sel w370 passed" id="sel_pleaseselectaccount_17375" v="请选择账户" validategroup="{required:true}" tips="tipsrequired" val="124581883" pass="true"><span class="title"><label class="txt"><span lan="payeraccount_119">长城电子借记卡</span><span class="ml5">6013******2875</span><span class="ml5">长城电子借记卡</span><span class="ml5" lan="payeraccount_42465">黑龙江</span></label></span><ul class="list hide" visible="false" style="display: none;"><li val="124581883"><a href="javascript:void(0);" titlan="payeraccount_119" title="长城电子借记卡"><span lan="payeraccount_119">长城电子借记卡</span><span class="ml5">6013******2875</span><span class="ml5">长城电子借记卡</span><span class="ml5" lan="payeraccount_42465">黑龙江</span></a></li></ul><iframe class="list hide" src="" marginwidth="0" framespacing="0" marginheight="0" frameborder="0" style="opacity: 0; zoom: 1; position: absolute; z-index: 9; margin-left: -1px; width: 2px; display: none; background: rgb(255, 255, 255);" visible="false"></iframe></div>        </div>       </li>       <li class="clearfix" id="sel_pleaseselectcurrency_17386_li">        <span class="item-title">         <span class="mr5">*</span>         <label lan="l1575" v="请选择币种">请选择币种</label>         <em>:</em>        </span>        <div class="item-con">         <div class="sel w150 passed" id="sel_pleaseselectcurrency_17386" v="请选择币种" validategroup="{required:true}" tips="tipsrequired" val="001" title="人民币元" lan="currency_type_001" pass="true"><span class="title"><label class="txt"><a href="javascript:void(0);" titlan="currency_type_001" title="人民币元"><span lan="currency_type_001">人民币元</span></a></label></span><ul class="list hide" visible="false" style="display: none;"><li val="001"><a href="javascript:void(0);" titlan="currency_type_001" title="人民币元"><span lan="currency_type_001">人民币元</span></a></li></ul><iframe class="list hide" src="" marginwidth="0" framespacing="0" marginheight="0" frameborder="0" style="opacity: 0; zoom: 1; position: absolute; z-index: 9; margin-left: -1px; width: 152px; display: none; background: rgb(255, 255, 255);" visible="false"></iframe></div>        </div>       </li>       <li class="clearfix" id="rd_moneyremit_19072_li">        <span class="item-title">         <span class="mr5">*</span>         <label lan="l0494" v="钞/汇">钞/汇</label>         <em>:</em>        </span>        <div class="item-con">         <span class="ck-rd">          <input class="type" type="radio" id="rd_moneyremit_19072_1" name="rd_moneyremit_19072" checked="checked" value="01" disabled="disabled">          <label class="txt text-darkengray" id="lab_moneyremit_19072_1" lan="moneyremit_01" v="现钞" for="rd_moneyremit_19072_1">现钞</label>         </span>         <span class="ck-rd">          <input class="type" type="radio" id="rd_moneyremit_19072_2" name="rd_moneyremit_19072" value="02" disabled="disabled">          <label class="txt text-darkengray" id="lab_moneyremit_19072_2" lan="moneyremit_02" v="现汇" for="rd_moneyremit_19072_2">现汇</label>         </span>        </div>       </li>       <li class="clearfix">        <span class="item-title">         <span class="mr5">*</span>         <label lan="l0051" v="起始日期">起始日期</label>         <em>:</em>        </span>        <div class="item-con">         <input type="text" class="input date passed" readonly="readonly" id="date_state_date_data_date" v="起始日期" tips="tipsrequired tips0261" validategroup="{required:true,reg48:true}" lan="date" currcode="" value="" globalnumber="1458" pass="true"><div class="JsDatePickBox hide" style="z-index: 10; position: absolute; display: none; left: 598.03125px; top: 356px;" globalcalnumber="1458" visible="false"><div><div class="boxMainInner"><div class="controlsBar" globalnumber="1458"><div class="monthForwardButton" globalnumber="1458"></div><div class="monthBackwardButton" globalnumber="1458"></div><div class="yearForwardButton" globalnumber="1458"></div><div class="yearBackwardButton" globalnumber="1458"></div><div class="controlsBarText"><select><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option><option value="5">6</option><option value="6">7</option><option value="7">8</option><option value="8">9</option><option value="9">10</option><option value="10">11</option><option value="11">12</option></select><select><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option></select></div></div><div class="tooltip"></div><div class="weekDaysRow"><span class="weekDay" lan="l6168">日</span><span class="weekDay" lan="l7635">一</span><span class="weekDay" lan="l7636">二</span><span class="weekDay" lan="l7637">三</span><span class="weekDay" lan="l7638">四</span><span class="weekDay" lan="l7639">五</span><span class="weekDay" lan="l7640" style="margin-right: 0px;">六</span></div><div class="boxMainCellsContainer"><a class="skipDay prevMonth">31</a><a globalnumber="1458" class="dayDown daySelected" isselected="1">1</a><a globalnumber="1458" class="dayNormal">2</a><a globalnumber="1458" class="dayNormal">3</a><a globalnumber="1458" class="dayNormal">4</a><a globalnumber="1458" class="dayNormal">5</a><a globalnumber="1458" class="dayNormal weekend" day="7">6</a><a globalnumber="1458" class="dayNormal weekend" day="1">7</a><a globalnumber="1458" class="dayNormal ">8</a><a globalnumber="1458" class="dayNormal">9</a><a globalnumber="1458" class="dayNormal ">10</a><a globalnumber="1458" class="dayNormal ">11</a><a globalnumber="1458" class="dayNormal">12</a><a globalnumber="1458" class="dayNormal weekend" day="7">13</a><a globalnumber="1458" class="dayNormal weekend" day="1">14</a><a globalnumber="1458" class="dayNormal ">15</a><a globalnumber="1458" class="dayNormal">16</a><a globalnumber="1458" class="dayNormal">17</a><a globalnumber="1458" class="dayNormal">18</a><a globalnumber="1458" class="dayNormal">19</a><a globalnumber="1458" class="dayNormal weekend" day="7">20</a><a globalnumber="1458" class="dayNormal weekend" day="1">21</a><a globalnumber="1458" class="dayNormal ">22</a><a globalnumber="1458" class="dayNormal ">23</a><a globalnumber="1458" class="dayNormal">24</a><a globalnumber="1458" class="dayNormal">25</a><a globalnumber="1458" class="dayNormal ">26</a><a globalnumber="1458" class="dayNormal weekend" day="7">27</a><a globalnumber="1458" class="dayNormal weekend" day="1">28</a><a globalnumber="1458" class="dayNormal ">29</a><a globalnumber="1458" class="dayNormal ">30</a><a class="skipDay nextMonth">1</a><a class="skipDay nextMonth">2</a><a class="skipDay nextMonth">3</a><a class="skipDay nextMonth">4</a></div></div></div></div>        </div>       </li>       <li class="clearfix">        <span class="item-title">         <span class="mr5">*</span>         <label lan="l0052" v="结束日期">结束日期</label>         <em>:</em>        </span>        <div class="item-con">         <input type="text" class="input date passed" readonly="readonly" id="date_end_date_data_date" v="结束日期" tips="tipsrequired tips0261" validategroup="{required:true,reg48:true}" lan="date" currcode="" value="" globalnumber="9676" pass="true"><div class="JsDatePickBox" style="z-index: 10; position: absolute; display: none;"><div><div class="boxMainInner"><div class="controlsBar" globalnumber="9676"><div class="monthForwardButton" globalnumber="9676"></div><div class="monthBackwardButton" globalnumber="9676"></div><div class="yearForwardButton" globalnumber="9676"></div><div class="yearBackwardButton" globalnumber="9676"></div><div class="controlsBarText"><select><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option><option value="5">6</option><option value="6">7</option><option value="7">8</option><option value="8">9</option><option value="9">10</option><option value="10">11</option><option value="11">12</option></select><select><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option></select></div></div><div class="tooltip"></div><div class="weekDaysRow"><span class="weekDay" lan="l6168">日</span><span class="weekDay" lan="l7635">一</span><span class="weekDay" lan="l7636">二</span><span class="weekDay" lan="l7637">三</span><span class="weekDay" lan="l7638">四</span><span class="weekDay" lan="l7639">五</span><span class="weekDay" lan="l7640" style="margin-right: 0px;">六</span></div><div class="boxMainCellsContainer"><a class="skipDay prevMonth">26</a><a class="skipDay prevMonth">27</a><a class="skipDay prevMonth">28</a><a class="skipDay prevMonth">29</a><a class="skipDay prevMonth">30</a><a class="skipDay prevMonth">31</a><a globalnumber="9676" class="dayNormal weekend" day="7">1</a><a globalnumber="9676" class="dayNormal weekend" day="1">2</a><a globalnumber="9676" class="dayNormal ">3</a><a globalnumber="9676" class="dayNormal ">4</a><a globalnumber="9676" class="dayNormal ">5</a><a globalnumber="9676" class="dayNormal ">6</a><a globalnumber="9676" class="dayNormal ">7</a><a globalnumber="9676" class="dayNormal weekend" day="7">8</a><a globalnumber="9676" class="dayNormal weekend" day="1">9</a><a globalnumber="9676" istoday="1" class="dayNormalToday ">10</a><a globalnumber="9676" class="dayNormal ">11</a><a globalnumber="9676" class="dayNormal ">12</a><a globalnumber="9676" class="dayNormal ">13</a><a globalnumber="9676" class="dayNormal ">14</a><a globalnumber="9676" class="dayNormal weekend" day="7">15</a><a globalnumber="9676" class="dayNormal weekend" day="1">16</a><a globalnumber="9676" class="dayNormal ">17</a><a globalnumber="9676" class="dayNormal ">18</a><a globalnumber="9676" class="dayNormal ">19</a><a globalnumber="9676" class="dayNormal ">20</a><a globalnumber="9676" class="dayNormal ">21</a><a globalnumber="9676" class="dayNormal weekend" day="7">22</a><a globalnumber="9676" class="dayNormal weekend" day="1">23</a><a globalnumber="9676" class="dayNormal ">24</a><a globalnumber="9676" class="dayNormal ">25</a><a globalnumber="9676" class="dayNormal ">26</a><a globalnumber="9676" class="dayNormal ">27</a><a globalnumber="9676" class="dayNormal ">28</a><a globalnumber="9676" class="dayNormal weekend" day="7">29</a><a globalnumber="9676" class="dayNormal weekend" day="1">30</a><a class="skipDay nextMonth">1</a><a class="skipDay nextMonth">2</a><a class="skipDay nextMonth">3</a><a class="skipDay nextMonth">4</a><a class="skipDay nextMonth">5</a><a class="skipDay nextMonth">6</a></div></div></div></div>        </div>       </li>       <li class="clearfix mb0">        <div class="item-con">         <a class="btn btn-gray-s" href="javascript:void(0);" id="btn_49_17371">          <span class="btn-r" lan="l0049" v="查询">查询</span>         </a>        </div>       </li>      </ul>      <div class="tb-box tb-scroll" id="transactionDetails_list">  <table class="tb">      <thead>          <tr>             <th class="first w70" lan="l0852" v="交易日期">交易日期</th>              <th class="w70" lan="l1577" v="业务摘要">业务摘要</th>              <th class="w80" lan="l1579" v="对方账户名称">对方账户名称</th>              <th class="w90" lan="l1580" v="对方账户账号">对方账户账号</th>              <th class="w60" lan="l0093" v="币种">币种</th>              <th class="w30" lan="l46341" v="钞/汇">钞/汇</th>              <th class="w90 tar" lan="l1581" v="收入金额">收入金额</th>              <th class="w90 tar" lan="l0456" v="支出金额">支出金额</th>              <th class="w90 tar" lan="l4087" v="余额">余额</th>              <th class="w100" lan="l0110" v="附言">附言</th>          </tr>      </thead>      <tbody>                 <tr class="odd">              <td class="first" lan="date" currcode="">2014/11/02</td>              <td>转账支出</td>              <td></td>              <td></td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">29.10</td>              <td class="tar" lan="num" currcode="001">4,048.44</td>              <td></td>          </tr>                    <tr class="even">              <td class="first" lan="date" currcode="">2014/10/28</td>              <td>ATM取款</td>              <td></td>              <td></td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">500.00</td>              <td class="tar" lan="num" currcode="001">4,077.54</td>              <td></td>          </tr>                    <tr class="odd">              <td class="first" lan="date" currcode="">2014/10/28</td>              <td>代发划转</td>              <td>个人代收付业务过渡帐户</td>              <td>9056******4008</td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001">40.60</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">4,577.54</td>              <td></td>          </tr>                    <tr class="even">              <td class="first" lan="date" currcode="">2014/10/19</td>              <td>ATM取款</td>              <td></td>              <td></td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">500.00</td>              <td class="tar" lan="num" currcode="001">4,536.94</td>              <td></td>          </tr>                    <tr class="odd">              <td class="first" lan="date" currcode="">2014/10/12</td>              <td>转账支出</td>              <td></td>              <td></td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">100.00</td>              <td class="tar" lan="num" currcode="001">5,036.94</td>              <td></td>          </tr>                    <tr class="even">              <td class="first" lan="date" currcode="">2014/10/11</td>              <td>转账支出</td>              <td></td>              <td></td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">10.00</td>              <td class="tar" lan="num" currcode="001">5,136.94</td>              <td></td>          </tr>                    <tr class="odd">              <td class="first" lan="date" currcode="">2014/10/11</td>              <td>转账支出</td>              <td></td>              <td></td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">98.50</td>              <td class="tar" lan="num" currcode="001">5,146.94</td>              <td></td>          </tr>                    <tr class="even">              <td class="first" lan="date" currcode="">2014/10/02</td>              <td>转账支出</td>              <td></td>              <td></td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">30.00</td>              <td class="tar" lan="num" currcode="001">5,245.44</td>              <td></td>          </tr>                    <tr class="odd">              <td class="first" lan="date" currcode="">2014/09/26</td>              <td>代发划转</td>              <td>个人代收付业务过渡帐户</td>              <td>9056******4008</td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001">40.60</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">5,275.44</td>              <td></td>          </tr>                    <tr class="even">              <td class="first" lan="date" currcode="">2014/09/22</td>              <td>收费</td>              <td></td>              <td></td>              <td lan="kind_of_currencies_001">人民币元</td>              <td lan="moneyremit_00">-</td>              <td class="tar" lan="num" currcode="001"></td>              <td class="tar" lan="num" currcode="001">4.00</td>              <td class="tar" lan="num" currcode="001">5,234.84</td>              <td></td>          </tr>                </tbody>  </table>  </div>      <!--页脚-->      <div class="page-right" id="transactionDetails__data_foot"><ul class="page"><li class="p-list"><span lan="l0384" v="查询到" class="mr5">查询到</span><em>14</em><span lan="l0385" v="条记录" class="ml5">条记录</span></li><li class="p-list"><span lan="l1430" v="第" class="mr5">第</span><em class="js-curindex">1</em><span class="ml5 mr5" lan="l1428" v="页/共">页/共</span><em>2</em><span class="ml5" lan="l36263" v="页">页</span></li><li class="p-list"><a href="javascript:void(0);" title="上一页" class="prev disabled" op="prev" lan="l1425" v="上一页">上一页</a></li><li class="p-list"><a href="javascript:void(0);" title="下一页" class="next" op="next" lan="l1426" v="下一页">下一页</a></li><li class="p-list"><span lan="l1427" v="跳转到第">跳转至第</span><input type="text" class="input input-page"><span lan="l1429" v="页">页</span></li><li class="p-list"><a class="btn btn-gray-s btn-page goto" href="javascript:void(0);" op="goto"><span class="btn-r goto" op="goto" lan="l0441">跳转</span></a><a id="download" target="_blank" class="btn btn-gray-s btn-page ml5" href="javascript:void(0);"><span class="btn-r" lan="l0442" v="下载">下载</span></a></li></ul></div>     </div>     <div class="tips-box">      <div class="tips-title" lan="l6720" v="温馨提示">温馨提示</div>      <ol class="sn-box">       <li class="clearfix">        <label>1.</label>        <span lan="l0151" v="带*号的输入栏为必填项">带*号的输入栏为必填项。</span>       </li>       <li class="clearfix">        <label>2.</label>        <span lan="l1573" v="夜间由于我行须进行系统数据处理，可能出现部分账户的交易记录短时间无法查询的情况。">夜间由于我行须进行系统数据处理，可能出现部分账户的交易记录短时间无法查询的情况。</span>       </li>       <li class="clearfix">        <label>3.</label>        <span lan="l1882" v="红字代表冲正交易。">红字代表冲正交易。</span>       </li>       <li class="clearfix display-en">           <label>4.</label>           <span lan="l46340"></span>       </li>      </ol>     </div>     <p class="page-num text-darkengray tac">      <span lan="l7935" v="页面号">页面号</span>      <em>02020001</em>     </p>    </div>   </div></div><div style="width: 100%; clear:both; color: #999; line-height: 20px; padding-top:8px; text-align: center" id="pageNo"><span _tmplitem="2" lan="l7935" v="页面号">页面号</span><em _tmplitem="2">02020001</em></div></div><div id="welcome" class="bu-main home clearfix hide" visible="false" style="display: none;"><div class="message-box"><div class="message"><h4 class="message-normal"><span lan="l2916" v="电子银行客户号">您的电子银行客户号</span><span class="ml5 mr5 welcome-customerId">114229086</span>|<span class="ml5 mr5 welcome-loginHintPrefix" v="您的欢迎信息是" lan="l10030">您的欢迎信息是</span><span class="welcome-loginHint ml5">jiangtianwen</span></h4><h4 class="message-vip hide"><span lan="l50968" v="尊敬的">尊敬的</span><span id="message-vip-type"></span><span lan="l6847" v="，">，</span><span lan="l2916" v="电子银行客户号">您的电子银行客户号</span><span class="ml5 mr5 welcome-customerId">114229086</span></h4><h4 class="message-vip hide"><span class="mr5 welcome-loginHintPrefix" v="您的欢迎信息是" lan="l10030">您的欢迎信息是</span><span class="welcome-loginHint ml5">jiangtianwen</span></h4><p><span v="您最近一次成功登录本站是" lan="l4636">您最近一次成功登录本站是</span><span id="welcome-loginDate" class="ml5 mr5 w120 display-ib">2014/11/02 14:15:31</span>|<span class="ml5" v="您最近一次登录本站失败是" lan="l4637">您最近一次登录本站失败是</span><span id="welcome-loginErrorDate" class="ml5 display-ib w120">2014/05/02 17:31:17</span></p></div><p class="i-tips hide" id="eMsgWarn"><span lan="l15771" v="您的中银e令还有">您的中银e令还有</span> <span id="eMsgWarnDays" class="text-red"></span> <span lan="l15772" v="您的中银e令还有 35 天到期，请您尽快到柜台进行更换新中银e令，以免影响您的正常使用。">天到期，请您尽快到柜台进行更换新中银e令，以免影响您的正常使用。</span></p><p class="i-tips hide" id="eMsgExpired"><span lan="l15784" v="您的中银e令于">您的中银e令于</span> <span id="eMsgExpiredDays" class="text-red"></span> <span lan="l15785" v="已到期，请您到柜台进行更换新中银e令，以免影响您的正常使用。">已到期，请您到柜台进行更换新中银e令，以免影响您的正常使用。</span></p><p class="i-tips hide" id="isModifyPWD" visible="false" style="display: none;"><span lan="l15515" v="您的登录密码已超过三个月未修改，为了提高您使用网上银行的安全性，建议您">您的登录密码已超过三个月未修改，为了提高您使用网上银行的安全性，建议您</span> <a lan="l15517" v="修改密码" id="welcome_modifyPassword" href="javascript:void(0);">修改密码</a> <span lan="l15516" v="。">。</span></p><p class="i-tips" id="welcome_userNoCreditCard"><span lan="l0301" v="尊敬的客户，您尚未关联信用卡，可通过“">尊敬的客户，您尚未关联信用卡，可通过“</span> <a lan="l0178" v="账户自助关联" id="welcome_linkAccount" href="javascript:void(0);">账户自助关联</a> <span lan="l8527" v="”服务关联已有信用卡，如需申请新卡可通过">”服务关联已有信用卡，如需申请新卡可</span> <a href="javascript:void(0);" id="welcome_crcdApplyOnline" lan="l0302" v="在线申请信用卡" class="ml5">在线申请信用卡</a> <span lan="l15500" v="。">。</span></p></div><div id="news-wrap" class="news"><h4 id="news-link" class="ntitle clearfix"><span class="fl current" v="最新消息" lan="l4765">最新消息</span> <a class="morelink" href="javascript:void(0)" onclick="openNewWindow(&#39;msg.html?locale=&#39; + localParam[lan])"></a></h4><dl id="latest-container" class="news-container"><dd><a class="msgDetail" href="javascript:void(0);" gblmsgid="89997">关于我行调整部分自营表内理财产品风险级别的公告</a></dd><dd><a class="msgDetail" href="javascript:void(0);" gblmsgid="88957">关于我行理财产品相关服务页面信息调整的公告</a></dd><dd><a class="msgDetail" href="javascript:void(0);" gblmsgid="88810">用中行支付，满百送50元话费+江西特产大礼包！</a></dd></dl></div><dl id="welcome-query-form" class="layout-lr service-check"><dt lan="l7542" v="服务记录查询">服务记录查询</dt><dd class="clearfix" style="margin-bottom:5px"><span class="item-title"><label v="业务种类" lan="l0050">业务种类</label><em>:</em></span><div class="item-con"><div class="sel w150" id="welcome-SvrRecType" val="01" validategroup="{required:true}" tips="tipsrequired" title="全部" lan="l0466"><span class="title"><label class="txt"><a href="javascript:void(0);" titlan="l0466" title="全部"><span lan="l0466">全部</span></a></label></span><ul class="list hide sel-h" visible="false" style="display: none;"><li val="01"><a href="javascript:void(0);" titlan="l0466" title="全部"><span lan="l0466">全部</span></a></li><li val="02" class="even"><a href="javascript:void(0);" titlan="l6889" title="设置类交易"><span lan="l6889">设置类交易</span></a></li><li val="30"><a href="javascript:void(0);" titlan="l0178" title="账户自助关联"><span lan="l0178">账户自助关联</span></a></li><li val="64" class="even"><a href="javascript:void(0);" titlan="l6890" title="申请定期/活期账户"><span lan="l6890">申请定期/活期账户</span></a></li><li val="03"><a href="javascript:void(0);" titlan="l0029" title="转账汇款"><span lan="l0029">转账汇款</span></a></li><li val="31" class="even"><a href="javascript:void(0);" titlan="l6884" title="主动收款"><span lan="l6884">主动收款</span></a></li><li val="04"><a href="javascript:void(0);" titlan="l0192" title="定期存款"><span lan="l0192">定期存款</span></a></li><li val="05" class="even"><a href="javascript:void(0);" titlan="l6891" title="预约指令"><span lan="l6891">预约指令</span></a></li><li val="06"><a href="javascript:void(0);" titlan="l0033" title="公用服务缴费"><span lan="l0033">公用服务缴费</span></a></li><li val="07" class="even"><a href="javascript:void(0);" titlan="l6892" title="信用卡交易"><span lan="l6892">信用卡交易</span></a></li><li val="08"><a href="javascript:void(0);" titlan="l6893" title="外汇交易"><span lan="l6893">外汇交易</span></a></li><li val="09" class="even"><a href="javascript:void(0);" titlan="l6894" title="黄金交易"><span lan="l6894">黄金交易</span></a></li><li val="53"><a href="javascript:void(0);" titlan="l6895" title="白银交易"><span lan="l6895">白银交易</span></a></li><li val="70" class="even"><a href="javascript:void(0);" titlan="l14891" title="铂金交易"><span lan="l14891">铂金交易</span></a></li><li val="71"><a href="javascript:void(0);" titlan="l14892" title="钯金交易"><span lan="l14892">钯金交易</span></a></li><li val="10" class="even"><a href="javascript:void(0);" titlan="l6896" title="基金交易"><span lan="l6896">基金交易</span></a></li><li val="26"><a href="javascript:void(0);" titlan="l0080" title="中银理财计划I"><span lan="l0080">中银理财计划I</span></a></li><li val="24" class="even"><a href="javascript:void(0);" titlan="l0219" title="中银理财计划II"><span lan="l0219">中银理财计划II</span></a></li><li val="11"><a href="javascript:void(0);" titlan="l6897" title="债券交易"><span lan="l6897">债券交易</span></a></li><li val="14" class="even"><a href="javascript:void(0);" titlan="l0234" title="第三方存管"><span lan="l0234">第三方存管</span></a></li><li val="15"><a href="javascript:void(0);" titlan="l0233" title="B股银证转账"><span lan="l0233">B股银证转账</span></a></li><li val="21" class="even"><a href="javascript:void(0);" titlan="l6898" title="银期转账"><span lan="l6898">银期转账</span></a></li><li val="16"><a href="javascript:void(0);" titlan="l0013" title="登录"><span lan="l0013">登录</span></a></li><li val="17" class="even"><a href="javascript:void(0);" titlan="l9786" title="退出"><span lan="l9786">退出</span></a></li><li val="20"><a href="javascript:void(0);" titlan="l6504" title="电子支付"><span lan="l6504">电子支付</span></a></li><li val="25" class="even"><a href="javascript:void(0);" titlan="l0037" title="结售汇"><span lan="l0037">结售汇</span></a></li><li val="27"><a href="javascript:void(0);" titlan="l6901" title="手机号转账"><span lan="l6901">手机号转账</span></a></li><li val="28" class="even"><a href="javascript:void(0);" titlan="l9753" title="跨行现金管理"><span lan="l9753">跨行现金管理</span></a></li><li val="29"><a href="javascript:void(0);" titlan="l6903" title="认证登录"><span lan="l6903">认证登录</span></a></li><li val="32" class="even"><a href="javascript:void(0);" titlan="l6904" title="手机交易码"><span lan="l6904">手机交易码</span></a></li><li val="36"><a href="javascript:void(0);" titlan="l6503" title="理财直付"><span lan="l6503">理财直付</span></a></li><li val="37" class="even"><a href="javascript:void(0);" titlan="l0232" title="贵金属代理"><span lan="l0232">贵金属代理</span></a></li><li val="38"><a href="javascript:void(0);" titlan="SvrRecType_38" title="协议支付"><span lan="SvrRecType_38">协议支付</span></a></li><li val="43" class="even"><a href="javascript:void(0);" titlan="l0222" title="双向宝"><span lan="l0222">双向宝</span></a></li><li val="44"><a href="javascript:void(0);" titlan="l0220" title="网上专属理财"><span lan="l0220">网上专属理财</span></a></li><li val="50" class="even"><a href="javascript:void(0);" titlan="l6906" title="银医通"><span lan="l6906">银医通</span></a></li><li val="55"><a href="javascript:void(0);" titlan="l0249" title="中银财互通服务"><span lan="l0249">中银财互通服务</span></a></li><li val="52" class="even"><a href="javascript:void(0);" titlan="l0248" title="全球账户管理"><span lan="l0248">全球账户管理</span></a></li><li val="56"><a href="javascript:void(0);" titlan="l9754" title="银联跨行无卡支付"><span lan="l9754">银联跨行无卡支付</span></a></li><li val="57" class="even"><a href="javascript:void(0);" titlan="l7137" title="银行本票/汇票申请"><span lan="l7137">银行本票/汇票申请</span></a></li><li val="62"><a href="javascript:void(0);" titlan="l46118" title="汇款套餐"><span lan="l46118">汇款套餐</span></a></li><li val="61" class="even"><a href="javascript:void(0);" titlan="l6909" title="密码汇款"><span lan="l6909">密码汇款</span></a></li><li val="58"><a href="javascript:void(0);" titlan="l6910" title="电子现金服务"><span lan="l6910">电子现金服务</span></a></li><li val="81" class="even"><a href="javascript:void(0);" titlan="l0034" title="民生服务"><span lan="l0034">民生服务</span></a></li><li val="63"><a href="javascript:void(0);" titlan="l0200" title="预付卡充值"><span lan="l0200">预付卡充值</span></a></li><li val="65" class="even"><a href="javascript:void(0);" titlan="l6452" title="虚拟银行卡服务"><span lan="l6452">虚拟银行卡服务</span></a></li><li val="66"><a href="javascript:void(0);" titlan="l2655" title="信用卡激活"><span lan="l2655">信用卡激活</span></a></li><li val="67" class="even"><a href="javascript:void(0);" titlan="l2670" title="信用卡挂失"><span lan="l2670">信用卡挂失</span></a></li><li val="68"><a href="javascript:void(0);" titlan="l0231" title="贵金属积存"><span lan="l0231">贵金属积存</span></a></li><li val="69" class="even"><a href="javascript:void(0);" titlan="l0045" title="期权"><span lan="l0045">期权</span></a></li><li val="82"><a href="javascript:void(0);" titlan="l0089" title="手机取款"><span lan="l0089">手机取款</span></a></li><li val="72" class="even"><a href="javascript:void(0);" titlan="l7795" title="提前还款"><span lan="l7795">提前还款</span></a></li><li val="73"><a href="javascript:void(0);" titlan="l10075" title="预设日期提前还款"><span lan="l10075">预设日期提前还款</span></a></li><li val="74" class="even"><a href="javascript:void(0);" titlan="l7687" title="存款质押贷款"><span lan="l7687">存款质押贷款</span></a></li><li val="75"><a href="javascript:void(0);" titlan="l8027" title="保险"><span lan="l8027">保险</span></a></li><li val="83" class="even"><a href="javascript:void(0);" titlan="l21040" title="ATM无卡取款"><span lan="l21040">ATM无卡取款</span></a></li><li val="76"><a href="javascript:void(0);" titlan="l10539" title="在线批量转账"><span lan="l10539">在线批量转账</span></a></li><li val="85" class="even"><a href="javascript:void(0);" titlan="SvrRecType_85" title="预约换借记卡"><span lan="SvrRecType_85">预约换借记卡</span></a></li><li val="86"><a href="javascript:void(0);" titlan="SvrRecType_86" title="个人智慧主办账户"><span lan="SvrRecType_86">个人智慧主办账户</span></a></li><li val="84" class="even"><a href="javascript:void(0);" titlan="SvrRecType_84" title="银商转账"><span lan="SvrRecType_84">银商转账</span></a></li><li val="78"><a href="javascript:void(0);" titlan="SvrRecType_78" title="大额到账提醒"><span lan="SvrRecType_78">大额到账提醒</span></a></li><li val="79" class="even"><a href="javascript:void(0);" titlan="SvrRecType_79" title="理财产品到期提醒"><span lan="SvrRecType_79">理财产品到期提醒</span></a></li><li val="SvrRecType_01"><a href="javascript:void(0);" titlan="l44588" title="中银易商交易(待支付)"><span lan="l44588">中银易商交易(待支付)</span></a></li><li val="SvrRecType_02" class="even"><a href="javascript:void(0);" titlan="l44587" title="中银易商交易(已支付)"><span lan="l44587">中银易商交易(已支付)</span></a></li><li val="SvrRecType_a03"><a href="javascript:void(0);" titlan="SvrRecType_a03" title="中银易商交易(已撤销)"><span lan="SvrRecType_a03">中银易商交易(已撤销)</span></a></li><li val="90" class="even"><a href="javascript:void(0);" titlan="SvrRecType_90" title="汇款公司跨境汇款"><span lan="SvrRecType_90">汇款公司跨境汇款</span></a></li><li val="91"><a href="javascript:void(0);" titlan="SvrRecType_91" title="循环贷款用款"><span lan="SvrRecType_91">循环贷款用款</span></a></li><li val="92" class="even"><a href="javascript:void(0);" titlan="l47113" title="变更还款账户"><span lan="l47113">变更还款账户</span></a></li><li val="93"><a href="javascript:void(0);" titlan="SvrRecType_93" title="跨行资金归集"><span lan="SvrRecType_93">跨行资金归集</span></a></li><li val="94" class="even"><a href="javascript:void(0);" titlan="SvrRecType_94" title="申请开立存款证明"><span lan="SvrRecType_94">申请开立存款证明</span></a></li></ul><iframe class="list hide" src="" marginwidth="0" framespacing="0" marginheight="0" frameborder="0" style="opacity: 0; zoom: 1; position: absolute; z-index: 9; margin-left: -1px; width: 152px; display: none; background: rgb(255, 255, 255);" visible="false"></iframe></div></div></dd><dd class="clearfix"><span class="item-title"><label v="起始日期" lan="l0051">起始日期</label><em>:</em></span><div class="item-con clearfix mb0"><input id="welcome-startDate" type="text" class="input date fl" style="_margin-left:3px" globalnumber="3246" readonly="readonly"><div class="JsDatePickBox" style="z-index: 10; position: absolute; display: none;"><div><div class="boxMainInner"><div class="controlsBar" globalnumber="3246"><div class="monthForwardButton" globalnumber="3246"></div><div class="monthBackwardButton" globalnumber="3246"></div><div class="yearForwardButton" globalnumber="3246"></div><div class="yearBackwardButton" globalnumber="3246"></div><div class="controlsBarText"><select><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option><option value="5">6</option><option value="6">7</option><option value="7">8</option><option value="8">9</option><option value="9">10</option><option value="10">11</option><option value="11">12</option></select><select><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option></select></div></div><div class="tooltip"></div><div class="weekDaysRow"><span class="weekDay" lan="l6168">日</span><span class="weekDay" lan="l7635">一</span><span class="weekDay" lan="l7636">二</span><span class="weekDay" lan="l7637">三</span><span class="weekDay" lan="l7638">四</span><span class="weekDay" lan="l7639">五</span><span class="weekDay" lan="l7640" style="margin-right: 0px;">六</span></div><div class="boxMainCellsContainer"><a class="skipDay prevMonth">26</a><a class="skipDay prevMonth">27</a><a class="skipDay prevMonth">28</a><a class="skipDay prevMonth">29</a><a class="skipDay prevMonth">30</a><a class="skipDay prevMonth">31</a><a globalnumber="3246" class="dayNormal weekend" day="7">1</a><a globalnumber="3246" class="dayNormal weekend" day="1">2</a><a globalnumber="3246" class="dayNormal ">3</a><a globalnumber="3246" class="dayNormal ">4</a><a globalnumber="3246" class="dayNormal ">5</a><a globalnumber="3246" class="dayNormal ">6</a><a globalnumber="3246" class="dayNormal ">7</a><a globalnumber="3246" class="dayNormal weekend" day="7">8</a><a globalnumber="3246" class="dayNormal weekend" day="1">9</a><a globalnumber="3246" istoday="1" class="dayNormalToday ">10</a><a globalnumber="3246" class="dayNormal ">11</a><a globalnumber="3246" class="dayNormal ">12</a><a globalnumber="3246" class="dayNormal ">13</a><a globalnumber="3246" class="dayNormal ">14</a><a globalnumber="3246" class="dayNormal weekend" day="7">15</a><a globalnumber="3246" class="dayNormal weekend" day="1">16</a><a globalnumber="3246" class="dayNormal ">17</a><a globalnumber="3246" class="dayNormal ">18</a><a globalnumber="3246" class="dayNormal ">19</a><a globalnumber="3246" class="dayNormal ">20</a><a globalnumber="3246" class="dayNormal ">21</a><a globalnumber="3246" class="dayNormal weekend" day="7">22</a><a globalnumber="3246" class="dayNormal weekend" day="1">23</a><a globalnumber="3246" class="dayNormal ">24</a><a globalnumber="3246" class="dayNormal ">25</a><a globalnumber="3246" class="dayNormal ">26</a><a globalnumber="3246" class="dayNormal ">27</a><a globalnumber="3246" class="dayNormal ">28</a><a globalnumber="3246" class="dayNormal weekend" day="7">29</a><a globalnumber="3246" class="dayNormal weekend" day="1">30</a><a class="skipDay nextMonth">1</a><a class="skipDay nextMonth">2</a><a class="skipDay nextMonth">3</a><a class="skipDay nextMonth">4</a><a class="skipDay nextMonth">5</a><a class="skipDay nextMonth">6</a></div></div></div></div><span class="ml5 fl" v="结束日期" lan="l0052">结束日期</span><em class="fl ml5 mr5">:</em><input id="welcome-endDate" type="text" class="input date fl" globalnumber="8897" readonly="readonly"><div class="JsDatePickBox" style="z-index: 10; position: absolute; display: none;"><div><div class="boxMainInner"><div class="controlsBar" globalnumber="8897"><div class="monthForwardButton" globalnumber="8897"></div><div class="monthBackwardButton" globalnumber="8897"></div><div class="yearForwardButton" globalnumber="8897"></div><div class="yearBackwardButton" globalnumber="8897"></div><div class="controlsBarText"><select><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option><option value="5">6</option><option value="6">7</option><option value="7">8</option><option value="8">9</option><option value="9">10</option><option value="10">11</option><option value="11">12</option></select><select><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option></select></div></div><div class="tooltip"></div><div class="weekDaysRow"><span class="weekDay" lan="l6168">日</span><span class="weekDay" lan="l7635">一</span><span class="weekDay" lan="l7636">二</span><span class="weekDay" lan="l7637">三</span><span class="weekDay" lan="l7638">四</span><span class="weekDay" lan="l7639">五</span><span class="weekDay" lan="l7640" style="margin-right: 0px;">六</span></div><div class="boxMainCellsContainer"><a class="skipDay prevMonth">26</a><a class="skipDay prevMonth">27</a><a class="skipDay prevMonth">28</a><a class="skipDay prevMonth">29</a><a class="skipDay prevMonth">30</a><a class="skipDay prevMonth">31</a><a globalnumber="8897" class="dayNormal weekend" day="7">1</a><a globalnumber="8897" class="dayNormal weekend" day="1">2</a><a globalnumber="8897" class="dayNormal ">3</a><a globalnumber="8897" class="dayNormal ">4</a><a globalnumber="8897" class="dayNormal ">5</a><a globalnumber="8897" class="dayNormal ">6</a><a globalnumber="8897" class="dayNormal ">7</a><a globalnumber="8897" class="dayNormal weekend" day="7">8</a><a globalnumber="8897" class="dayNormal weekend" day="1">9</a><a globalnumber="8897" istoday="1" class="dayNormalToday ">10</a><a globalnumber="8897" class="dayNormal ">11</a><a globalnumber="8897" class="dayNormal ">12</a><a globalnumber="8897" class="dayNormal ">13</a><a globalnumber="8897" class="dayNormal ">14</a><a globalnumber="8897" class="dayNormal weekend" day="7">15</a><a globalnumber="8897" class="dayNormal weekend" day="1">16</a><a globalnumber="8897" class="dayNormal ">17</a><a globalnumber="8897" class="dayNormal ">18</a><a globalnumber="8897" class="dayNormal ">19</a><a globalnumber="8897" class="dayNormal ">20</a><a globalnumber="8897" class="dayNormal ">21</a><a globalnumber="8897" class="dayNormal weekend" day="7">22</a><a globalnumber="8897" class="dayNormal weekend" day="1">23</a><a globalnumber="8897" class="dayNormal ">24</a><a globalnumber="8897" class="dayNormal ">25</a><a globalnumber="8897" class="dayNormal ">26</a><a globalnumber="8897" class="dayNormal ">27</a><a globalnumber="8897" class="dayNormal ">28</a><a globalnumber="8897" class="dayNormal weekend" day="7">29</a><a globalnumber="8897" class="dayNormal weekend" day="1">30</a><a class="skipDay nextMonth">1</a><a class="skipDay nextMonth">2</a><a class="skipDay nextMonth">3</a><a class="skipDay nextMonth">4</a><a class="skipDay nextMonth">5</a><a class="skipDay nextMonth">6</a></div></div></div></div><a id="welcome-query" href="javascript:void(0)" class="btn btn-gray-s ml10 fl"><span class="btn-r" v="查询" lan="l0049">查询</span></a></div></dd></dl><div id="hyperchannel" class="hyperchannel"><a href="javascript:void(0)" title="账户概览" controller="AccountOverview" class="icon act-view" lan="l0175" v="账户概览">账户概览</a> <a href="javascript:void(0)" title="转账汇款" key="TransfersAndRemittances" class="icon trans-act" v="转账汇款" lan="l9781">转账汇款</a> <a href="javascript:void(0)" title="自助缴费" key="selfServices" class="icon self-pay" v="自助缴费" lan="l0199">自助缴费</a> <a href="javascript:void(0)" title="信用卡还款" controller="CreditCardRptRel" class="icon credit-pay" v="信用卡还款" lan="l0095">信用卡还款</a> <a href="javascript:void(0)" title="外汇交易" key="ForeignExchange" class="icon foreign-exchange" v="外汇交易" lan="l6893">外汇交易</a> <a href="javascript:void(0)" title="中银理财" key="BOCWealthManagement" class="icon cdt-financial" v="中银理财" lan="l8025">中银理财</a> <a href="javascript:void(0)" title="民生服务" key="PersonLivelihood" class="btn-a life-service" v="民生服务" lan="l9756">民生服务</a> <a href="javascript:void(0)" title="行情走势" class="btn-a style-rute" v="行情走势" lan="l7545" onclick="openNewWindow(&#39;http://www.boc.cn/marketchart/&#39;)">行情走势</a> <a href="javascript:void(0)" title="市场分析" class="btn-a market-analysis" v="市场分析" lan="l7546" onclick="openNewWindow(&#39;http://www.boc.cn/fimarkets/&#39;)">市场分析</a></div></div><div id="full-container" class="bu-main home clearfix hide" visible="false" style="display: none;"></div><div id="footer" class="bu-footer"><p><a href="https://95566.boc.cn/ZIM/index.htm" id="a_60_1170" urllan="url.onlineServiceUrl" lan="l22359" v="在线客服">在线客服</a><em class="ml5 mr5">|</em><a v="服务热线" lan="l9881" name="servicHotline" urllan="url.servicHotlineUrl" href="https://ebsnew.boc.cn/boc20/bocmain/linkPages/serviceline.html?locale=zh_CN" onclick="openNewWindow(this.href);return false">服务热线</a><em class="ml5 mr5">|</em><a title="安全须知" lan="l0022" v="安全须知" urllan="url.saftNote" name="saftNote" href="http://www.boc.cn/ebanking/security/bocnet/200810/t20081022_990714.html" onclick="openNewWindow(this.href);return false">安全须知</a><em class="ml5 mr5">|</em><a href="javascript:void(0);" title="打印本页" id="welcome_print" lan="l10036" v="打印本页">打印本页</a></p><p><span v="中国银行股份有限公司" lan="l0069">中国银行股份有限公司</span><span v="版权所有" lan="l0070" class="ml10">版权所有</span></p></div></div><div class="hide editfail" id="msgBox" style="position:absolute;z-index:999;width:630px"><div class="bu-pop" style="position:absolute;z-index:999;left:0;top:0"><h4 class="pop-title"><span class="txt" lan="l7282">操作提示</span> <a class="close" href="javascript:void(0);" id="closeMsgBox"></a></h4><div class="pop-con"><p class="unset"><span id="msgContent">操作失败!</span></p><p class="btn-box tac" style="margin-bottom:0"><a id="hideMsgBox" class="btn" href="javascript:void(0);"><span class="btn-r" lan="l0315" v="确认"></span></a></p></div></div><iframe src="" marginwidth="0" framespacing="0" marginheight="0" frameborder="0" width="100%" height="100%" style="left:0; background:rgb(255,255,255); top:0; width:100%; filter:alpha(opacity=0); -moz-opacity: 0; opacity: 0;zoom:1; position:absolute; z-index: 998"></iframe></div><div id="funcBox" class="bu-pop search-result-y hide"><h4 class="pop-title"><span class="txt" v="功能搜索结果" lan="l7625"></span> <a id="func-close" class="close" href="javascript:void(0)" title="close"></a></h4><div class="pop-con"><div class="search-y"><input id="func-keyword" class="input" type="text" value="" phlan="l14855" validategroup="{}"><a id="func-search" href="javascript:void(0)" title="" lan="l6763" v="搜索"></a></div><p class="m"><span class="ml5" v="找到" lan="l10038"></span><span id="func-records" class="ml5 mr5">3</span><span lan="l10037" v="条相关功能"></span></p><ul id="func-result" class="sea-function-y"></ul><div class="tac mt20 hide"><span id="no-keyword" lan="l15285" v="请输入您要搜索的关键字。">请输入您要搜索的关键字。</span><span v="抱歉，未找到“" lan="l10039"></span><span id="sorry-keyword">汇款</span><span v="”相关结果" lan="l10040"></span></div></div></div><div id="ajaxLoading" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 702px; zoom: 1; z-index: 999; display: none;" class="hide" visible="false"><img style="width:32px;height:32px;margin-left:-16px;margin-top:-16px;top:50%;left:50%;position:relative" src="./yinhang_files/ajaxloading-new.gif"></div><div id="quit-dialog" class="bu-pop bu-pop-warn hide"><h4 class="pop-title"><span class="txt" v="重要信息提示" lan="l10041"></span></h4><div class="pop-con tac"><strong class="unset"><span lan="l10042">尊敬的客户，为了您的资金安全，在您退出网银前，请拨出中银e盾(USBKey) 并妥善保管。</span></strong><p class="btn-box mb0"><a id="quit-confirm" href="javascript:void(0);" class="btn"><span class="btn-r" lan="l0315">确认</span></a></p></div></div><script type="text/javascript" src="./yinhang_files/dojo.js.1.6.1.uncompressed.js"></script><script type="text/javascript" src="./yinhang_files/application.js"></script><script type="text/javascript" src="./yinhang_files/NodeList-manipulate.js"></script><script type="text/javascript" src="./yinhang_files/dojo2.js"></script><script type="text/javascript" src="./yinhang_files/common.js"></script><script type="text/javascript" src="./yinhang_files/dojo.common.js"></script><script type="text/javascript" src="./yinhang_files/spine.js"></script><script type="text/javascript" src="./yinhang_files/dojo.tmpl.js"></script><script type="text/javascript" src="./yinhang_files/errorCode.js"></script><script type="text/javascript" src="./yinhang_files/tooltip.js"></script><script type="text/javascript" src="./yinhang_files/formValid.js"></script><script type="text/javascript" src="./yinhang_files/itselect.js"></script><script type="text/javascript" src="./yinhang_files/json2.js"></script><script type="text/javascript" src="./yinhang_files/localize.js"></script><script type="text/javascript" src="./yinhang_files/printer.js"></script><script type="text/javascript" src="./yinhang_files/devicePrint.js"></script><script type="text/javascript" src="./yinhang_files/common.propertiesConfig.js"></script><script type="text/javascript" src="./yinhang_files/datepicker.js"></script><script type="text/javascript" src="./yinhang_files/dateUtil.js"></script><script type="text/javascript" src="./yinhang_files/ajaxfileupload.js"></script><script type="text/javascript" src="./yinhang_files/disabled.js"></script><script type="text/javascript" src="./yinhang_files/detachSigner.js"></script><script type="text/javascript" src="./yinhang_files/securityFactor.js"></script><script type="text/javascript" src="./yinhang_files/secEditCtrl.js"></script><script type="text/javascript" src="./yinhang_files/antiCheat.js"></script><script type="text/javascript" src="./yinhang_files/liquidmetal.js"></script><script type="text/javascript" src="./yinhang_files/raphael.js"></script><script type="text/javascript" src="./yinhang_files/currencyUtil.js"></script><script type="text/javascript" src="./yinhang_files/stringUtil.js"></script><script type="text/javascript" src="./yinhang_files/validationUtil.js"></script><script type="text/javascript" src="./yinhang_files/qswhGB2312.js"></script><script type="text/javascript" src="./yinhang_files/minsheng.js"></script><script type="text/javascript" src="./yinhang_files/minshengParser.js"></script><script type="text/javascript" src="./yinhang_files/cMenu.js"></script><script type="text/javascript" src="./yinhang_files/cSubMenu.js"></script><script type="text/javascript" src="./yinhang_files/cHeader.js"></script><script type="text/javascript" src="./yinhang_files/cWelcome.js"></script><script type="text/javascript" src="./yinhang_files/cardWelcome.js"></script><script type="text/javascript" src="./yinhang_files/models.min.js"></script><div class="hide" style="position: absolute; z-index: 3940; display: none;" id="info-ps" visible="false"><div class="info-tip"><p class="arrow"></p><div id="info-con" class="text"></div></div></div><div id="lightbox" style="left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0.3; zoom: 1; position: fixed; z-index: 9; display: none; background: rgb(150, 150, 150);" class="hide" visible="false"></div></body></html>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="http://www.w3school.com.cn/h.asp" title="HTML ϵ�н̳�">HTML ϵ�н̳�</a></li>
+<li id="b"><a href="http://www.w3school.com.cn/b.asp" title="������ű��̳�">������ű�</a></li>
+<li id="s"><a href="http://www.w3school.com.cn/s.asp" title="�������ű��̳�">�������ű�</a></li>
+<li id="d"><a href="http://www.w3school.com.cn/d.asp" title="ASP.NET �̳�">ASP.NET �̳�</a></li>
+<li id="x"><a href="http://www.w3school.com.cn/x.asp" title="XML ϵ�н̳�">XML ϵ�н̳�</a></li>
+<li id="ws"><a href="http://www.w3school.com.cn/ws.asp" title="Web Services ϵ�н̳�">Web Services ϵ�н̳�</a></li>
+<li id="w"><a href="http://www.w3school.com.cn/w.asp" title="��վ�ֲ�">��վ�ֲ�</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+
+<div id="course"><h2>JS &amp; DOM �ο��ֲ�</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/jsref/index.asp" title="JavaScript �� HTML DOM �ο��ֲ�">�ο��ֲ�Ŀ¼</a></li>
+</ul>
+<h2>JavaScript ����</h2>
+<ul>
+<li class="currentLink"><a href="./Array ����_files/Array ����.html" title="JavaScript Array ����ο��ֲ�">JS Array</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_boolean.asp" title="JavaScript Boolean ����ο��ֲ�">JS Boolean</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_date.asp" title="JavaScript Date ����ο��ֲ�">JS Date</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_math.asp" title="JavaScript Math ����Ĳο��ֲ�">JS Math</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_number.asp" title="JavaScript Number ����ο��ֲ�">JS Number</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_string.asp" title="JavaScript String ����ο��ֲ�">JS String</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp" title="JavaScript RegExp ����ο��ֲ�">JS RegExp</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_global.asp" title="JavaScript ȫ�ֶ���ο��ֲ�">JS Functions</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/jsref_events.asp" title="JavaScript �¼��ο��ֲ�">JS Events</a></li>
+</ul>
+<h2>Browser ����</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_window.asp" title="HTML DOM Window ����">Window</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_navigator.asp" title="HTML DOM Navigator ����">Navigator</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_screen.asp" title="HTML DOM Screen ����">Screen</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_history.asp" title="HTML DOM History ����">History</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_location.asp" title="HTML DOM Location ����">Location</a></li>
+</ul>
+<h2>HTML DOM ����</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_document.asp" title="HTML DOM Document ����">DOM Document</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_all.asp" title="HTML DOM Element ����">DOM Element</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_attributes.asp" title="HTML DOM Attribute ����">DOM Attribute</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_event.asp" title="HTML DOM Event ����">DOM Event</a></li>
+</ul>
+<h2>HTML ����</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_anchor.asp" title="HTML DOM Anchor ����">&lt;a&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_area.asp" title="HTML DOM Area ����">&lt;area&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_audio.asp" title="HTML DOM Audio ����">&lt;audio&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_base.asp" title="HTML DOM Base ����">&lt;base&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_body.asp" title="HTML DOM Body ����">&lt;body&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_blockquote.asp" title="HTML DOM Blockquote ����">&lt;blockquote&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_pushbutton.asp" title="HTML DOM Button ����">&lt;button&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_canvas.asp" title="HTML DOM Canvas ����">&lt;canvas&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_col.asp" title="HTML DOM Column ����">&lt;col&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_colgroup.asp" title="HTML DOM ColumnGroup ����">&lt;colgroup&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_datalist.asp" title="HTML DOM Datalist ����">&lt;datalist&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_del.asp" title="HTML DOM Del ����">&lt;del&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_details.asp" title="HTML DOM Details ����">&lt;details&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_dialog.asp" title="HTML DOM Dialog ����">&lt;dialog&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_embed.asp" title="HTML DOM Embed ����">&lt;embed&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_fieldset.asp" title="HTML DOM Fieldset ����">&lt;fieldset&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_form.asp" title="HTML DOM Form ����">&lt;form&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_frame.asp" title="HTML DOM Frame ����">&lt;frame&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_frameset.asp" title="HTML DOM Frameset ����">&lt;frameset&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_iframe.asp" title="HTML DOM IFrame ����">&lt;iframe&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_image.asp" title="HTML DOM Image ����">&lt;img&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_ins.asp" title="HTML DOM Ins ����">&lt;ins&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_button.asp" title="HTML DOM Button ����">&lt;input&gt; button</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_checkbox.asp" title="HTML DOM Checkbox ����">&lt;input&gt; checkbox</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_color.asp" title="HTML DOM Color ����">&lt;input&gt; color</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_date.asp" title="HTML DOM Input Date ����">&lt;input&gt; date</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_datetime.asp" title="HTML DOM Datetime ����">&lt;input&gt; datetime</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_datetime-local.asp" title="HTML DOM Datetime Local ����">&lt;input&gt; datetime-local</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_email.asp" title="HTML DOM Email ����">&lt;input&gt; email</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_fileupload.asp" title="HTML DOM FileUpload ����">&lt;input&gt; file</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_hidden.asp" title="HTML DOM Hidden ����">&lt;input&gt; hidden</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_input_image.asp" title="HTML DOM Input Image ����">&lt;input&gt; image</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_month.asp" title="HTML DOM Month ����">&lt;input&gt; month</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_number.asp" title="HTML DOM Number ����">&lt;input&gt; number</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_password.asp" title="HTML DOM Password ����">&lt;input&gt; password</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_range.asp" title="HTML DOM Input Range ����">&lt;input&gt; range</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_radio.asp" title="HTML DOM Radio ����">&lt;input&gt; radio</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_reset.asp" title="HTML DOM Reset ����">&lt;input&gt; reset</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_search.asp" title="HTML DOM Input Search ����">&lt;input&gt; search</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_submit.asp" title="HTML DOM Submit ����">&lt;input&gt; submit</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_text.asp" title="HTML DOM Text ����">&lt;input&gt; text</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_input_time.asp" title="HTML DOM Input Time ����">&lt;input&gt; time</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_url.asp" title="HTML DOM Input URL ����">&lt;input&gt; url</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_week.asp" title="HTML DOM Week ����">&lt;input&gt; week</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_keygen.asp" title="HTML DOM Keygen ����">&lt;keygen&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_label.asp" title="HTML DOM Label ����">&lt;label&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_legend.asp" title="HTML DOM Legend ����">&lt;legend&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_li.asp" title="HTML DOM Li ����">&lt;li&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_link.asp" title="HTML DOM Link ����">&lt;link&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_map.asp" title="HTML DOM Map ����">&lt;map&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_menu.asp" title="HTML DOM Menu ����">&lt;menu&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_menuitem.asp" title="HTML DOM MenuItem ����">&lt;menuitem&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_meta.asp" title="HTML DOM Meta ����">&lt;meta&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_meter.asp" title="HTML DOM Meter ����">&lt;meter&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_object.asp" title="HTML DOM Object ����">&lt;object&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_ol.asp" title="HTML DOM Ol ����">&lt;ol&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_optgroup.asp" title="HTML DOM OptionGroup ����">&lt;optgroup&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_option.asp" title="HTML DOM Option ����">&lt;option&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_param.asp" title="HTML DOM Parameter ����">&lt;param&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_progress.asp" title="HTML DOM Progress ����">&lt;progress&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_quote.asp" title="HTML DOM Quote ����">&lt;q&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_script.asp" title="HTML DOM Script ����">&lt;script&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_select.asp" title="HTML DOM Select ����">&lt;select&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_source.asp" title="HTML DOM Source ����">&lt;source&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_style.asp" title="HTML DOM Style ����">&lt;style&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_table.asp" title="HTML DOM Table ����">&lt;table&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_tabledata.asp" title="HTML DOM TableCell ����">&lt;td&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_tablehead.asp" title="HTML DOM TableHeader ����">&lt;th&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_tablerow.asp" title="HTML DOM TableRow ����">&lt;tr&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_textarea.asp" title="HTML DOM Textarea ����">&lt;textarea&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_time.asp" title="HTML DOM Time ����">&lt;time&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_title.asp" title="HTML DOM Title ����">&lt;title&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_track.asp" title="HTML DOM Track ����">&lt;track&gt;</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/dom_obj_video.asp" title="HTML DOM Video ����">&lt;video&gt;</a></li>
+</ul>
+</div><div id="selected">
+<h2>��վ�ֲ�</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/site/index.asp" title="��վ����">��վ����</a></li>
+<li><a href="http://www.w3school.com.cn/w3c/index.asp" title="��ά������ (W3C)">��ά������ (W3C)</a></li>
+<li><a href="http://www.w3school.com.cn/browsers/index.asp" title="�������Ϣ">�������Ϣ</a></li>
+<li><a href="http://www.w3school.com.cn/quality/index.asp" title="��վƷ��">��վƷ��</a></li>
+<li><a href="http://www.w3school.com.cn/semweb/index.asp" title="������">������</a></li>
+<li><a href="http://www.w3school.com.cn/careers/index.asp" title="ְҵ�滮">ְҵ�滮</a></li>
+<li><a href="http://www.w3school.com.cn/hosting/index.asp" title="��վ����">��վ����</a></li>
+</ul>
+
+<h2><a href="http://www.w3school.com.cn/about/index.asp" title="���� W3School" id="link_about">���� W3School</a></h2>
+<h2><a href="http://www.w3school.com.cn/about/about_helping.asp" title="���� W3School" id="link_help">���� W3School</a></h2>
+
+</div>
+
+</div>
+
+<div id="maincontent">
+
+<h1>JavaScript Array ����</h1>
+
+
+<div>
+<h2>Array ����</h2>
+
+<p>Array ���������ڵ����ı����д洢���ֵ��</p>
+
+<h3>���� Array ������﷨��</h3>
+
+<pre>new Array();
+new Array(<i>size</i>);
+new Array(<i>element0</i>, <i>element1</i>, ..., <i>elementn</i>);
+</pre>
+
+<h3>����</h3>
+
+<p>���� <i>size</i> ������������Ԫ�ظ��������ص����飬length �ֶν�����Ϊ <i>size</i> ��ֵ��</p>
+
+<p>���� <i>element</i> ..., <i>elementn</i> �ǲ����б�����ʹ����Щ���������ù��캯�� Array() ʱ���´����������Ԫ�ؾͻᱻ��ʼ��Ϊ��Щֵ������ length �ֶ�Ҳ�ᱻ����Ϊ�����ĸ�����</p>
+
+<h3>����ֵ</h3>
+
+<p>�����´���������ʼ���˵����顣</p>
+
+<p>������ù��캯�� Array() ʱû��ʹ�ò�������ô���ص�����Ϊ�գ�length �ֶ�Ϊ 0��</p>
+
+<p>�����ù��캯��ʱֻ���ݸ���һ�����ֲ������ù��캯�������ؾ���ָ��������Ԫ��Ϊ undefined �����顣</p>
+
+<p>�������������� Array() ʱ���ù��캯�����ò���ָ����ֵ��ʼ�����顣</p>
+
+<p>���ѹ��캯����Ϊ�������ã���ʹ�� new �����ʱ��������Ϊ��ʹ�� new �����������ʱ����Ϊ��ȫһ����</p>
+</div>
+
+
+<div>
+<h2>Array ��������</h2>
+
+<table class="dataintable">
+  <tbody><tr>
+    <th style="width:25%">����</th>
+    <th>����</th>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_constructor_array.asp">constructor</a></td>
+    <td>���ضԴ����˶�������麯�������á�</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_length_array.asp">length</a></td>
+    <td>���û򷵻�������Ԫ�ص���Ŀ��</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_prototype_array.asp">prototype</a></td>
+    <td>ʹ��������������������Ժͷ�����</td>
+  </tr>
+  </tbody></table>
+</div>
+
+
+<div>
+<h2>Array ���󷽷�</h2>
+
+<table class="dataintable">
+  <tbody><tr>
+    <th style="width:25%">����</th>
+    <th>����</th>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_concat_array.asp">concat()</a></td>
+    <td>�����������������飬�����ؽ����</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_join.asp">join()</a></td>
+    <td>�����������Ԫ�ط���һ���ַ�����Ԫ��ͨ��ָ���ķָ������зָ���</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_pop.asp">pop()</a></td>
+    <td>ɾ����������������һ��Ԫ��</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_push.asp">push()</a></td>
+    <td>�������ĩβ����һ�������Ԫ�أ��������µĳ��ȡ�</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_reverse.asp">reverse()</a></td>
+    <td>�ߵ�������Ԫ�ص�˳��</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_shift.asp">shift()</a></td>
+    <td>ɾ������������ĵ�һ��Ԫ��</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_slice_array.asp">slice()</a></td>
+    <td>��ĳ�����е����鷵��ѡ����Ԫ��</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_sort.asp">sort()</a></td>
+    <td>�������Ԫ�ؽ�������</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_splice.asp">splice()</a></td>
+    <td>ɾ��Ԫ�أ���������������Ԫ�ء�</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_tosource_array.asp">toSource()</a></td>
+    <td>���ظö����Դ���롣</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_toString_array.asp">toString()</a></td>
+    <td>������ת��Ϊ�ַ����������ؽ����</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_toLocaleString_array.asp">toLocaleString()</a></td>
+    <td>������ת��Ϊ�������飬�����ؽ����</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_unshift.asp">unshift()</a></td>
+    <td>������Ŀ�ͷ����һ�������Ԫ�أ��������µĳ��ȡ�</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.w3school.com.cn/jsref/jsref_valueof_array.asp">valueOf()</a></td>
+    <td>������������ԭʼֵ</td>
+  </tr>
+</tbody></table>
+</div>
+
+
+
+
+</div>
+<!-- maincontent end -->
+
+<div id="sidebar">
+
+<div id="searchui">
+<form method="get" id="searchform" action="http://www.google.com.hk/search">
+<p><label for="searched_content">Search:</label></p>
+<p><input type="hidden" name="sitesearch" value="w3school.com.cn"></p>
+<p>
+<input type="text" name="as_q" class="box" id="searched_content" title="�ڴ������������ݡ�">
+<input type="submit" value="Go" class="button" title="������">
+</p>
+</form>
+</div>
+
+<div id="tools">
+<h5 id="tools_reference"><a href="http://www.w3school.com.cn/jsref/index.asp">JavaScript �ο��ֲ�</a></h5>
+<h5 id="tools_example"><a href="http://www.w3school.com.cn/example/jseg_examples.asp">JavaScript ʵ��</a></h5>
+<h5 id="tools_quiz"><a href="http://www.w3school.com.cn/js/js_quiz.asp">JavaScript ����</a></h5>
+</div>
+
+<div id="ad">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3381531532877742";
+/* sidebar-160x600 */
+google_ad_slot = "3772569310";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="./Array ����_files/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+
+</div>
+
+<div id="footer">
+<p>
+W3School �ṩ�����ݽ�������ѵ�����ǲ���֤���ݵ���ȷ�ԡ�ͨ��ʹ�ñ�վ������֮�����ķ����뱾վ�޹ء�W3School �������İ���������ݽ������ԣ����κη������⼰���ղ��е��κ����Ρ�
+</p>
+
+<p>
+��ʹ�ñ�վʱ���������ѽ����˱�վ��<a href="http://www.w3school.com.cn/about/about_use.asp" title="����ʹ��">ʹ������</a>��<a href="http://www.w3school.com.cn/about/about_privacy.asp" title="������˽">��˽����</a>����Ȩ���У�����һ��Ȩ����
+�����̣�<a href="http://www.yktz.net/" title="�Ϻ�Ӯ��Ͷ�����޹�˾">�Ϻ�Ӯ��Ͷ�����޹�˾</a>��
+<a href="http://www.miitbeian.gov.cn/">��ICP��06004630��</a>
+</p>
+</div>
+
+</div>
+<!-- wrapper end -->
+
+
+
+</body></html>

@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<HEAD>
 <title>WeDGeT-ReadTable</title>
 <meta charset="utf-8">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="js/bootstrap.min.js"></script>
+<script>
+function f_SaveAsExcel( _sHtml , _sFileName ){
+	var oWin=window.open("about:blank","Excel","top=2000,left=2000");
+
+	oWin.document.write( _sHtml);
+	oWin.document.execCommand('Saveas',false , _sFileName );
+	oWin.close();
+}
+</script>
 <?php
 	$database = null;
 	$table = null;
@@ -18,18 +27,20 @@
 		or die("cannot connect database: " . mysqli_error());
 	mysqli_query($dbc, "set names utf8");
 ?>
-</head>
+</HEAD>
 
-<body>
-	<div class="container">
+<BODY>
+<div class="container">
 		<div class="row">
 			<h3><?php echo $table;?></h3>
 			<?php
 				echo '<a class="btn btn-success" href="user_database.php?database=' . $database. '&table='. $table .'&nickname='. $nickname .'">返回查看所有表单</a>';
-				echo '<br><br>';
 			?>
+			<input class="btn btn-success" name="" type="button" onClick="f_SaveAsExcel(document.all.content.innerHTML,'test.xls');" value="导出表单到本地">
+			<br>
+			<br>
 		</div>
-		<div class="row">
+		<div id="content" class="row">
 			<?php			
 				$query = "SELECT * FROM ". $table;
 				$result = mysqli_query($dbc, $query)  or die(mysqli_error($dbc));
@@ -63,5 +74,5 @@
 			?>
 		</div>
 	</div>
-</body>
-</html>
+</BODY>
+</HTML>

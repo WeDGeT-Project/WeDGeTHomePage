@@ -84,6 +84,7 @@
 				break;
 			}
 		}
+		break;
 	}
 	//echo '该行表头数量:'.$columns.'<br>';
 	$sql_create_table = $sql_create_table . "primary key (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
