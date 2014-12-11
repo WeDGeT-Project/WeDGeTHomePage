@@ -1,359 +1,1224 @@
-<!DOCTYPE html>
-<!-- saved from url=(0052)http://www.w3school.com.cn/jsref/jsref_obj_array.asp -->
-<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
-<meta charset="gbk">
-<meta name="robots" content="all">
-<meta name="author" content="w3school.com.cn">
-<link rel="stylesheet" type="text/css" href="./Array ¶ÔÏó_files/c5.css">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0052)http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/CX_1.asp -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+ 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<TITLE>æˆç»©æŸ¥è¯¢</TITLE>  <LINK href="æˆç»©æŸ¥è¯¢_files/xs.css" rel="stylesheet" type="text/css"> 
+<STYLE type="text/css">
+<!--
+.style3 {font-size: 12px}
+.style4 {color: #FF0000}
+-->
+</STYLE>
+ 
+<SCRIPT src="æˆç»©æŸ¥è¯¢_files/public.js" type="text/javascript"></SCRIPT>
 
-<title>JavaScript Array ¶ÔÏó</title>
-
-</head>
-
-<body class="browserscripting" id="jsref">
-
-<div id="wrapper">
-
-<div id="header">
-<a href="http://www.w3school.com.cn/index.html" title="w3school ÔÚÏß½Ì³Ì" style="float:left;">w3school ÔÚÏß½Ì³Ì</a>
-<div id="ad_head">
-<script async="" type="text/javascript" src="./Array ¶ÔÏó_files/ca-pub-3381531532877742.js"></script><script type="text/javascript"><!--
-google_ad_client = "pub-3381531532877742";
-/* 728x90, ´´½¨ÓÚ 08-12-1 */
-google_ad_slot = "7423315034";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript" src="./Array ¶ÔÏó_files/show_ads.js">
-</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
-</div>
-</div>
-
-<div id="navfirst">
-<ul id="menu">
-<li id="h"><a href="http://www.w3school.com.cn/h.asp" title="HTML ÏµÁĞ½Ì³Ì">HTML ÏµÁĞ½Ì³Ì</a></li>
-<li id="b"><a href="http://www.w3school.com.cn/b.asp" title="ä¯ÀÀÆ÷½Å±¾½Ì³Ì">ä¯ÀÀÆ÷½Å±¾</a></li>
-<li id="s"><a href="http://www.w3school.com.cn/s.asp" title="·şÎñÆ÷½Å±¾½Ì³Ì">·şÎñÆ÷½Å±¾</a></li>
-<li id="d"><a href="http://www.w3school.com.cn/d.asp" title="ASP.NET ½Ì³Ì">ASP.NET ½Ì³Ì</a></li>
-<li id="x"><a href="http://www.w3school.com.cn/x.asp" title="XML ÏµÁĞ½Ì³Ì">XML ÏµÁĞ½Ì³Ì</a></li>
-<li id="ws"><a href="http://www.w3school.com.cn/ws.asp" title="Web Services ÏµÁĞ½Ì³Ì">Web Services ÏµÁĞ½Ì³Ì</a></li>
-<li id="w"><a href="http://www.w3school.com.cn/w.asp" title="½¨Õ¾ÊÖ²á">½¨Õ¾ÊÖ²á</a></li>
-</ul>
-</div>
-
-<div id="navsecond">
-
-<div id="course"><h2>JS &amp; DOM ²Î¿¼ÊÖ²á</h2>
-<ul>
-<li><a href="http://www.w3school.com.cn/jsref/index.asp" title="JavaScript ºÍ HTML DOM ²Î¿¼ÊÖ²á">²Î¿¼ÊÖ²áÄ¿Â¼</a></li>
-</ul>
-<h2>JavaScript ¶ÔÏó</h2>
-<ul>
-<li class="currentLink"><a href="./Array ¶ÔÏó_files/Array ¶ÔÏó.html" title="JavaScript Array ¶ÔÏó²Î¿¼ÊÖ²á">JS Array</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_boolean.asp" title="JavaScript Boolean ¶ÔÏó²Î¿¼ÊÖ²á">JS Boolean</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_date.asp" title="JavaScript Date ¶ÔÏó²Î¿¼ÊÖ²á">JS Date</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_math.asp" title="JavaScript Math ¶ÔÏóµÄ²Î¿¼ÊÖ²á">JS Math</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_number.asp" title="JavaScript Number ¶ÔÏó²Î¿¼ÊÖ²á">JS Number</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_string.asp" title="JavaScript String ¶ÔÏó²Î¿¼ÊÖ²á">JS String</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp" title="JavaScript RegExp ¶ÔÏó²Î¿¼ÊÖ²á">JS RegExp</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/jsref_obj_global.asp" title="JavaScript È«¾Ö¶ÔÏó²Î¿¼ÊÖ²á">JS Functions</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/jsref_events.asp" title="JavaScript ÊÂ¼ş²Î¿¼ÊÖ²á">JS Events</a></li>
-</ul>
-<h2>Browser ¶ÔÏó</h2>
-<ul>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_window.asp" title="HTML DOM Window ¶ÔÏó">Window</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_navigator.asp" title="HTML DOM Navigator ¶ÔÏó">Navigator</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_screen.asp" title="HTML DOM Screen ¶ÔÏó">Screen</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_history.asp" title="HTML DOM History ¶ÔÏó">History</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_location.asp" title="HTML DOM Location ¶ÔÏó">Location</a></li>
-</ul>
-<h2>HTML DOM ¶ÔÏó</h2>
-<ul>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_document.asp" title="HTML DOM Document ¶ÔÏó">DOM Document</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_all.asp" title="HTML DOM Element ¶ÔÏó">DOM Element</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_attributes.asp" title="HTML DOM Attribute ¶ÔÏó">DOM Attribute</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_event.asp" title="HTML DOM Event ¶ÔÏó">DOM Event</a></li>
-</ul>
-<h2>HTML ¶ÔÏó</h2>
-<ul>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_anchor.asp" title="HTML DOM Anchor ¶ÔÏó">&lt;a&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_area.asp" title="HTML DOM Area ¶ÔÏó">&lt;area&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_audio.asp" title="HTML DOM Audio ¶ÔÏó">&lt;audio&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_base.asp" title="HTML DOM Base ¶ÔÏó">&lt;base&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_body.asp" title="HTML DOM Body ¶ÔÏó">&lt;body&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_blockquote.asp" title="HTML DOM Blockquote ¶ÔÏó">&lt;blockquote&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_pushbutton.asp" title="HTML DOM Button ¶ÔÏó">&lt;button&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_canvas.asp" title="HTML DOM Canvas ¶ÔÏó">&lt;canvas&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_col.asp" title="HTML DOM Column ¶ÔÏó">&lt;col&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_colgroup.asp" title="HTML DOM ColumnGroup ¶ÔÏó">&lt;colgroup&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_datalist.asp" title="HTML DOM Datalist ¶ÔÏó">&lt;datalist&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_del.asp" title="HTML DOM Del ¶ÔÏó">&lt;del&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_details.asp" title="HTML DOM Details ¶ÔÏó">&lt;details&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_dialog.asp" title="HTML DOM Dialog ¶ÔÏó">&lt;dialog&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_embed.asp" title="HTML DOM Embed ¶ÔÏó">&lt;embed&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_fieldset.asp" title="HTML DOM Fieldset ¶ÔÏó">&lt;fieldset&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_form.asp" title="HTML DOM Form ¶ÔÏó">&lt;form&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_frame.asp" title="HTML DOM Frame ¶ÔÏó">&lt;frame&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_frameset.asp" title="HTML DOM Frameset ¶ÔÏó">&lt;frameset&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_iframe.asp" title="HTML DOM IFrame ¶ÔÏó">&lt;iframe&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_image.asp" title="HTML DOM Image ¶ÔÏó">&lt;img&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_ins.asp" title="HTML DOM Ins ¶ÔÏó">&lt;ins&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_button.asp" title="HTML DOM Button ¶ÔÏó">&lt;input&gt; button</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_checkbox.asp" title="HTML DOM Checkbox ¶ÔÏó">&lt;input&gt; checkbox</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_color.asp" title="HTML DOM Color ¶ÔÏó">&lt;input&gt; color</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_date.asp" title="HTML DOM Input Date ¶ÔÏó">&lt;input&gt; date</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_datetime.asp" title="HTML DOM Datetime ¶ÔÏó">&lt;input&gt; datetime</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_datetime-local.asp" title="HTML DOM Datetime Local ¶ÔÏó">&lt;input&gt; datetime-local</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_email.asp" title="HTML DOM Email ¶ÔÏó">&lt;input&gt; email</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_fileupload.asp" title="HTML DOM FileUpload ¶ÔÏó">&lt;input&gt; file</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_hidden.asp" title="HTML DOM Hidden ¶ÔÏó">&lt;input&gt; hidden</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_input_image.asp" title="HTML DOM Input Image ¶ÔÏó">&lt;input&gt; image</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_month.asp" title="HTML DOM Month ¶ÔÏó">&lt;input&gt; month</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_number.asp" title="HTML DOM Number ¶ÔÏó">&lt;input&gt; number</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_password.asp" title="HTML DOM Password ¶ÔÏó">&lt;input&gt; password</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_range.asp" title="HTML DOM Input Range ¶ÔÏó">&lt;input&gt; range</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_radio.asp" title="HTML DOM Radio ¶ÔÏó">&lt;input&gt; radio</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_reset.asp" title="HTML DOM Reset ¶ÔÏó">&lt;input&gt; reset</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_search.asp" title="HTML DOM Input Search ¶ÔÏó">&lt;input&gt; search</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_submit.asp" title="HTML DOM Submit ¶ÔÏó">&lt;input&gt; submit</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_text.asp" title="HTML DOM Text ¶ÔÏó">&lt;input&gt; text</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_input_time.asp" title="HTML DOM Input Time ¶ÔÏó">&lt;input&gt; time</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_url.asp" title="HTML DOM Input URL ¶ÔÏó">&lt;input&gt; url</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_week.asp" title="HTML DOM Week ¶ÔÏó">&lt;input&gt; week</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_keygen.asp" title="HTML DOM Keygen ¶ÔÏó">&lt;keygen&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_label.asp" title="HTML DOM Label ¶ÔÏó">&lt;label&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_legend.asp" title="HTML DOM Legend ¶ÔÏó">&lt;legend&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_li.asp" title="HTML DOM Li ¶ÔÏó">&lt;li&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_link.asp" title="HTML DOM Link ¶ÔÏó">&lt;link&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_map.asp" title="HTML DOM Map ¶ÔÏó">&lt;map&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_menu.asp" title="HTML DOM Menu ¶ÔÏó">&lt;menu&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_menuitem.asp" title="HTML DOM MenuItem ¶ÔÏó">&lt;menuitem&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_meta.asp" title="HTML DOM Meta ¶ÔÏó">&lt;meta&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_meter.asp" title="HTML DOM Meter ¶ÔÏó">&lt;meter&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_object.asp" title="HTML DOM Object ¶ÔÏó">&lt;object&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_ol.asp" title="HTML DOM Ol ¶ÔÏó">&lt;ol&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_optgroup.asp" title="HTML DOM OptionGroup ¶ÔÏó">&lt;optgroup&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_option.asp" title="HTML DOM Option ¶ÔÏó">&lt;option&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_param.asp" title="HTML DOM Parameter ¶ÔÏó">&lt;param&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_progress.asp" title="HTML DOM Progress ¶ÔÏó">&lt;progress&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_quote.asp" title="HTML DOM Quote ¶ÔÏó">&lt;q&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_script.asp" title="HTML DOM Script ¶ÔÏó">&lt;script&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_select.asp" title="HTML DOM Select ¶ÔÏó">&lt;select&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_source.asp" title="HTML DOM Source ¶ÔÏó">&lt;source&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_style.asp" title="HTML DOM Style ¶ÔÏó">&lt;style&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_table.asp" title="HTML DOM Table ¶ÔÏó">&lt;table&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_tabledata.asp" title="HTML DOM TableCell ¶ÔÏó">&lt;td&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_tablehead.asp" title="HTML DOM TableHeader ¶ÔÏó">&lt;th&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_tablerow.asp" title="HTML DOM TableRow ¶ÔÏó">&lt;tr&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_textarea.asp" title="HTML DOM Textarea ¶ÔÏó">&lt;textarea&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_time.asp" title="HTML DOM Time ¶ÔÏó">&lt;time&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_title.asp" title="HTML DOM Title ¶ÔÏó">&lt;title&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_track.asp" title="HTML DOM Track ¶ÔÏó">&lt;track&gt;</a></li>
-<li><a href="http://www.w3school.com.cn/jsref/dom_obj_video.asp" title="HTML DOM Video ¶ÔÏó">&lt;video&gt;</a></li>
-</ul>
-</div><div id="selected">
-<h2>½¨Õ¾ÊÖ²á</h2>
-<ul>
-<li><a href="http://www.w3school.com.cn/site/index.asp" title="ÍøÕ¾¹¹½¨">ÍøÕ¾¹¹½¨</a></li>
-<li><a href="http://www.w3school.com.cn/w3c/index.asp" title="ÍòÎ¬ÍøÁªÃË (W3C)">ÍòÎ¬ÍøÁªÃË (W3C)</a></li>
-<li><a href="http://www.w3school.com.cn/browsers/index.asp" title="ä¯ÀÀÆ÷ĞÅÏ¢">ä¯ÀÀÆ÷ĞÅÏ¢</a></li>
-<li><a href="http://www.w3school.com.cn/quality/index.asp" title="ÍøÕ¾Æ·ÖÊ">ÍøÕ¾Æ·ÖÊ</a></li>
-<li><a href="http://www.w3school.com.cn/semweb/index.asp" title="ÓïÒåÍø">ÓïÒåÍø</a></li>
-<li><a href="http://www.w3school.com.cn/careers/index.asp" title="Ö°Òµ¹æ»®">Ö°Òµ¹æ»®</a></li>
-<li><a href="http://www.w3school.com.cn/hosting/index.asp" title="ÍøÕ¾Ö÷»ú">ÍøÕ¾Ö÷»ú</a></li>
-</ul>
-
-<h2><a href="http://www.w3school.com.cn/about/index.asp" title="¹ØÓÚ W3School" id="link_about">¹ØÓÚ W3School</a></h2>
-<h2><a href="http://www.w3school.com.cn/about/about_helping.asp" title="°ïÖú W3School" id="link_help">°ïÖú W3School</a></h2>
-
-</div>
-
-</div>
-
-<div id="maincontent">
-
-<h1>JavaScript Array ¶ÔÏó</h1>
-
-
-<div>
-<h2>Array ¶ÔÏó</h2>
-
-<p>Array ¶ÔÏóÓÃÓÚÔÚµ¥¸öµÄ±äÁ¿ÖĞ´æ´¢¶à¸öÖµ¡£</p>
-
-<h3>´´½¨ Array ¶ÔÏóµÄÓï·¨£º</h3>
-
-<pre>new Array();
-new Array(<i>size</i>);
-new Array(<i>element0</i>, <i>element1</i>, ..., <i>elementn</i>);
-</pre>
-
-<h3>²ÎÊı</h3>
-
-<p>²ÎÊı <i>size</i> ÊÇÆÚÍûµÄÊı×éÔªËØ¸öÊı¡£·µ»ØµÄÊı×é£¬length ×Ö¶Î½«±»ÉèÎª <i>size</i> µÄÖµ¡£</p>
-
-<p>²ÎÊı <i>element</i> ..., <i>elementn</i> ÊÇ²ÎÊıÁĞ±í¡£µ±Ê¹ÓÃÕâĞ©²ÎÊıÀ´µ÷ÓÃ¹¹Ôìº¯Êı Array() Ê±£¬ĞÂ´´½¨µÄÊı×éµÄÔªËØ¾Í»á±»³õÊ¼»¯ÎªÕâĞ©Öµ¡£ËüµÄ length ×Ö¶ÎÒ²»á±»ÉèÖÃÎª²ÎÊıµÄ¸öÊı¡£</p>
-
-<h3>·µ»ØÖµ</h3>
-
-<p>·µ»ØĞÂ´´½¨²¢±»³õÊ¼»¯ÁËµÄÊı×é¡£</p>
-
-<p>Èç¹ûµ÷ÓÃ¹¹Ôìº¯Êı Array() Ê±Ã»ÓĞÊ¹ÓÃ²ÎÊı£¬ÄÇÃ´·µ»ØµÄÊı×éÎª¿Õ£¬length ×Ö¶ÎÎª 0¡£</p>
-
-<p>µ±µ÷ÓÃ¹¹Ôìº¯ÊıÊ±Ö»´«µİ¸øËüÒ»¸öÊı×Ö²ÎÊı£¬¸Ã¹¹Ôìº¯Êı½«·µ»Ø¾ßÓĞÖ¸¶¨¸öÊı¡¢ÔªËØÎª undefined µÄÊı×é¡£</p>
-
-<p>µ±ÆäËû²ÎÊıµ÷ÓÃ Array() Ê±£¬¸Ã¹¹Ôìº¯Êı½«ÓÃ²ÎÊıÖ¸¶¨µÄÖµ³õÊ¼»¯Êı×é¡£</p>
-
-<p>µ±°Ñ¹¹Ôìº¯Êı×÷Îªº¯Êıµ÷ÓÃ£¬²»Ê¹ÓÃ new ÔËËã·ûÊ±£¬ËüµÄĞĞÎªÓëÊ¹ÓÃ new ÔËËã·ûµ÷ÓÃËüÊ±µÄĞĞÎªÍêÈ«Ò»Ñù¡£</p>
-</div>
-
-
-<div>
-<h2>Array ¶ÔÏóÊôĞÔ</h2>
-
-<table class="dataintable">
-  <tbody><tr>
-    <th style="width:25%">ÊôĞÔ</th>
-    <th>ÃèÊö</th>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_constructor_array.asp">constructor</a></td>
-    <td>·µ»Ø¶Ô´´½¨´Ë¶ÔÏóµÄÊı×éº¯ÊıµÄÒıÓÃ¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_length_array.asp">length</a></td>
-    <td>ÉèÖÃ»ò·µ»ØÊı×éÖĞÔªËØµÄÊıÄ¿¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_prototype_array.asp">prototype</a></td>
-    <td>Ê¹ÄúÓĞÄÜÁ¦Ïò¶ÔÏóÌí¼ÓÊôĞÔºÍ·½·¨¡£</td>
-  </tr>
-  </tbody></table>
-</div>
-
-
-<div>
-<h2>Array ¶ÔÏó·½·¨</h2>
-
-<table class="dataintable">
-  <tbody><tr>
-    <th style="width:25%">·½·¨</th>
-    <th>ÃèÊö</th>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_concat_array.asp">concat()</a></td>
-    <td>Á¬½ÓÁ½¸ö»ò¸ü¶àµÄÊı×é£¬²¢·µ»Ø½á¹û¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_join.asp">join()</a></td>
-    <td>°ÑÊı×éµÄËùÓĞÔªËØ·ÅÈëÒ»¸ö×Ö·û´®¡£ÔªËØÍ¨¹ıÖ¸¶¨µÄ·Ö¸ô·û½øĞĞ·Ö¸ô¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_pop.asp">pop()</a></td>
-    <td>É¾³ı²¢·µ»ØÊı×éµÄ×îºóÒ»¸öÔªËØ</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_push.asp">push()</a></td>
-    <td>ÏòÊı×éµÄÄ©Î²Ìí¼ÓÒ»¸ö»ò¸ü¶àÔªËØ£¬²¢·µ»ØĞÂµÄ³¤¶È¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_reverse.asp">reverse()</a></td>
-    <td>µßµ¹Êı×éÖĞÔªËØµÄË³Ğò¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_shift.asp">shift()</a></td>
-    <td>É¾³ı²¢·µ»ØÊı×éµÄµÚÒ»¸öÔªËØ</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_slice_array.asp">slice()</a></td>
-    <td>´ÓÄ³¸öÒÑÓĞµÄÊı×é·µ»ØÑ¡¶¨µÄÔªËØ</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_sort.asp">sort()</a></td>
-    <td>¶ÔÊı×éµÄÔªËØ½øĞĞÅÅĞò</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_splice.asp">splice()</a></td>
-    <td>É¾³ıÔªËØ£¬²¢ÏòÊı×éÌí¼ÓĞÂÔªËØ¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_tosource_array.asp">toSource()</a></td>
-    <td>·µ»Ø¸Ã¶ÔÏóµÄÔ´´úÂë¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_toString_array.asp">toString()</a></td>
-    <td>°ÑÊı×é×ª»»Îª×Ö·û´®£¬²¢·µ»Ø½á¹û¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_toLocaleString_array.asp">toLocaleString()</a></td>
-    <td>°ÑÊı×é×ª»»Îª±¾µØÊı×é£¬²¢·µ»Ø½á¹û¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_unshift.asp">unshift()</a></td>
-    <td>ÏòÊı×éµÄ¿ªÍ·Ìí¼ÓÒ»¸ö»ò¸ü¶àÔªËØ£¬²¢·µ»ØĞÂµÄ³¤¶È¡£</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.w3school.com.cn/jsref/jsref_valueof_array.asp">valueOf()</a></td>
-    <td>·µ»ØÊı×é¶ÔÏóµÄÔ­Ê¼Öµ</td>
-  </tr>
-</tbody></table>
-</div>
-
-
-
-
-</div>
-<!-- maincontent end -->
-
-<div id="sidebar">
-
-<div id="searchui">
-<form method="get" id="searchform" action="http://www.google.com.hk/search">
-<p><label for="searched_content">Search:</label></p>
-<p><input type="hidden" name="sitesearch" value="w3school.com.cn"></p>
-<p>
-<input type="text" name="as_q" class="box" id="searched_content" title="ÔÚ´ËÊäÈëËÑË÷ÄÚÈİ¡£">
-<input type="submit" value="Go" class="button" title="ËÑË÷£¡">
-</p>
-</form>
-</div>
-
-<div id="tools">
-<h5 id="tools_reference"><a href="http://www.w3school.com.cn/jsref/index.asp">JavaScript ²Î¿¼ÊÖ²á</a></h5>
-<h5 id="tools_example"><a href="http://www.w3school.com.cn/example/jseg_examples.asp">JavaScript ÊµÀı</a></h5>
-<h5 id="tools_quiz"><a href="http://www.w3school.com.cn/js/js_quiz.asp">JavaScript ²âÑé</a></h5>
-</div>
-
-<div id="ad">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3381531532877742";
-/* sidebar-160x600 */
-google_ad_slot = "3772569310";
-google_ad_width = 160;
-google_ad_height = 600;
-//-->
-</script>
-<script type="text/javascript" src="./Array ¶ÔÏó_files/show_ads.js">
-</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
-</div>
-
-</div>
-
-<div id="footer">
-<p>
-W3School Ìá¹©µÄÄÚÈİ½öÓÃÓÚÅàÑµ¡£ÎÒÃÇ²»±£Ö¤ÄÚÈİµÄÕıÈ·ĞÔ¡£Í¨¹ıÊ¹ÓÃ±¾Õ¾ÄÚÈİËæÖ®¶øÀ´µÄ·çÏÕÓë±¾Õ¾ÎŞ¹Ø¡£W3School ¼òÌåÖĞÎÄ°æµÄËùÓĞÄÚÈİ½ö¹©²âÊÔ£¬¶ÔÈÎºÎ·¨ÂÉÎÊÌâ¼°·çÏÕ²»³Ğµ£ÈÎºÎÔğÈÎ¡£
-</p>
-
-<p>
-µ±Ê¹ÓÃ±¾Õ¾Ê±£¬´ú±íÄúÒÑ½ÓÊÜÁË±¾Õ¾µÄ<a href="http://www.w3school.com.cn/about/about_use.asp" title="¹ØÓÚÊ¹ÓÃ">Ê¹ÓÃÌõ¿î</a>ºÍ<a href="http://www.w3school.com.cn/about/about_privacy.asp" title="¹ØÓÚÒşË½">ÒşË½Ìõ¿î</a>¡£°æÈ¨ËùÓĞ£¬±£ÁôÒ»ÇĞÈ¨Àû¡£
-ÔŞÖúÉÌ£º<a href="http://www.yktz.net/" title="ÉÏº£Ó®¿ÆÍ¶×ÊÓĞÏŞ¹«Ë¾">ÉÏº£Ó®¿ÆÍ¶×ÊÓĞÏŞ¹«Ë¾</a>¡£
-<a href="http://www.miitbeian.gov.cn/">ÃÉICP±¸06004630ºÅ</a>
-</p>
-</div>
-
-</div>
-<!-- wrapper end -->
-
-
-
-</body></html>
+<META name="GENERATOR" content="MSHTML 11.00.9600.17420"></HEAD> 
+<BODY onload="if(window.name!=''){document.body.style.width='98%';}">
+<STYLE type="text/css">
+<!--
+.text {
+	COLOR: #3c3c3c; LINE-HEIGHT: 28px
+}
+.text1 {
+	FONT-SIZE: 14px; COLOR: #3c3c3c; LINE-HEIGHT: 28px
+}
+.STYLE1 {
+	font-family:"é»‘ä½“";
+	font-size: 15pt;
+	font-weight: bold;
+}
+.style6 {color: #0000FF}
+-->
+</STYLE>
+ 
+<DIV id="top">
+<DIV class="left"></DIV>
+<DIV class="center"><SPAN>æ¬¢è¿æ‚¨ï¼šå§œå¤©æ–‡ã€€|ã€€1203106ç­ã€€|ã€€<A class="menu" href="http://xscj.hit.edu.cn/Close.asp">é€€å‡ºç³»ç»Ÿ</A> 
+ ã€€ã€€ã€€ã€€ã€€</SPAN></DIV>
+<DIV class="right"></DIV>
+<DIV class="space"></DIV></DIV>
+<DIV id="head">
+<DIV class="left"></DIV>
+<DIV class="center">
+<DIV class="title" id="space_title">å“ˆå°”æ»¨å·¥ä¸šå¤§å­¦</DIV>
+<DIV class="intro" id="space_intro">æœ¬ç§‘ç”Ÿå­¦åŠ¡ç®¡ç†</DIV></DIV>
+<DIV class="right"></DIV>
+<DIV class="space"></DIV></DIV>
+<DIV id="menus">
+<DIV class="left"></DIV>
+<DIV class="center">
+<UL>
+  <LI><A class="menu" 
+  href="http://xscj.hit.edu.cn/hitjwgl/xs/Main.asp"><SPAN>è¿”å›ä¸»èœå•</SPAN></A></LI>
+  <LI><A class="menu" 
+  href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/cx.asp"><SPAN>é‡æ–°æŸ¥è¯¢æˆç»©</SPAN></A></LI></UL></DIV>
+<DIV class="right"></DIV>
+<DIV class="space"></DIV></DIV>
+<DIV id="spacemain">
+<DIV id="top_style">
+<H2></H2>
+<H1></H1></DIV>
+<DIV class="center"><!--  -->	 
+<TABLE width="80%" align="center" border="0" cellspacing="0" cellpadding="0">
+  <TBODY>
+  <TR>
+    <TD height="60" align="center"><STRONG><FONT size="4">1120310604 - 
+      		 ç¬¬ä¸€å­¦ä½æˆç»©è¡¨</FONT></STRONG></TD></TR></TBODY></TABLE>
+<TABLE width="80%" align="center" bgcolor="#ffffff" border="1" cellspacing="0" 
+cellpadding="0">
+  <TBODY>
+  <TR bgcolor="#cccccc">
+    <TD height="28">
+      <DIV align="center"><STRONG>å­¦æœŸ</STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG>è¯¾ç¨‹å·</STRONG></DIV></TD>
+    <TD width="25%">
+      <DIV align="center"><STRONG>è¯¾ç¨‹å</STRONG></DIV></TD>
+    <TD width="10%">
+      <DIV align="center"><STRONG>æˆè¯¾æ•™å¸ˆ</STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG>ç±»åˆ«</STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG>å­¦åˆ†</STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG>å­¦æ—¶</STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG>æˆç»©</STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG>æˆç»©ç±»åˆ«</STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG>å¤‡æ³¨</STRONG></DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2012ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08C1150311</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å¤§å­¦è‹±è¯­</DIV></TD>
+    <TD>
+      <DIV align="center">å­™ç››è</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                60             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2012ç§‹å­£&amp;CJ=80&amp;CJLB=&amp;kcm=å¤§å­¦è‹±è¯­&amp;JSM=å­™ç››è&amp;KCH=08C1150311&amp;JSH=/3593/1&amp;mid=1120310604" 
+      target="_blank">80</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2012ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08N1120220</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ä»£æ•°ä¸å‡ ä½•</DIV></TD>
+    <TD>
+      <DIV align="center">å¾é˜³</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">3.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                60             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2012ç§‹å­£&amp;CJ=98&amp;CJLB=&amp;kcm=ä»£æ•°ä¸å‡ ä½•&amp;JSM=å¾é˜³&amp;KCH=08N1120220&amp;JSH=/956367&amp;mid=1120310604" 
+      target="_blank">98</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2012ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08T1034030</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;é«˜çº§è¯­è¨€ç¨‹åºè®¾è®¡</DIV></TD>
+    <TD>
+      <DIV align="center">èµµå·</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">4.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                72             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2012ç§‹å­£&amp;CJ=89&amp;CJLB=&amp;kcm=é«˜çº§è¯­è¨€ç¨‹åºè®¾è®¡&amp;JSM=èµµå·&amp;KCH=08T1034030&amp;JSH=0647;68&amp;mid=1120310604" 
+      target="_blank">89</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2012ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08N1120211</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å·¥ç§‘æ•°å­¦åˆ†æ</DIV></TD>
+    <TD>
+      <DIV align="center">é»„è‰³</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">5.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                90             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2012ç§‹å­£&amp;CJ=96&amp;CJLB=&amp;kcm=å·¥ç§‘æ•°å­¦åˆ†æ&amp;JSM=é»„è‰³&amp;KCH=08N1120211&amp;JSH=/956;24&amp;mid=1120310604" 
+      target="_blank">96</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2012ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08T1034060</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;è®¡ç®—æœºå¯¼è®º</DIV></TD>
+    <TD>
+      <DIV align="center">æˆ˜å¾·è‡£</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                30             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2012ç§‹å­£&amp;CJ=97&amp;CJLB=&amp;kcm=è®¡ç®—æœºå¯¼è®º&amp;JSM=æˆ˜å¾·è‡£&amp;KCH=08T1034060&amp;JSH=0647370&amp;mid=1120310604" 
+      target="_blank">97</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2012ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08C1000030</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å†›è®­åŠå†›äº‹ç†è®º</DIV></TD>
+    <TD>
+      <DIV align="center">ç½—å–„å</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">3.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                3å‘¨             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2012ç§‹å­£&amp;CJ=79&amp;CJLB=&amp;kcm=å†›è®­åŠå†›äº‹ç†è®º&amp;JSM=ç½—å–„å&amp;KCH=08C1000030&amp;JSH=/35;360&amp;mid=1120310604" 
+      target="_blank">79</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2012ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08C1240110</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;æ€æƒ³é“å¾·ä¿®å…»ä¸æ³•å¾‹åŸºç¡€</DIV></TD>
+    <TD>
+      <DIV align="center">åˆ˜æ™“èŠ³</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                34             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2012ç§‹å­£&amp;CJ=87&amp;CJLB=&amp;kcm=æ€æƒ³é“å¾·ä¿®å…»ä¸æ³•å¾‹åŸºç¡€&amp;JSM=åˆ˜æ™“èŠ³&amp;KCH=08C1240110&amp;JSH=/;683/7&amp;mid=1120310604" 
+      target="_blank">87</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2012ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">04C1170011</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ä½“è‚²</DIV></TD>
+    <TD>
+      <DIV align="center">å¾ç£Š</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">1.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                30             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2012ç§‹å­£&amp;CJ=90&amp;CJLB=&amp;kcm=ä½“è‚²&amp;JSM=å¾ç£Š&amp;KCH=04C1170011&amp;JSH=/35;;/1&amp;mid=1120310604" 
+      target="_blank">90</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2012ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">C0005020</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ç§‘æŠ€æ–‡çŒ®æ£€ç´¢ä¸åˆ©ç”¨</DIV></TD>
+    <TD>
+      <DIV align="center">éƒ­å…´æ˜</DIV></TD>
+    <TD>
+      <DIV align="center">å…¨æ ¡ä»»é€‰</DIV></TD>
+    <TD>
+      <DIV align="center">0.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                10             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2012ç§‹å­£&amp;CJ=82&amp;CJLB=&amp;kcm=ç§‘æŠ€æ–‡çŒ®æ£€ç´¢ä¸åˆ©ç”¨&amp;JSM=éƒ­å…´æ˜&amp;KCH=C0005020&amp;JSH=8<<43/3&amp;mid=1120310604" 
+      target="_blank">82</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR>
+    <TD height="10" colspan="10">&nbsp;</TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">04N1110021</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å¤§å­¦ç‰©ç†II</DIV></TD>
+    <TD>
+      <DIV align="center">å´ç¦</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">4.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                75             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=87&amp;CJLB=&amp;kcm=å¤§å­¦ç‰©ç†II&amp;JSM=å´ç¦&amp;KCH=04N1110021&amp;JSH=/955323&amp;mid=1120310604" 
+      target="_blank">87</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08C1150312</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å¤§å­¦è‹±è¯­</DIV></TD>
+    <TD>
+      <DIV align="center">å­™ç››è</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                60             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=77&amp;CJLB=&amp;kcm=å¤§å­¦è‹±è¯­&amp;JSM=å­™ç››è&amp;KCH=08C1150312&amp;JSH=/3593/1&amp;mid=1120310604" 
+      target="_blank">77</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08T1060710</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ç”µè·¯III</DIV></TD>
+    <TD>
+      <DIV align="center">åˆ˜æ´ªè‡£</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">3.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                50             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=82&amp;CJLB=&amp;kcm=ç”µè·¯III&amp;JSM=åˆ˜æ´ªè‡£&amp;KCH=08T1060710&amp;JSH=/84:;26&amp;mid=1120310604" 
+      target="_blank">82</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08T1060760</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ç”µè·¯å®éªŒ</DIV></TD>
+    <TD>
+      <DIV align="center">æç°</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">1.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                18             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=78&amp;CJLB=&amp;kcm=ç”µè·¯å®éªŒ&amp;JSM=æç°&amp;KCH=08T1060760&amp;JSH=/84:5/0&amp;mid=1120310604" 
+      target="_blank">78</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08N1120212</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å·¥ç§‘æ•°å­¦åˆ†æ</DIV></TD>
+    <TD>
+      <DIV align="center">æ´ªæˆæ“</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">5.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                90             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=94&amp;CJLB=&amp;kcm=å·¥ç§‘æ•°å­¦åˆ†æ&amp;JSM=æ´ªæˆæ“&amp;KCH=08N1120212&amp;JSH=/956330&amp;mid=1120310604" 
+      target="_blank">94</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08T1030060</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;æ±‡ç¼–è¯­è¨€ç¨‹åºè®¾è®¡</DIV></TD>
+    <TD>
+      <DIV align="center">éƒ‘è´µæ»¨</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                40             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=83&amp;CJLB=&amp;kcm=æ±‡ç¼–è¯­è¨€ç¨‹åºè®¾è®¡&amp;JSM=éƒ‘è´µæ»¨&amp;KCH=08T1030060&amp;JSH=/65638/388&amp;mid=1120310604" 
+      target="_blank">83</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08N1030010</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;é›†åˆè®ºä¸å›¾è®º</DIV></TD>
+    <TD>
+      <DIV align="center">åˆ˜å³°</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">3.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                48             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=81&amp;CJLB=&amp;kcm=é›†åˆè®ºä¸å›¾è®º&amp;JSM=åˆ˜å³°&amp;KCH=08N1030010&amp;JSH=064731/&amp;mid=1120310604" 
+      target="_blank">81</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">04C1170012</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ä½“è‚²</DIV></TD>
+    <TD>
+      <DIV align="center">å¾ç£Š</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">1.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                30             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=86&amp;CJLB=&amp;kcm=ä½“è‚²&amp;JSM=å¾ç£Š&amp;KCH=04C1170012&amp;JSH=/35;;/1&amp;mid=1120310604" 
+      target="_blank">86</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">08C1240120</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ä¸­å›½è¿‘ç°ä»£å²çº²è¦</DIV></TD>
+    <TD>
+      <DIV align="center">é»„è¿›å</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                32             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=86&amp;CJLB=&amp;kcm=ä¸­å›½è¿‘ç°ä»£å²çº²è¦&amp;JSM=é»„è¿›å&amp;KCH=08C1240120&amp;JSH=/;5:;5/&amp;mid=1120310604" 
+      target="_blank">86</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">C0001280</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;åšå¼ˆè®º</DIV></TD>
+    <TD>
+      <DIV align="center">å°åŒè‰¯</DIV></TD>
+    <TD>
+      <DIV align="center">å…¨æ ¡ä»»é€‰</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                40             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=74&amp;CJLB=&amp;kcm=åšå¼ˆè®º&amp;JSM=å°åŒè‰¯&amp;KCH=C0001280&amp;JSH=/:54;00&amp;mid=1120310604" 
+      target="_blank">74</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">C0001020</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;æ•°å­¦å»ºæ¨¡</DIV></TD>
+    <TD>
+      <DIV align="center">å¼ è¾¾æ²»</DIV></TD>
+    <TD>
+      <DIV align="center">å…¨æ ¡ä»»é€‰</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                30             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=86&amp;CJLB=&amp;kcm=æ•°å­¦å»ºæ¨¡&amp;JSM=å¼ è¾¾æ²»&amp;KCH=C0001020&amp;JSH=/956;14&amp;mid=1120310604" 
+      target="_blank">86</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">C0005270</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ç½‘ç»œä¸ç¤¾ä¼šå¯¼è®º</DIV></TD>
+    <TD>
+      <DIV align="center">å¼ ç¥</DIV></TD>
+    <TD>
+      <DIV align="center">å…¨æ ¡ä»»é€‰</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                32             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=89&amp;CJLB=&amp;kcm=ç½‘ç»œä¸ç¤¾ä¼šå¯¼è®º&amp;JSM=å¼ ç¥&amp;KCH=C0005270&amp;JSH=0647;25&amp;mid=1120310604" 
+      target="_blank">89</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">G2160020</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å›½æ–‡ç»å…¸å¯¼è¯»</DIV></TD>
+    <TD>
+      <DIV align="center">ä»˜ä¸½</DIV></TD>
+    <TD>
+      <DIV align="center">é€šè¯†æ•™è‚²</DIV></TD>
+    <TD>
+      <DIV align="center">1.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                20             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013æ˜¥å­£&amp;CJ=77&amp;CJLB=&amp;kcm=å›½æ–‡ç»å…¸å¯¼è¯»&amp;JSM=ä»˜ä¸½&amp;KCH=G2160020&amp;JSH=/;67318&amp;mid=1120310604" 
+      target="_blank">77</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR>
+    <TD height="10" colspan="10">&nbsp;</TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">04N1110022</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å¤§å­¦ç‰©ç†II</DIV></TD>
+    <TD>
+      <DIV align="center">èµµæ ‘æ°‘</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">4.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                75             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=83&amp;CJLB=&amp;kcm=å¤§å­¦ç‰©ç†II&amp;JSM=èµµæ ‘æ°‘&amp;KCH=04N1110022&amp;JSH=/9553/4&amp;mid=1120310604" 
+      target="_blank">83</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13GN11000211</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å¤§å­¦ç‰©ç†å®éªŒI</DIV></TD>
+    <TD>
+      <DIV align="center">é’±å®ˆä»</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">1.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                33             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=80&amp;CJLB=&amp;kcm=å¤§å­¦ç‰©ç†å®éªŒI&amp;JSM=é’±å®ˆä»&amp;KCH=13GN11000211&amp;JSH=/955313&amp;mid=1120310604" 
+      target="_blank">80</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13GN12000300</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;æ¦‚ç‡è®ºä¸æ•°ç†ç»Ÿè®¡</DIV></TD>
+    <TD>
+      <DIV align="center">å²æ™“å†‰</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                44             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=80&amp;CJLB=&amp;kcm=æ¦‚ç‡è®ºä¸æ•°ç†ç»Ÿè®¡&amp;JSM=å²æ™“å†‰&amp;KCH=13GN12000300&amp;JSH=055741/49=&amp;mid=1120310604" 
+      target="_blank">80</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13GC16000300</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;æ¯›æ³½ä¸œæ€æƒ³å’Œä¸­å›½ç‰¹è‰²ç¤¾ä¼šä¸»ä¹‰ç†è®ºä½“ç³»æ¦‚è®º</DIV></TD>
+    <TD>
+      <DIV align="center">é»„èº</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">4.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                60             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=78&amp;CJLB=&amp;kcm=æ¯›æ³½ä¸œæ€æƒ³å’Œä¸­å›½ç‰¹è‰²ç¤¾ä¼šä¸»ä¹‰ç†è®ºä½“ç³»æ¦‚è®º&amp;JSM=é»„èº&amp;KCH=13GC16000300&amp;JSH=/;68300&amp;mid=1120310604" 
+      target="_blank">78</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SC03100100</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;æ•°æ®ç»“æ„ä¸ç®—æ³•(è‹±æ–‡)</DIV></TD>
+    <TD>
+      <DIV align="center">å¼ å²©1</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">3.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                60             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=72&amp;CJLB=&amp;kcm=æ•°æ®ç»“æ„ä¸ç®—æ³•(è‹±æ–‡)&amp;JSM=å¼ å²©1&amp;KCH=13SC03100100&amp;JSH=0647315&amp;mid=1120310604" 
+      target="_blank">72</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SD03100600</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;æ•°å­—é€»è¾‘è®¾è®¡</DIV></TD>
+    <TD>
+      <DIV align="center">å¼ å½¦èˆª</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">3.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                56             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=89&amp;CJLB=&amp;kcm=æ•°å­—é€»è¾‘è®¾è®¡&amp;JSM=å¼ å½¦èˆª&amp;KCH=13SD03100600&amp;JSH=064730/&amp;mid=1120310604" 
+      target="_blank">89</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13GC17000103</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ä½“è‚²</DIV></TD>
+    <TD>
+      <DIV align="center">é©¬æ™“å¤©</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">0.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                15             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=95&amp;CJLB=&amp;kcm=ä½“è‚²&amp;JSM=é©¬æ™“å¤©&amp;KCH=13GC17000103&amp;JSH=/35;302&amp;mid=1120310604" 
+      target="_blank">95</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">C0003660</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å‡»å‰‘</DIV></TD>
+    <TD>
+      <DIV align="center">ç‹ç‚</DIV></TD>
+    <TD>
+      <DIV align="center">å…¨æ ¡ä»»é€‰</DIV></TD>
+    <TD>
+      <DIV align="center">1.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                30             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=94&amp;CJLB=&amp;kcm=å‡»å‰‘&amp;JSM=ç‹ç‚&amp;KCH=C0003660&amp;JSH=/35;304&amp;mid=1120310604" 
+      target="_blank">94</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">C0004720</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;çŸ¥è¯†äº§æƒ</DIV></TD>
+    <TD>
+      <DIV align="center">çª¦ç‰å‰</DIV></TD>
+    <TD>
+      <DIV align="center">å…¨æ ¡ä»»é€‰</DIV></TD>
+    <TD>
+      <DIV align="center">1.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                24             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=82&amp;CJLB=&amp;kcm=çŸ¥è¯†äº§æƒ&amp;JSM=çª¦ç‰å‰&amp;KCH=C0004720&amp;JSH=/;68312&amp;mid=1120310604" 
+      target="_blank">82</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2013ç§‹å­£</DIV></TD>
+    <TD>
+      <DIV align="center">10C4150590</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;è‹±è¯­æ–‡åŒ–åŸºç¡€</DIV></TD>
+    <TD>
+      <DIV align="center">é™ˆå“1</DIV></TD>
+    <TD>
+      <DIV align="center">è‹±è¯­æ‹“å±•</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                32             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2013ç§‹å­£&amp;CJ=70&amp;CJLB=&amp;kcm=è‹±è¯­æ–‡åŒ–åŸºç¡€&amp;JSM=é™ˆå“1&amp;KCH=10C4150590&amp;JSH=/35942/&amp;mid=1120310604" 
+      target="_blank">70</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR>
+    <TD height="10" colspan="10">&nbsp;</TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13GN11000212</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å¤§å­¦ç‰©ç†å®éªŒI</DIV></TD>
+    <TD>
+      <DIV align="center">æ–¹å…‰å®‡</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">1.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                27             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=74&amp;CJLB=&amp;kcm=å¤§å­¦ç‰©ç†å®éªŒI&amp;JSM=æ–¹å…‰å®‡&amp;KCH=13GN11000212&amp;JSH=/955;32&amp;mid=1120310604" 
+      target="_blank">74</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SP08001400</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;å·¥ç¨‹è®­ç»ƒ(ç”µå­å·¥è‰ºå®ä¹ )</DIV></TD>
+    <TD>
+      <DIV align="center">éŸ©ç§€ç´</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                2å‘¨             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=87&amp;CJLB=&amp;kcm=å·¥ç¨‹è®­ç»ƒ(ç”µå­å·¥è‰ºå®ä¹ )&amp;JSM=éŸ©ç§€ç´&amp;KCH=13SP08001400&amp;JSH=/54<32/&amp;mid=1120310604" 
+      target="_blank">87</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13GN12000600</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;è®¡ç®—æ–¹æ³•</DIV></TD>
+    <TD>
+      <DIV align="center">é™ˆå»¶æ¢…</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                36             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=84&amp;CJLB=&amp;kcm=è®¡ç®—æ–¹æ³•&amp;JSM=é™ˆå»¶æ¢…&amp;KCH=13GN12000600&amp;JSH=/956337&amp;mid=1120310604" 
+      target="_blank">84</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SC03100200</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;è®¡ç®—æœºç»„æˆåŸç†</DIV></TD>
+    <TD>
+      <DIV align="center">èˆ’ç‡•å›</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">4.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                64             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=86&amp;CJLB=&amp;kcm=è®¡ç®—æœºç»„æˆåŸç†&amp;JSM=èˆ’ç‡•å›&amp;KCH=13SC03100200&amp;JSH=0647;50&amp;mid=1120310604" 
+      target="_blank">86</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13GN03100100</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;è¿‘ä¸–ä»£æ•°</DIV></TD>
+    <TD>
+      <DIV align="center">ææ¶›1</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                32             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=72&amp;CJLB=&amp;kcm=è¿‘ä¸–ä»£æ•°&amp;JSM=ææ¶›1&amp;KCH=13GN03100100&amp;JSH=0647332&amp;mid=1120310604" 
+      target="_blank">72</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13GC16000400</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;é©¬å…‹æ€ä¸»ä¹‰åŸºæœ¬åŸç†</DIV></TD>
+    <TD>
+      <DIV align="center">æœå¸®äº‘</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">3.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                48             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=88&amp;CJLB=&amp;kcm=é©¬å…‹æ€ä¸»ä¹‰åŸºæœ¬åŸç†&amp;JSM=æœå¸®äº‘&amp;KCH=13GC16000400&amp;JSH=/;5:;56&amp;mid=1120310604" 
+      target="_blank">88</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SP03100100</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;è½¯ä»¶è®¾è®¡ä¸å¼€å‘å®è·µâ… </DIV></TD>
+    <TD>
+      <DIV align="center">éª†å‰æ´²</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                48             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=85&amp;CJLB=&amp;kcm=è½¯ä»¶è®¾è®¡ä¸å¼€å‘å®è·µâ… &amp;JSM=éª†å‰æ´²&amp;KCH=13SP03100100&amp;JSH=077;3/2&amp;mid=1120310604" 
+      target="_blank">85</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SD03100700</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;æ•°ç†é€»è¾‘</DIV></TD>
+    <TD>
+      <DIV align="center">ä»»ä¸–å†›</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                32             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=85&amp;CJLB=&amp;kcm=æ•°ç†é€»è¾‘&amp;JSM=ä»»ä¸–å†›&amp;KCH=13SD03100700&amp;JSH=0647331&amp;mid=1120310604" 
+      target="_blank">85</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SC03100300</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ç®—æ³•è®¾è®¡ä¸åˆ†æ</DIV></TD>
+    <TD>
+      <DIV align="center">ç‹å®å¿—</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">2.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                40             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=80&amp;CJLB=&amp;kcm=ç®—æ³•è®¾è®¡ä¸åˆ†æ&amp;JSM=ç‹å®å¿—&amp;KCH=13SC03100300&amp;JSH=077;;00&amp;mid=1120310604" 
+      target="_blank">80</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13GC17000104</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ä½“è‚²</DIV></TD>
+    <TD>
+      <DIV align="center">é©¬æ™“å¤©</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">0.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                15             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=95&amp;CJLB=&amp;kcm=ä½“è‚²&amp;JSM=é©¬æ™“å¤©&amp;KCH=13GC17000104&amp;JSH=/35;302&amp;mid=1120310604" 
+      target="_blank">95</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014æ˜¥å­£</DIV></TD>
+    <TD>
+      <DIV align="center">10C4150530</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;è‹±è¯­è§†å¬è¯´</DIV></TD>
+    <TD>
+      <DIV align="center">Jennifer</DIV></TD>
+    <TD>
+      <DIV align="center">è‹±è¯­æ‹“å±•</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                32             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014æ˜¥å­£&amp;CJ=85&amp;CJLB=&amp;kcm=è‹±è¯­è§†å¬è¯´&amp;JSM=Jennifer&amp;KCH=10C4150530&amp;JSH=0856S1/345&amp;mid=1120310604" 
+      target="_blank">85</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR>
+    <TD height="10" colspan="10">&nbsp;</TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014å¤å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SP03100300</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;è®¡ç®—æœºè®¾è®¡ä¸å®è·µ</DIV></TD>
+    <TD>
+      <DIV align="center">é»„å‰‘å</DIV></TD>
+    <TD>
+      <DIV align="center">å¿…ä¿®</DIV></TD>
+    <TD>
+      <DIV align="center">3.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                56             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014å¤å­£&amp;CJ=92&amp;CJLB=&amp;kcm=è®¡ç®—æœºè®¾è®¡ä¸å®è·µ&amp;JSM=é»„å‰‘å&amp;KCH=13SP03100300&amp;JSH=0647381&amp;mid=1120310604" 
+      target="_blank">92</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014å¤å­£</DIV></TD>
+    <TD>
+      <DIV align="center">GO71100200</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;æˆåŠŸå¿ƒç†ä¸äººæ‰å‘å±•</DIV></TD>
+    <TD>
+      <DIV align="center">åˆ˜ä¸½ç¾</DIV></TD>
+    <TD>
+      <DIV align="center">å…¨æ ¡ä»»é€‰</DIV></TD>
+    <TD>
+      <DIV align="center">1.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                20             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014å¤å­£&amp;CJ=0&amp;CJLB=&amp;kcm=æˆåŠŸå¿ƒç†ä¸äººæ‰å‘å±•&amp;JSM=åˆ˜ä¸½ç¾&amp;KCH=GO71100200&amp;JSH=8<4=3/1&amp;mid=1120310604" 
+      target="_blank">0</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                å…¶å®ƒ             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014å¤å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SE03100100</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;C++ç¨‹åºè®¾è®¡</DIV></TD>
+    <TD>
+      <DIV align="center">éƒ‘è´µæ»¨</DIV></TD>
+    <TD>
+      <DIV align="center">é™é€‰</DIV></TD>
+    <TD>
+      <DIV align="center">2.0             </DIV></TD>
+    <TD>
+      <DIV align="center">                32             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014å¤å­£&amp;CJ=90&amp;CJLB=&amp;kcm=C++ç¨‹åºè®¾è®¡&amp;JSM=éƒ‘è´µæ»¨&amp;KCH=13SE03100100&amp;JSH=/65638/388&amp;mid=1120310604" 
+      target="_blank">90</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             </DIV></TD></TR>
+  <TR onmouseover="SeeSetBg(this)" onmouseout="SeeReBg(this)">
+    <TD height="25">
+      <DIV align="center">2014å¤å­£</DIV></TD>
+    <TD>
+      <DIV align="center">13SE03100400</DIV></TD>
+    <TD>
+      <DIV align="left">&nbsp;ä¿¡å·ä¸ç³»ç»Ÿ</DIV></TD>
+    <TD>
+      <DIV align="center">ç¨‹ä¸¹æ¾</DIV></TD>
+    <TD>
+      <DIV align="center">é™é€‰</DIV></TD>
+    <TD>
+      <DIV align="center">2.5             </DIV></TD>
+    <TD>
+      <DIV align="center">                40             </DIV></TD>
+    <TD>
+      <DIV align="center"><A href="http://xscj.hit.edu.cn/hitjwgl/xs/cjcx/XSCJ_XX.asp?XQ=2014å¤å­£&amp;CJ=76&amp;CJLB=&amp;kcm=ä¿¡å·ä¸ç³»ç»Ÿ&amp;JSM=ç¨‹ä¸¹æ¾&amp;KCH=13SE03100400&amp;JSH=0647;12&amp;mid=1120310604" 
+      target="_blank">76</A>                             </DIV></TD>
+    <TD>
+      <DIV align="center">ã€€             </DIV></TD>
+    <TD>
+      <DIV align="center">                ã€€             
+</DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE width="80%" align="center" bgcolor="#ffffff" border="1" cellspacing="0" 
+cellpadding="0">
+  <TBODY>
+  <TR>
+    <TD bgcolor="#ececec" rowspan="4">
+      <DIV align="center"><STRONG><FONT size="2">å­¦åˆ†ç»Ÿè®¡</FONT></STRONG></DIV></TD>
+    <TD height="25">
+      <DIV align="center"><STRONG><FONT size="2">è¯¾ç¨‹ç±»åˆ«</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG><FONT size="2">å¿…ä¿®</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG><FONT size="2">é™é€‰</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG><FONT size="2">å…¨æ ¡ä»»é€‰</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG><FONT size="2">åˆ›æ–°å­¦åˆ†</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG><FONT size="2">ç´ è´¨è®²åº§</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG><FONT size="2">é€šè¯†æ•™è‚²</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><STRONG><FONT size="2">å…¶å®ƒ</FONT></STRONG></DIV></TD></TR>
+  <TR>
+    <TD height="25">
+      <DIV align="center"><STRONG><FONT size="2">é€‰è¯¾å­¦åˆ†</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">97.5</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">4.5</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">9.5</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">0.0</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">0.0</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">1.0</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">0.0</FONT></DIV></TD></TR>
+  <TR>
+    <TD height="25">
+      <DIV align="center"><STRONG><FONT size="2">å®Œæˆå­¦åˆ†</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">97.5</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">4.5</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">8.5</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">0.0</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">0.0</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">1.0</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">0.0</FONT></DIV></TD></TR>
+  <TR>
+    <TD height="25">
+      <DIV align="center"><STRONG><FONT size="2">å®Œæˆæ¯”ä¾‹</FONT></STRONG></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">100.00%		 </FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">		100.00%		 </FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">		89.5%		 </FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">		&nbsp;		</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">		&nbsp;		</FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">		100.00%		 </FONT></DIV></TD>
+    <TD>
+      <DIV align="center"><FONT size="2">		&nbsp;
+		</FONT></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE width="80%" align="center" bgcolor="#ffffff" border="0" cellspacing="0" 
+cellpadding="0">
+  <TBODY>
+  <TR>
+    <TD height="36">
+      <DIV align="left"><SPAN class="style3">æ³¨æ„ï¼š<SPAN 
+      class="style4">åœ¨ç™¾åˆ†åˆ¶æˆç»©ä¸Šç‚¹å‡»å³å¯æŸ¥çœ‹è¯¥è¯¾ç¨‹çš„å…·ä½“å„åˆ†é¡¹æˆç»©</SPAN>ã€‚</SPAN></DIV></TD></TR></TBODY></TABLE><BR><BR><!--  --> 
+  
+<DIV class="space"></DIV></DIV></DIV>
+<DIV id="bot_style">
+<H2></H2>
+<H1></H1></DIV>
+<SCRIPT src="æˆç»©æŸ¥è¯¢_files/foot.js"></SCRIPT>
+ </BODY></HTML>

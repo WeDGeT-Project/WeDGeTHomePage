@@ -34,6 +34,9 @@
 	?>
 	<div class="row">
 		<h1>提取Web页面中的表单数据</h1>
+		<p class="text-info">使用指南：该页面是网页表单抽取界面，所以需要目标网页的HTML文件。</P>
+    	<p class="text-info">您可以使用以下方法获取目标网页的HTML文件：进入目标网页，保存网页源代码（Ctrl+s）到您的计算机任意位置（html文件），命名请使用英文，并且名称中不能有空格。</P>
+		<p class="text-info">然后您便可以抽取目标网页的表单数据了：点击下面的“选择文件”，选择您刚刚保存的HTML，确定之后，点击“从选中的HTML文件中提取表单数据”。</P
 	</div>
 	<form class="form-horizontal" method="post" enctype="multipart/form-data">
 
@@ -44,7 +47,9 @@
 			</div>
 		</div>
 		<div class="form-actions">
-			<p class="text-info">注意：由于编码问题，对于英文网站直接将网址输入即可；对于中文网站必须将源代码存到本地，路径和文件名不可包含中文和空格</P>
+			<p>注意：该页面展示的是网页中所有表单的抽取结果，并意味着已经存到您的数据库中哦。在您中意的表单下，填写表单名字，并点击“将此表单写入您的数据库”，便可加入您的数据库中。</P>
+			<p>注意：如果抽取结果是乱码，这是由于原网页编码造成的，你只需把html文件在保存时选择“UTF-8”编码方式即可(放心，您一定会找到的，并不高端~)。</P>
+			<p>任何疑问，请加QQ群，我们会第一时间回答您：个人Web网页数据抽取 20541685</p>
 			<button type="submit" class="btn btn-success">从选中的HTML文件中提取表单数据</button>
 		</div>
 	</form>

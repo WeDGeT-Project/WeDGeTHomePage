@@ -54,9 +54,9 @@
 			{
 				$count_th++;
 				$every_th = strip_tags($every_th);  //去除标签干扰
-				if(strip_tags($every_th) == " ")
+				if(strip_tags($every_th) == '')
 				{
-					$sql_create_table = $sql_create_table . "tablehead" . " varchar(45),";
+					$sql_create_table = $sql_create_table . "`tablehead`" . " varchar(45),";
 				}
 				else
 				{

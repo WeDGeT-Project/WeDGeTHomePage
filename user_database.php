@@ -56,7 +56,7 @@
 				<h1>个人Web网页数据抽取：您的表格</h1>
 				<p class="text-info">以下是您曾抽取过的表单，您可以对它们进行一些操作。如果您没有发现任何表单，说明您未抽取表单并存入数据库。</p>
 				<?php 
-					echo '<a class="btn btn-success" href="extract_table.php?database=' . $database. '&nickname='.$nickname.'">抽取数据</a>';
+					echo '<a class="btn btn-success" href="extract_table.php?database=' . $database. '&nickname='.$nickname.'">开始从网页中抽取表单数据</a>';
 				?>
 				<br>
 				<br>

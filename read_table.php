@@ -37,7 +37,7 @@ function f_SaveAsExcel( _sHtml , _sFileName ){
 				echo '<a class="btn btn-success" href="user_database.php?database=' . $database. '&table='. $table .'&nickname='. $nickname .'">返回查看所有表单</a>';
 			?>
 			<input class="btn btn-success" name="" type="button" onClick="f_SaveAsExcel(document.all.content.innerHTML,'test.xls');" value="导出表单到本地">
-			<br>
+			<p>注意：导出功能暂时只支持IE内核浏览器</p>
 			<br>
 		</div>
 		<div id="content" class="row">
